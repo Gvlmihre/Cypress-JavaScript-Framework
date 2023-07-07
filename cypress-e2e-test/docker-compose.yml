@@ -3,10 +3,10 @@ services:
   cypress:
     image: "cypress/included:10.3.0"
     environment:
-      - cypress_test_env_admin_baseUrl=http://test-admin.co2nnectorpro.com.tr
-      - cypress_test_env_dashboard_baseUrl=http://test-app.co2nnectorpro.com.tr
-      - cypress_dev_env_admin_baseUrl=http://dev-test-admin.co2nnectorpro.com.tr
-      - cypress_dev_env_dashboard_baseUrl=http://dev-test-web.co2nnectorpro.com.tr
+      - cypress_test_env_admin_baseUrl=http://test-admin.connectapp.com.tr
+      - cypress_test_env_dashboard_baseUrl=http://test-app.connectapp.com.tr
+      - cypress_dev_env_admin_baseUrl=http://dev-test-admin.connectapp.com.tr
+      - cypress_dev_env_dashboard_baseUrl=http://dev-test-web.connectapp.com.tr
     working_dir: /e2e
     volumes:
       - ./:/e2e

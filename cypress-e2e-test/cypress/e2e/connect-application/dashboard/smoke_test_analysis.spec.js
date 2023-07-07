@@ -1,15 +1,5 @@
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
 
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 analysis page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-12 02:21:56
- */
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -57,17 +47,17 @@ describe('Run Connector Pro v2 analysis page smoke tests', () => {
             .find('li').as('options')
             .then(options => [...options].map(option => option.innerText))
             .then(texts => year.push(texts.toString()));
-             cy.log(year).then(()=>{
-                 newYear = year[0].split(",")
-                 cy.log(newYear)
-                 cy.log(newYear.length)
-                 for (let i = 0; i < newYear.length; i++) {
-                     years.push(newYear[i])
-                 }
-                 cy.log(years)
-                 cy.log(years.length)
-             })
+        cy.log(year).then(() => {
+            newYear = year[0].split(",")
+            cy.log(newYear)
+            cy.log(newYear.length)
+            for (let i = 0; i < newYear.length; i++) {
+                years.push(newYear[i])
+            }
+            cy.log(years)
+            cy.log(years.length)
         })
+    })
 
     it("Get locations from analysis page locations dropdown list ", () => {
         let location = []
@@ -77,7 +67,7 @@ describe('Run Connector Pro v2 analysis page smoke tests', () => {
             .find('li').as('options')
             .then(options => [...options].map(option => option.innerText))
             .then(texts => location.push(texts.toString()));
-        cy.log(locations).then(()=>{
+        cy.log(locations).then(() => {
             newLocation = location[0].split(",")
             cy.log(locations)
             cy.log(newLocation.length)

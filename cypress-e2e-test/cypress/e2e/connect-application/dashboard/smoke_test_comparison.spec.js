@@ -1,15 +1,5 @@
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
 
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 comparisons page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-15 08:21:56
- */
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -103,8 +93,8 @@ describe('Run Connector Pro v2 comparisons page smoke tests', () => {
         loginAndVisitComparisonPage();
         const year_ddmenu = comparisonsPageElements[3].panel_comparisons_tab_contents[1].comparison_year_ddmenu
         const years_in_ddmenu = comparisonsPageElements[3].panel_comparisons_tab_contents[1].comparison_year_ddmenu[0][languageStrings]
-        cy.get(year_ddmenu[0].css).find('option').each(item=> {
-           cy.get(item).invoke('val').then((text) =>{
+        cy.get(year_ddmenu[0].css).find('option').each(item => {
+            cy.get(item).invoke('val').then((text) => {
                 years_in_ddmenu.push(text)
                 cy.log(years_in_ddmenu)
 

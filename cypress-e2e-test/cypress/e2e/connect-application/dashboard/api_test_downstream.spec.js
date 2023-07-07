@@ -1,11 +1,4 @@
-/**
- * Climateware Copyright (c) 2023
- *
- * @summary ConnectorPro v2 public API tests using cypress
- * @author Gülmihre <gulimiremaimaiti@climateware.com>
- *
- * Created at     : 2023-05-17 10:06:45
- */
+
 
 
 /// <reference types="cypress" />
@@ -108,10 +101,10 @@ describe('Run Connector Pro V2 Public API Category 3.1 downstream Transportation
                 departurePlaceId: departurePlaceId,
                 arrivalPlaceId: arrivalPlaceId
             }).then(json => {
-            expect(json.status).to.equals(200)
-            const calculatedAmount = json.amount
-            cy.log(calculatedAmount)
-        })
+                expect(json.status).to.equals(200)
+                const calculatedAmount = json.amount
+                cy.log(calculatedAmount)
+            })
     })
 
 
@@ -155,10 +148,10 @@ describe('Run Connector Pro V2 Public API Category 3.1 downstream Transportation
                 departurePlaceId: departurePlaceId,
                 arrivalPlaceId: arrivalPlaceId
             }).then(json => {
-            expect(json.status).to.equals(200)
-            const calculatedAmount = json.body.amount
-            cy.log(calculatedAmount)
-        })
+                expect(json.status).to.equals(200)
+                const calculatedAmount = json.body.amount
+                cy.log(calculatedAmount)
+            })
     })
 
     //Downstream Transportation And Distribution - Land Related Tests Start Here
@@ -205,10 +198,10 @@ describe('Run Connector Pro V2 Public API Category 3.1 downstream Transportation
                 departurePlaceId: departurePlaceId,
                 arrivalPlaceId: arrivalPlaceId
             }).then(json => {
-            expect(json.status).to.equals(200)
-            const calculatedAmount = json.body.amount
-            cy.log(calculatedAmount)
-        })
+                expect(json.status).to.equals(200)
+                const calculatedAmount = json.body.amount
+                cy.log(calculatedAmount)
+            })
     })
 
 
@@ -246,10 +239,10 @@ describe('Run Connector Pro V2 Public API Category 3.1 downstream Transportation
                 departurePlace: departurePlace,
                 arrivalPlace: arrivalPlace
             }).then(json => {
-            expect(json.status).to.equals(200)
-            const calculatedAmount = json.body.amount
-            cy.log(calculatedAmount)
-        })
+                expect(json.status).to.equals(200)
+                const calculatedAmount = json.body.amount
+                cy.log(calculatedAmount)
+            })
     })
 
     //Downstream Transportation And Distribution - Common Tests Start Here

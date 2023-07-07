@@ -1,16 +1,5 @@
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
 
-
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 report page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-12 02:21:56
- */
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -108,7 +97,7 @@ describe('Run Connector Pro v2 results page smoke tests', () => {
                 cy.log('e', e)
             }
         })
-        cy.contains('#content > section > div.location-selection > div', 'Grup', {timeout: 3000});
+        cy.contains('#content > section > div.location-selection > div', 'Grup', { timeout: 3000 });
         cy.get(dropdownMenuSelector).each(ddMenuItem => {
             clickDropDownMenuAndValidateOptions(ddMenuItem, languageStrings);
         });

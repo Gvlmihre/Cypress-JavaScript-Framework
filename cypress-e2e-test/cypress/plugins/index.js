@@ -19,8 +19,8 @@
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+    // `on` is used to hook into various events Cypress emits
+    // `config` is the resolved Cypress config
 }
 
 const postgreSQL = require('cypress-postgresql');
@@ -41,7 +41,7 @@ async function fetchConfigurationByFile(environment, testType, testSiteIsAdmin) 
             break;
         case "api":
             configJson.env.testType = 'api';
-            specPathPattern = specPathPattern.replace("TEST_TYPE","api_test");
+            specPathPattern = specPathPattern.replace("TEST_TYPE", "api_test");
             break;
         case "smoke":
         default:
@@ -55,17 +55,17 @@ async function fetchConfigurationByFile(environment, testType, testSiteIsAdmin) 
 
         switch (configJson.env['environment']) {
             case "development":
-                configJson.baseUrl = 'http://dev-test-admin.co2nnectorpro.com.tr';
+                configJson.baseUrl = 'http://dev-test-admin.connectapp.com.tr';
                 break;
             case "staging":
-                configJson.baseUrl = 'https://admin.app.staging.co2nnectorpro.com.tr';
+                configJson.baseUrl = 'https://admin.app.staging.connectapp.com.tr';
                 break;
             case "production":
-                configJson.baseUrl = 'http://prod-admin.co2nnectorpro.com.tr';
+                configJson.baseUrl = 'http://prod-admin.connectapp.com.tr';
                 break;
             case "test":
             default:
-                configJson.baseUrl = 'http://test-admin.co2nnectorpro.com.tr';
+                configJson.baseUrl = 'http://test-admin.connectapp.com.tr';
         }
     } else {
         specPathPattern = specPathPattern.replace("TEST_SITE", "dashboard");

@@ -1,15 +1,5 @@
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
 
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 targets page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-15 08:21:56
- */
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {

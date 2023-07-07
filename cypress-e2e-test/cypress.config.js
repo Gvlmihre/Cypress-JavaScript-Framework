@@ -11,10 +11,10 @@ module.exports = defineConfig({
     },
     reporter: "cypress-multi-reporters",
     env: {
-      token: 'iq+Q7+oY5NdWAf6c8XQ2RtHMU01R8DtlPZjNv2My8v4=',
-      apiBaseUrl: 'http://139.59.136.11:8003',
+      token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+      apiBaseUrl: 'http://xxx.xx.xx.xx:xxxx',
       loginEndPoint: '/auth/signin',
-      username: 'gulimiremaimaiti@semtrio.com',
+      username: 'xxx@xxx.com',
       password: '1234abcd'
     },
     reporterOptions: {

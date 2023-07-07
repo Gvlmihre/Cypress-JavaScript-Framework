@@ -1,12 +1,3 @@
-/**
- * Climateware Copyright (c) 2023
- *
- * @summary ConnectorPro v2 public API tests using cypress
- * @author Gülmihre <gulimiremaimaiti@climateware.com>
- *
- * Created at     : 2023-05-31 15:31:45
- */
-
 /// <reference types="cypress" />
 require('cypress-xpath');
 const faker = require("faker");
@@ -83,8 +74,8 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
                         distance: distance,
                         passengerCount: passengerCount
                     }).then(json => {
-                    expect(json.status).to.equals(200)
-                })
+                        expect(json.status).to.equals(200)
+                    })
             })
         })
     })
@@ -131,17 +122,17 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(8, 1)
 
-            cy.apiRequest('POST',
-                `/calculation/business-travels/others`,
-                {
-                    locationId: locationId,
-                    amount: amount,
-                    emissionSourceId: emissionSourceIds[i],
-                    unitId: emissionSourceUnits[i]
-                }).then(json => {
+        cy.apiRequest('POST',
+            `/calculation/business-travels/others`,
+            {
+                locationId: locationId,
+                amount: amount,
+                emissionSourceId: emissionSourceIds[i],
+                unitId: emissionSourceUnits[i]
+            }).then(json => {
                 expect(json.status).to.equals(200)
             })
-        })
+    })
 
     it('Connector Pro V2 Public API Business Travels Calculate Carbon Footprint POST Request 400 Bad Request Test - Others', () => {
 
@@ -149,16 +140,16 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(8, 1)
 
-            cy.apiRequest('POST',
-                `/calculation/business-travels/others`,
-                {
-                    locationId: locationId,
-                    amount: amount,
-                    emissionSourceId: emissionSourceIds[i],
-                }).then(json => {
+        cy.apiRequest('POST',
+            `/calculation/business-travels/others`,
+            {
+                locationId: locationId,
+                amount: amount,
+                emissionSourceId: emissionSourceIds[i],
+            }).then(json => {
                 expect(json.status).to.equals(400)
                 expect(json.statusText).to.equals('Bad Request')
             })
-        })
     })
+})
 

@@ -1,15 +1,4 @@
 /**
- * Semtrio Copyright (c) 2022
- *
- *
- * @summary Functional tests for ConnectorPro v2 calculations page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-12 02:21:56
- *
- * @Edited by : Gülmihre KUTBİLGE <gulimiremaimaiti@climateware.com>
- * @Edited at : 2023-06-26 13:21:56
- * */
 
 /// <reference types="cypress" />
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
@@ -46,10 +35,10 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
   const password = `${Cypress.env('password')}`
 
 
- /* beforeEach(() => {
-    cy.visit('/');
-  });
-*/
+  /* beforeEach(() => {
+     cy.visit('/');
+   });
+ */
   /**
    * Functional tests for calculations page tests start here
    */

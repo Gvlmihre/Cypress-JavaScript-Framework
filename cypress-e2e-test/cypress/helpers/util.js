@@ -1,13 +1,13 @@
 import calculationsPageElements from "../fixtures/connectorprov2/dashboard/calculations.json";
 const faker = require("faker");
 
-const test_url='http://test-app.co2nnectorpro.com.tr/login'
-const username_field='div.inner > div:nth-child(2) > input'
-const password_field ='#loginPassword'
-const login_button= 'div.container>div:nth-child(2)>button'
-const first_company= "table > tbody>tr:nth-child(1)"
-const connectorProTRLanguageCode="tr"
-const connectorProENLanguageCode="en"
+const test_url = 'http://test-app.co2nnectapp.com.tr/login'
+const username_field = 'div.inner > div:nth-child(2) > input'
+const password_field = '#loginPassword'
+const login_button = 'div.container>div:nth-child(2)>button'
+const first_company = "table > tbody>tr:nth-child(1)"
+const connectorProTRLanguageCode = "tr"
+const connectorProENLanguageCode = "en"
 export const adminLogin = (username, password) => {
     cy.visit(test_url)
     cy.get(username_field)
@@ -18,43 +18,43 @@ export const adminLogin = (username, password) => {
 
     const current_language_code = localStorage.getItem('co2nnectorpro-language-code');
     cy.log(current_language_code)
-    if(current_language_code === 'tr') {
+    if (current_language_code === 'tr') {
         cy.contains('Giriş yapmak istediğiniz firmayı seçiniz');
-    } else if(current_language_code === 'en') {
+    } else if (current_language_code === 'en') {
         cy.contains('Giriş yapmak istediğiniz firmayı seçiniz');
     }
     cy.log("Logged in welcome page successfully.");
 
     cy.get(first_company).click()
 
-    if(current_language_code === 'tr') {
+    if (current_language_code === 'tr') {
         cy.contains('Çıkış');
-    } else if(current_language_code === 'en') {
+    } else if (current_language_code === 'en') {
         cy.contains('Logout');
     }
     cy.log("Logged in successfully.");
 };
 
 export const logout = () => {
-    cy.get('.logout').click({force: true});
-    
+    cy.get('.logout').click({ force: true });
+
     const current_language_code = localStorage.getItem('co2nnectorpro-language-code');
-    if(current_language_code === 'tr') {
+    if (current_language_code === 'tr') {
         cy.contains('Oturum Aç');
-    } else if(current_language_code === 'en') {
+    } else if (current_language_code === 'en') {
         cy.contains('Login');
     }
     cy.log("Logged out successfully.")
 }
 
-export const clickOnElementAndVisitPageAndCheckUrl = (selector, urlContains) =>  {
+export const clickOnElementAndVisitPageAndCheckUrl = (selector, urlContains) => {
     cy.get(selector, { timeout: 5000 }).should('be.visible').click().then(() => {
         cy.location('pathname').should('contain', urlContains);
     });
 };
 
 export const clickDropDownMenuAndValidateOptions = (dropdownMenuSelector, languageOption) => {
-    if(dropdownMenuSelector.xpath.endsWith('select')) {
+    if (dropdownMenuSelector.xpath.endsWith('select')) {
         cy.xpath(dropdownMenuSelector.xpath).find('option').then(opts => {
             let actual = [...opts].map(o => o.text).sort();
             let expected = dropdownMenuSelector.options[languageOption].sort();
@@ -62,7 +62,7 @@ export const clickDropDownMenuAndValidateOptions = (dropdownMenuSelector, langua
             console.log('expected', expected.toString())
             expect(actual).to.be.deep.eq(expected);
 
-            if(dropdownMenuSelector.hasOwnProperty('option_to_select')) {
+            if (dropdownMenuSelector.hasOwnProperty('option_to_select')) {
                 cy.xpath(dropdownMenuSelector.xpath).select(dropdownMenuSelector.option_to_select.text[languageOption])
                     .should('have.value', dropdownMenuSelector.option_to_select.value);
             }
@@ -84,17 +84,17 @@ export const clickToCheckButtonActionAndInputLabel = (subcategory) => {
     });
 }
 export const selectFromVsDdmenu = (vsDdmenuSelector) => {
-      let index
-      cy.get(vsDdmenuSelector+'>div').click({force:true})
-      cy.get(vsDdmenuSelector).find('li').as('options').then(() => {
-          cy.get('@options').each((el, i, list) => {
-               index = faker.mersenne.rand(list.length-1, 0)
-          }).then(() => {
-              cy.get('@options').eq(index).click({force:true})
-              cy.wait(1000)
-          })
-       })
-    }
+    let index
+    cy.get(vsDdmenuSelector + '>div').click({ force: true })
+    cy.get(vsDdmenuSelector).find('li').as('options').then(() => {
+        cy.get('@options').each((el, i, list) => {
+            index = faker.mersenne.rand(list.length - 1, 0)
+        }).then(() => {
+            cy.get('@options').eq(index).click({ force: true })
+            cy.wait(1000)
+        })
+    })
+}
 
 export const getSelectDdmenuLength = (selectDdmenuSelector) => {
     let length
@@ -111,28 +111,28 @@ export const selectYearAndLocation = () => {
     cy.wait(1000)
     selectFromVsDdmenu(locationVsDdmenuCss)
 }
-    const fillCalculationForm = () => ({
-        emission_industry: faker.mersenne.rand(3, 0),
-        emission_source_selection: faker.mersenne.rand(2, 0),
-        consumption_amount: faker.mersenne.rand(400, 10),
-        unit:faker.mersenne.rand(10, 0),
-        explanation: "cypress_test_" +  faker.lorem.word(),
-        data_source: faker.mersenne.rand(3, 0),
-        device_type: faker.mersenne.rand(10, 0),
-        gas_capacity: faker.mersenne.rand(5000, 50),
-        fill_amount: faker.mersenne.rand(4000, 100),
-        shipping_type_selection: faker.mersenne.rand(2, 0),
-        departure_filling: 'ist',
-        arrival_filling: 'ank',
-        distance: faker.mersenne.rand(7000, 100),
-        weight: faker.mersenne.rand(4000, 500),
-        activity: "Cypress"+ faker.lorem.word(),
-        description: "cypress_test_description" +  faker.lorem.word(),
-        activity_data: faker.mersenne.rand(3000, 500),
-        ef: faker.mersenne.rand(1000, 10)
-    })
+const fillCalculationForm = () => ({
+    emission_industry: faker.mersenne.rand(3, 0),
+    emission_source_selection: faker.mersenne.rand(2, 0),
+    consumption_amount: faker.mersenne.rand(400, 10),
+    unit: faker.mersenne.rand(10, 0),
+    explanation: "cypress_test_" + faker.lorem.word(),
+    data_source: faker.mersenne.rand(3, 0),
+    device_type: faker.mersenne.rand(10, 0),
+    gas_capacity: faker.mersenne.rand(5000, 50),
+    fill_amount: faker.mersenne.rand(4000, 100),
+    shipping_type_selection: faker.mersenne.rand(2, 0),
+    departure_filling: 'ist',
+    arrival_filling: 'ank',
+    distance: faker.mersenne.rand(7000, 100),
+    weight: faker.mersenne.rand(4000, 500),
+    activity: "Cypress" + faker.lorem.word(),
+    description: "cypress_test_description" + faker.lorem.word(),
+    activity_data: faker.mersenne.rand(3000, 500),
+    ef: faker.mersenne.rand(1000, 10)
+})
 export const categoryOneCalculation = (index) => {
-    const categoryOneSubCategories= calculationsPageElements[18].categoryOneCalculationForm.category_one_subcategories
+    const categoryOneSubCategories = calculationsPageElements[18].categoryOneCalculationForm.category_one_subcategories
     const emissionIndustry = calculationsPageElements[18].categoryOneCalculationForm.emission_industry
     const selectEmissionSource = calculationsPageElements[18].categoryOneCalculationForm.select_emission_source
     const selectEmissionSource2 = calculationsPageElements[18].categoryOneCalculationForm.select_emission_source2
@@ -156,81 +156,81 @@ export const categoryOneCalculation = (index) => {
 
     const current_language_code = localStorage.getItem('co2nnectorpro-language-code');
     cy.log(current_language_code)
-        if(index<4){
-            if(index === 2){
-                cy.get(`${categoryOneSubCategories}:nth-child(${index+1})`).click()
-                cy.wait(3000)
-                cy.get(emissionIndustry).select(fillCalculationForm().emission_industry)
-                cy.get(selectEmissionSource2).select(fillCalculationForm().emission_source_selection)
-                cy.get(consumptionAmount).type(fillCalculationForm().consumption_amount)
-                cy.get(explanation).type(fillCalculationForm().explanation)
-                cy.get(documentUpload).selectFile('dosya.pdf')
-                cy.get(save).click()
-                cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
-                        expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
-                        expect(el.text()).to.contains('Success')
-                    }
-                    cy.log("Carbon Footprint Saved!");
-                })
-            }else{
-                cy.get(`${categoryOneSubCategories}:nth-child(${index+1})`).click()
-                cy.wait(3000)
-                cy.get(selectEmissionSource).select(fillCalculationForm().emission_source_selection)
-                cy.get(consumptionAmount).type(fillCalculationForm().consumption_amount)
-                cy.get(explanation).type(fillCalculationForm().explanation)
-                cy.get(documentUpload).selectFile('dosya.pdf')
-                cy.get(save).click()
-                cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
-                        expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
-                        expect(el.text()).to.contains('Success')
-                    }
-                    cy.log("Carbon Footprint Saved!");
-                })
-            }
-        } else if(index === 4){
-            cy.get(`${categoryOneSubCategories}:nth-child(${index+1})`).click()
+    if (index < 4) {
+        if (index === 2) {
+            cy.get(`${categoryOneSubCategories}:nth-child(${index + 1})`).click()
             cy.wait(3000)
-            cy.get(dataSource).select(fillCalculationForm().data_source)
-            cy.get(deviceType).select(fillCalculationForm().device_type)
-            cy.wait(1000)
-            selectFromVsDdmenu(selectEmissionSource4)
-            cy.get(gasCapacity).type(fillCalculationForm().gas_capacity)
-            cy.get(fillAmount).type(fillCalculationForm().fill_amount)
-            cy.get(ef).type(fillCalculationForm().ef)
-            cy.get(documentUpload4).selectFile('dosya.pdf')
-            cy.get(explanation1).type(fillCalculationForm().explanation)
+            cy.get(emissionIndustry).select(fillCalculationForm().emission_industry)
+            cy.get(selectEmissionSource2).select(fillCalculationForm().emission_source_selection)
+            cy.get(consumptionAmount).type(fillCalculationForm().consumption_amount)
+            cy.get(explanation).type(fillCalculationForm().explanation)
+            cy.get(documentUpload).selectFile('dosya.pdf')
             cy.get(save).click()
             cy.get(successMessage).as('successMessage').then((el) => {
-                if(current_language_code === 'tr') {
+                if (current_language_code === 'tr') {
                     expect(el.text()).to.contains('İşlem Başarılı')
-                } else if(current_language_code === 'en') {
+                } else if (current_language_code === 'en') {
                     expect(el.text()).to.contains('Success')
                 }
                 cy.log("Carbon Footprint Saved!");
             })
-
-        } else if(index === 5){
-            cy.get(`${categoryOneSubCategories}:nth-child(${index+1})`).click()
+        } else {
+            cy.get(`${categoryOneSubCategories}:nth-child(${index + 1})`).click()
             cy.wait(3000)
-            cy.get(activity).type(fillCalculationForm().activity)
-            cy.get(amount).type(fillCalculationForm().fill_amount)
-            cy.get(unit).select(fillCalculationForm().unit)
-            cy.get(ef5).type(fillCalculationForm().ef)
+            cy.get(selectEmissionSource).select(fillCalculationForm().emission_source_selection)
+            cy.get(consumptionAmount).type(fillCalculationForm().consumption_amount)
+            cy.get(explanation).type(fillCalculationForm().explanation)
+            cy.get(documentUpload).selectFile('dosya.pdf')
             cy.get(save).click()
             cy.get(successMessage).as('successMessage').then((el) => {
-                if(current_language_code === 'tr') {
+                if (current_language_code === 'tr') {
                     expect(el.text()).to.contains('İşlem Başarılı')
-                } else if(current_language_code === 'en') {
+                } else if (current_language_code === 'en') {
                     expect(el.text()).to.contains('Success')
                 }
                 cy.log("Carbon Footprint Saved!");
             })
         }
+    } else if (index === 4) {
+        cy.get(`${categoryOneSubCategories}:nth-child(${index + 1})`).click()
+        cy.wait(3000)
+        cy.get(dataSource).select(fillCalculationForm().data_source)
+        cy.get(deviceType).select(fillCalculationForm().device_type)
+        cy.wait(1000)
+        selectFromVsDdmenu(selectEmissionSource4)
+        cy.get(gasCapacity).type(fillCalculationForm().gas_capacity)
+        cy.get(fillAmount).type(fillCalculationForm().fill_amount)
+        cy.get(ef).type(fillCalculationForm().ef)
+        cy.get(documentUpload4).selectFile('dosya.pdf')
+        cy.get(explanation1).type(fillCalculationForm().explanation)
+        cy.get(save).click()
+        cy.get(successMessage).as('successMessage').then((el) => {
+            if (current_language_code === 'tr') {
+                expect(el.text()).to.contains('İşlem Başarılı')
+            } else if (current_language_code === 'en') {
+                expect(el.text()).to.contains('Success')
+            }
+            cy.log("Carbon Footprint Saved!");
+        })
+
+    } else if (index === 5) {
+        cy.get(`${categoryOneSubCategories}:nth-child(${index + 1})`).click()
+        cy.wait(3000)
+        cy.get(activity).type(fillCalculationForm().activity)
+        cy.get(amount).type(fillCalculationForm().fill_amount)
+        cy.get(unit).select(fillCalculationForm().unit)
+        cy.get(ef5).type(fillCalculationForm().ef)
+        cy.get(save).click()
+        cy.get(successMessage).as('successMessage').then((el) => {
+            if (current_language_code === 'tr') {
+                expect(el.text()).to.contains('İşlem Başarılı')
+            } else if (current_language_code === 'en') {
+                expect(el.text()).to.contains('Success')
+            }
+            cy.log("Carbon Footprint Saved!");
+        })
     }
+}
 
 export const categoryTwoCalculation = (index) => {
     const current_language_code = localStorage.getItem('co2nnectorpro-language-code');
@@ -313,22 +313,22 @@ export const categoryThreeCalculation = (index) => {
     //const i = faker.mersenne.rand(3,0)
 
     cy.get(categoryThree).click()
-    if(index === 0 || index === 1){
+    if (index === 0 || index === 1) {
         cy.get(`${subcategories}:nth-child(${index + 1})`).click()
         cy.wait(2000)
 
         let j
-        cy.get(selectShippingType+'>div').click({force:true})
+        cy.get(selectShippingType + '>div').click({ force: true })
         cy.get(selectShippingType).find('li').as('options').then(() => {
             cy.get('@options').each((el, i, list) => {
-                j = faker.mersenne.rand(list.length-1, 0)
+                j = faker.mersenne.rand(list.length - 1, 0)
             }).then(() => {
                 cy.log(j)
-                cy.get('@options').eq(j).click({force:true})
+                cy.get('@options').eq(j).click({ force: true })
                 cy.wait(2000)
             })
         }).then(() => {
-            if(j === 1 ){
+            if (j === 1) {
                 cy.get(departure).type('ist').then(() => {
                     cy.get(departure).find('li').eq(3).click()
                 })
@@ -340,23 +340,23 @@ export const categoryThreeCalculation = (index) => {
                 cy.get(document).selectFile('connectorPro.xlsx')
                 cy.get(save).click()
                 cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
+                    if (current_language_code === 'tr') {
                         expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
+                    } else if (current_language_code === 'en') {
                         expect(el.text()).to.contains('Success')
                     }
                     cy.log("Carbon Footprint Saved!");
                 })
 
                 cy.wait(3000)
-                cy.get(bulkShippingFiles).click({force:true})
+                cy.get(bulkShippingFiles).click({ force: true })
                 cy.get(documentBulk).selectFile('connectorPro.xlsx')
-                cy.get(uploadFile).click({force:true})
+                cy.get(uploadFile).click({ force: true })
                 cy.wait(2000)
                 cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
+                    if (current_language_code === 'tr') {
                         expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
+                    } else if (current_language_code === 'en') {
                         expect(el.text()).to.contains('Success')
                     }
                     cy.log("File Uploaded Successfully!");
@@ -386,23 +386,23 @@ export const categoryThreeCalculation = (index) => {
                 cy.get(document).selectFile('connectorPro.xlsx')
                 cy.get(save).click()
                 cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
+                    if (current_language_code === 'tr') {
                         expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
+                    } else if (current_language_code === 'en') {
                         expect(el.text()).to.contains('Success')
                     }
                     cy.log("Carbon Footprint Saved!");
                 })
 
                 cy.wait(3000)
-                cy.get(bulkShippingFiles).click({force:true})
-                cy.get(documentBulk).selectFile('connectorPro.xlsx', {force:true})
-                cy.get(uploadFile).click({force:true})
+                cy.get(bulkShippingFiles).click({ force: true })
+                cy.get(documentBulk).selectFile('connectorPro.xlsx', { force: true })
+                cy.get(uploadFile).click({ force: true })
                 //cy.wait(2000)
                 cy.get(successMessage).as('successMessage').then((el) => {
-                    if(current_language_code === 'tr') {
+                    if (current_language_code === 'tr') {
                         expect(el.text()).to.contains('İşlem Başarılı')
-                    } else if(current_language_code === 'en') {
+                    } else if (current_language_code === 'en') {
                         expect(el.text()).to.contains('Success')
                     }
                     cy.log("File Uploaded Successfully!");
@@ -467,24 +467,24 @@ export const apiForbiddenRequest = (apiMethod, headers, urlEndpoint, requestBody
             },
             body: requestBody
         }).then(results => {
-        const responseCode = results.status
-        const statusText = results.statusText
-        cy.log(results)
-        cy.log(responseCode)
-        expect(responseCode).to.deep.eq(401)
-        expect(statusText).to.deep.eq('Unauthorized')
-    })
+            const responseCode = results.status
+            const statusText = results.statusText
+            cy.log(results)
+            cy.log(responseCode)
+            expect(responseCode).to.deep.eq(401)
+            expect(statusText).to.deep.eq('Unauthorized')
+        })
 }
 
 export const getLocations = () => {
 
     let locationIds = []
-               cy.apiRequest('GET', '/locations').then(json => {
-                   cy.log(json)
-                   cy.get(json.body.content).each(item => {
-                       locationIds.push(item.id)
-                   })
-               })
+    cy.apiRequest('GET', '/locations').then(json => {
+        cy.log(json)
+        cy.get(json.body.content).each(item => {
+            locationIds.push(item.id)
+        })
+    })
 
     return locationIds
 }
@@ -516,19 +516,19 @@ export const createFolderIfNotExists = (directoryPath) => {
 }
 
 export const calculateAirportDistance = (departureAirportId, arrivalAirportId) => {
-        cy.apiRequest('POST', '/calculation-variables/calculate/airport-distance',
-            {
-                departureAirportId: departureAirportId,
-                arrivalAirportId: arrivalAirportId
-            }).then(json => {
+    cy.apiRequest('POST', '/calculation-variables/calculate/airport-distance',
+        {
+            departureAirportId: departureAirportId,
+            arrivalAirportId: arrivalAirportId
+        }).then(json => {
             expect(json.status).to.equals(200)
         })
-            return cy.readFile('cypress/fixtures/generated_json_files/writeFileSuccess.json')
+    return cy.readFile('cypress/fixtures/generated_json_files/writeFileSuccess.json')
 }
 
 export const getAirportIds = () => {
 
-   const airportIds = []
+    const airportIds = []
     cy.apiRequest('GET', '/calculation-variables/places?placeType=AIRPORT')
         .then(json => {
             expect(json.status).to.equals(200)

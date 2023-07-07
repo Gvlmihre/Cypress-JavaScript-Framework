@@ -1,13 +1,4 @@
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 calculations page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-12 02:21:56
- */
+
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -70,8 +61,8 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
     it("Check calculation page category 1 calculation form components", () => {
         loginAndVisitCalculationsPage();
         cy.get(calculationsPageElements[6].subcategories).each(item => {
-            cy.get(item.css).click( {force: true});
-            cy.get(item.calculation_form[0].css).click( {force: true})
+            cy.get(item.css).click({ force: true });
+            cy.get(item.calculation_form[0].css).click({ force: true })
             cy.get((item.calculation_form[1])[languageStrings]).each(string => {
                 cy.contains(item.calculation_form[0].css, string)
             })
@@ -79,34 +70,34 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
     })
 
 
-    it("Check the category 1 detailed calculation tables",() => {
+    it("Check the category 1 detailed calculation tables", () => {
         loginAndVisitCalculationsPage();
         cy.get(calculationsPageElements[6].subcategories).each((item, index) => {
-            if(index < 4)
-            cy.get(item.css).click( {force: true});
+            if (index < 4)
+                cy.get(item.css).click({ force: true });
             cy.wait(1000)
-            cy.get(calculationsPageElements[12].Detailed_Calculation_form[0].icon_css).click( {force: true})
+            cy.get(calculationsPageElements[12].Detailed_Calculation_form[0].icon_css).click({ force: true })
             cy.get(calculationsPageElements[12].Detailed_Calculation_form[1][languageStrings]).each(string => {
                 cy.contains(calculationsPageElements[12].Detailed_Calculation_form[0].calculation_form_css, string)
             })
         })
     })
 
-    it("Check calculation page category 1 bottom form components", () =>{
+    it("Check calculation page category 1 bottom form components", () => {
         loginAndVisitCalculationsPage();
         cy.get(calculationsPageElements[6].subcategories).each((item, index) => {
-            if(index < 4){
-                cy.get(item.css).click( {force: true});
+            if (index < 4) {
+                cy.get(item.css).click({ force: true });
                 cy.get(calculationsPageElements[13][languageStrings]).each(string => {
                     cy.contains(bottom_form_1.css, string)
                     cy.contains(bottom_form_2.css, string)
                 })
-              }else if(index === 4){
-                cy.get(item.css).click( {force: true});
+            } else if (index === 4) {
+                cy.get(item.css).click({ force: true });
                 cy.get(calculationsPageElements[13][languageStrings]).each(string => {
                     cy.contains(bottom_form_1.css, string)
-            })
-          } else {
+                })
+            } else {
                 cy.get(calculationsPageElements[14].bottom_form_subcategory_6[languageStrings]).each(string => {
                     cy.contains(bottom_form_1.css, string)
                 })
@@ -114,11 +105,11 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
         })
     })
 
-        it("Check calculation page category 2 calculation form and bottom forms components", () => {
+    it("Check calculation page category 2 calculation form and bottom forms components", () => {
         loginAndVisitCalculationsPage();
         cy.get(calculationsPageElements[7].subcategories).each(item => {
-            cy.get(item.css).click( {force: true});
-            cy.get(item.calculation_form[0].css).click( {force: true})
+            cy.get(item.css).click({ force: true });
+            cy.get(item.calculation_form[0].css).click({ force: true })
             cy.get((item.calculation_form[1])[languageStrings]).each(string => {
                 cy.contains(item.calculation_form[0].css, string)
             })
@@ -131,9 +122,9 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
 
     it("check calculation page category 3 form components", () => {
         loginAndVisitCalculationsPage();
-        cy.get(calculationsPageElements[8].css).click( {force: true})
+        cy.get(calculationsPageElements[8].css).click({ force: true })
         cy.get(calculationsPageElements[8].subcategories).each(item => {
-            cy.get(item[0].css).click( {force: true});
+            cy.get(item[0].css).click({ force: true });
             cy.get((item[1].calculation_form[1])[languageStrings]).each(string => {
                 cy.contains(item[1].calculation_form[0].css, string)
             })
@@ -146,10 +137,10 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
 
     it("check calculation page category 3 bulk shipping files section form components", () => {
         loginAndVisitCalculationsPage();
-        cy.get(calculationsPageElements[8].css).click( {force: true})
+        cy.get(calculationsPageElements[8].css).click({ force: true })
         cy.get(calculationsPageElements[8].subcategories).each((item, i) => {
-            if(i<2){
-                cy.get(item[0].css).click( {force: true});
+            if (i < 2) {
+                cy.get(item[0].css).click({ force: true });
                 cy.wait(1000)
                 cy.get(calculationsPageElements[15].bulk_shipping_files_section[0].expanding_button_css).click()
                 cy.get((calculationsPageElements[15].bulk_shipping_files_section[1])[languageStrings]).each(string => {
@@ -164,9 +155,9 @@ describe('Run Connector Pro v2 calculations page smoke tests', () => {
 
     it("check calculation page category 4 form components", () => {
         loginAndVisitCalculationsPage();
-        cy.get(calculationsPageElements[9].css).click( {force: true})
+        cy.get(calculationsPageElements[9].css).click({ force: true })
         cy.get(calculationsPageElements[9].subcategories).each(item => {
-            cy.get(item[0].css).click( {force: true});
+            cy.get(item[0].css).click({ force: true });
             cy.get((item[1].calculation_form[1])[languageStrings]).each(string => {
                 cy.contains(item[1].calculation_form[0].css, string)
             })

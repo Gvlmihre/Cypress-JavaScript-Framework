@@ -1,15 +1,4 @@
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for connectorpro sign-in, sign-out, session manipulation
- * using cypress
- * @author Gulmihre <gulimiremaimaiti@climateware.com>
- *
- * Created at     : 2022-06-05 02:21:56
- * Changed at     : 2023-04-10 14:52:34
- */
+
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -116,13 +105,13 @@ describe('Run Connector Pro v2 smoke test', () => {
         }).then(results => {
             const token = results.body.accessToken
             cy.log(token)
-        localStorage.setItem('access_token', token);
-        localStorage.setItem('co2nnectorpro-language-code', connectorProLanguageEnCode);
-        expect(localStorage.getItem('co2nnectorpro-language-code')).to.equal(connectorProLanguageEnCode);
+            localStorage.setItem('access_token', token);
+            localStorage.setItem('co2nnectorpro-language-code', connectorProLanguageEnCode);
+            expect(localStorage.getItem('co2nnectorpro-language-code')).to.equal(connectorProLanguageEnCode);
 
-        cy.visit('/dashboard');
-        cy.url().should('contain', 'company-selection');
-        cy.contains('Please select the company you want to login');
-    });
-  })
+            cy.visit('/dashboard');
+            cy.url().should('contain', 'company-selection');
+            cy.contains('Please select the company you want to login');
+        });
+    })
 });

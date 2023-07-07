@@ -1,15 +1,6 @@
 import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
 
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 user profile page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-15 08:21:56
- */
+
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -58,7 +49,7 @@ describe('Run Connector Pro v2 user profile page smoke tests', () => {
     let userProfileLeftPanelContent = userProfilePageElements[3].panel_general_overview_and_help_menu[1][languageStrings];
     loginAndVisitUserProfilePage();
     cy.get(userProfileLeftPanelContent).each(string => {
-      cy.get(userProfilePageElements[3].panel_general_overview_and_help_menu[0].container_css).contains(string, {matchCase: false});
+      cy.get(userProfilePageElements[3].panel_general_overview_and_help_menu[0].container_css).contains(string, { matchCase: false });
     });
   });
 
@@ -78,7 +69,7 @@ describe('Run Connector Pro v2 user profile page smoke tests', () => {
     loginAndVisitUserProfilePage();
     cy.xpath(user_profile_settings).click()
     cy.wait(1000)
-      clickDropDownMenuAndValidateOptions(decimal_notation_ddmenu, languageStrings)
-    })
+    clickDropDownMenuAndValidateOptions(decimal_notation_ddmenu, languageStrings)
+  })
 
 });

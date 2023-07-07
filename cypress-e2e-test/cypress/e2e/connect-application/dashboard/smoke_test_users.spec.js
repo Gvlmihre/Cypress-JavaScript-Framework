@@ -1,13 +1,4 @@
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 users page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-15 08:21:56
- */
+
 ///<reference types="cypress-xpath" />
 
 import {

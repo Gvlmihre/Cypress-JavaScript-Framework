@@ -5,6 +5,6 @@
     "testType": "smoke",
     "testSite": "dashboard"
   },
-  "baseUrl": "https://app.co2nnectorpro.com.tr",
-  "specPattern": "cypress/e2e/connectorprov2/dashboard/**/*.{js,jsx,ts,tsx}"
+  "baseUrl": "https://app.co2nnectapp.com.tr",
+  "specPattern": "cypress/e2e/connectapp/dashboard/**/*.{js,jsx,ts,tsx}"
 }

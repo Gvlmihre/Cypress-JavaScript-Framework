@@ -1,13 +1,4 @@
-/**
- * Semtrio Copyright (c) 2022
- *
- * Test for demos
- *
- * @summary Basic tests for ConnectorPro v2 location page using cypress
- * @author Parvez <parvezislam@semtrio.com>
- *
- * Created at     : 2022-09-12 02:21:56
- */
+
 /// <reference types="cypress" />
 require('cypress-xpath');
 import {
@@ -43,8 +34,8 @@ describe('Run Connector Pro v2 location page smoke tests', () => {
   function loginAndVisitLocationsPage() {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
     clickOnElementAndVisitPageAndCheckUrl(
-        connectorproCommonElements[3].sidebar[0].locations[0],
-        locationPageElements[0].url);
+      connectorproCommonElements[3].sidebar[0].locations[0],
+      locationPageElements[0].url);
   }
 
   it('Check locations page for all panels', () => {
@@ -64,10 +55,10 @@ describe('Run Connector Pro v2 location page smoke tests', () => {
   it("Check location page for location settings form elements", () => {
     loginAndVisitLocationsPage();
     cy.get(
-        locationPageElements[4].location_settings_form[1][languageStrings]).each(
+      locationPageElements[4].location_settings_form[1][languageStrings]).each(
         item => {
           cy.contains(locationPageElements[4].location_settings_form[0].css,
-              item);
+            item);
         });
   });
 
@@ -84,11 +75,11 @@ describe('Run Connector Pro v2 location page smoke tests', () => {
   it("Check location page for location groups dropdown table headers", () => {
     loginAndVisitLocationsPage();
     cy.get(
-        locationPageElements[6].location_group_panel_table_headers[1][languageStrings]).each(
+      locationPageElements[6].location_group_panel_table_headers[1][languageStrings]).each(
         item => {
           cy.contains(
-              locationPageElements[6].location_group_panel_table_headers[0].css,
-              item);
+            locationPageElements[6].location_group_panel_table_headers[0].css,
+            item);
         });
   });
 
