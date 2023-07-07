@@ -1,0 +1,10 @@
+{
+  "env": {
+    "environment": "staging",
+    "db": "staging-db",
+    "testType": "smoke",
+    "testSite": "dashboard"
+  },
+  "baseUrl": "https://app.staging.co2nnectorpro.com.tr",
+  "specPattern": "cypress/e2e/connectorprov2/dashboard/**/*.{js,jsx,ts,tsx}"
+}

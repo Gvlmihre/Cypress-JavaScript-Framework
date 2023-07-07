@@ -1,0 +1,256 @@
+[
+  {
+    "url": "users"
+  },
+  {
+    "title": [
+      {
+        "css": ".title > h2:nth-child(1)",
+        "en": "USERS",
+        "tr": "KULLANICILAR"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": ".title > h3:nth-child(2)",
+        "en": "You Can Review and Update User Information",
+        "tr": "Kullanıcı Bilgilerini İnceleyip Güncelleyebilirsiniz"
+      }
+    ]
+  },
+  {
+    "input_fields": [
+      {
+        "_comment": "Check for input placeholder string value.",
+        "css": "#content > section > div.user-filters > div.input-group.form-group > input",
+        "xpath": "/html/body/div/main/section/div[2]/div[1]/input",
+        "en": "Filter by Name",
+        "tr": "İsme Göre Filtrele"
+      },
+      {
+        "_comment": "Check for input placeholder string value.",
+        "_comment_2": "CSS selector path can change with browser.",
+        "css": "#vs4__combobox > div.vs__selected-options > input",
+        "xpath": "/html/body/div/main/section/div[2]/div[2]/div/div/div[1]/input",
+        "en": "Filter by Location",
+        "tr": "Lokasyona Göre Filtrele"
+      }
+    ]
+  },
+  {
+    "panel_users_tab_contents": [
+      {
+        "_comment": "Currently only using panel container.",
+        "css": "#content > section > div.user-section",
+        "xpath": "//*[@id=\"content\"]/section/div[3]"
+      },
+      {
+        "en": [
+          "All Users",
+          "Admin",
+          "Greenhouse Gas Officer",
+          "observer"
+        ],
+        "tr": [
+          "Tüm Kullanıcılar",
+          "Admin",
+          "Sera Gazı Sorumlusu",
+          "Gözlemci"
+        ]
+      },
+      {
+        "tab_contents": [
+          {
+            "_comment": "All users' tab",
+            "css": "#content > section > div.user-section > div.role-tabs > div.role-tab:nth-child(1)",
+            "xpath": "/html/body/div/main/section/div[3]/div[1]/div[1]",
+            "content": [
+              {
+                "en": [
+                  "New User"
+                ],
+                "tr": [
+                  "Yeni Kullanıcı"
+                ]
+              }
+            ]
+          },
+          {
+            "_comment": "Admin users' tab",
+            "css": "#content > section > div.user-section > div.role-tabs > div.role-tab:nth-child(2)",
+            "xpath": "/html/body/div/main/section/div[3]/div[1]/div[2]",
+            "content": [
+              {
+                "en": [
+                  "New User"
+                ],
+                "tr": [
+                  "Yeni Kullanıcı"
+                ]
+              }
+            ]
+          },
+          {
+            "_comment": "Greenhouse Gas Officers' tab",
+            "css": "#content > section > div.user-section > div.role-tabs > div.role-tab:nth-child(3)",
+            "xpath": "/html/body/div/main/section/div[3]/div[1]/div[3]",
+            "content": [
+              {
+                "en": [
+                  "New User"
+                ],
+                "tr": [
+                  "Yeni Kullanıcı"
+                ]
+              }
+            ]
+          },
+          {
+            "_comment": "Observer' tab",
+            "css": "#content > section > div.user-section > div.role-tabs > div.role-tab:nth-child(4)",
+            "xpath": "/html/body/div/main/section/div[3]/div[1]/div[4]",
+            "content": [
+              {
+                "en": [
+                  "New User"
+                ],
+                "tr": [
+                  "Yeni Kullanıcı"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "form_change_user_information": {
+      "_comment": "Checking form container.",
+      "css": " div.users-form.container",
+      "xpath": "//*[@id=\"content\"]/section/div[4]/div[1]",
+      "content": [
+        {
+          "_comment": "Input filed labels",
+          "en": [
+            "E-mail address",
+            "Name",
+            "Surname",
+            "Department",
+            "Authorization",
+            "Delete"
+          ],
+          "tr": [
+            "E-mail Adresi",
+            "Adı",
+            "Soyadı",
+            "Bölüm/Departman",
+            "Yetki",
+            "Sil"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Assign_locations_to_user_section": [
+      {
+        "_comment": "Assign locations to user - whole section",
+        "css": "#content > section > div.user-form",
+        "xpath": "/html/body/div/main/section/div[4]"
+      },
+      {
+        "Location_Group_Dropdown_List":[
+          {
+            "comment": "The first dropdown menu in the Assign locations to user section",
+            "css": " div.vue-treeselect__input-container > input",
+            "xpath": "/html/body/div/main/section/div[4]/div[3]/div/div[1]/div/div[1]/div[1]/div[2]",
+            "xpath_options_container": "/html/body/div/main/section/div[4]/div[3]/div/div[1]/div/div[2]",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Test Gülüstan",
+                "Yeni grup",
+                "test"
+              ],
+              "default": "No options available."
+            }
+          }
+      ]
+      },
+      {
+        "Location_Search_section": {
+          "css": "#vs6__combobox > div.vs__selected-options > input",
+          "xpath": "/html/body/div/main/section/div[4]/div[3]/div/div[2]/input",
+          "en": "Location Search",
+          "tr": "Lokasyon Ara"
+        }
+      },
+      {
+        "locations_Table": [
+          {
+            "comment": "Checking all the components",
+            "css": " div.location-assignment > div:nth-child(1)",
+            "xpath": "//*[@id=\"content\"]/section/div[4]/div[4]/div[1]",
+            "content": [
+              {
+                "en": [
+                  "Group",
+                  "Location Name",
+                  "City",
+                  "District"
+                ],
+                "tr": [
+                  "Grup",
+                  "Lokasyon İsmi",
+                  "Şehir",
+                  "İlçe"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Assigned_Location_List_Table": [
+          {
+            "comment": "Checking all the components",
+            "css": "div.location-assignment > div:nth-child(2)",
+            "xpath": "//*[@id=\"content\"]/section/div[4]/div[4]/div[2]",
+            "content": [
+              {
+                "en": [
+                  "Group",
+                  "Location Name",
+                  "City",
+                  "District"
+                ],
+                "tr": [
+                  "Grup",
+                  "Lokasyon İsmi",
+                  "Şehir",
+                  "İlçe"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Save_Button": [
+          {
+            "css": " div.save-button > button",
+            "xpath": "/html/body/div/main/section/div[2]/div[2]/div/div/div[1]/input",
+            "en": "Save",
+            "tr": "Kaydet"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+

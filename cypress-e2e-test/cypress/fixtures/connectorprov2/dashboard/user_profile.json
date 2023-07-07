@@ -1,0 +1,215 @@
+[
+  {
+    "url": "profile"
+  },
+  {
+    "title": [
+      {
+        "css": ".title > h2:nth-child(1)",
+        "en": "Profile",
+        "tr": "PROFİL"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": ".title > h3:nth-child(2)",
+        "en": "You can edit your profile information",
+        "tr": "Kullanıcı Bilgilerinizi Değiştirebilirsiniz"
+      }
+    ]
+  },
+  {
+    "panel_general_overview_and_help_menu": [
+      {
+        "container_css": ".profile-title"
+      },
+      {
+        "en": [
+          "General Overview",
+          "Settings",
+          "Contact",
+          "FAQ"
+        ],
+        "tr": [
+          "Genel Bakış",
+          "Ayarlar",
+          "İletişim",
+          "Sıkça Sorulan Sorular"
+        ]
+      }
+    ]
+  },
+  {
+    "panel_user_information": [
+      {
+        "_comment": "Container div element's class property is dynamically changing on different selection.",
+        "container_css": "#content > section > div.profile-content> div:nth-child(2)",
+        "container_xpath": "//*[@id=\"content\"]/section/div[2]/div[2]"
+      },
+      {
+        "content": [
+          {
+            "_comment": "General Overview",
+            "css": "div.profile-menu-item:nth-child(1)",
+            "xpath": "/html/body/div/main/section/div[2]/div[1]/div[2]/div[1]",
+            "en": [
+              "Name",
+              "Authorization",
+              "Email",
+              "Avatar",
+              "Password",
+              "Edit"
+            ],
+            "tr": [
+              "Adı",
+              "Yetki",
+              "Email",
+              "Avatar",
+              "Şifre",
+              "Düzenle"
+            ]
+          },
+          {
+            "_comment": "Settings",
+            "css": "div.profile-menu-item:nth-child(2)",
+            "xpath": "/html/body/div/main/section/div[2]/div[1]/div[2]/div[2]",
+            "en": [
+              "Decimal Notation",
+              "API Access"
+            ],
+            "tr": [
+              "Ondalık Gösterimi",
+              "API Erişimi"
+            ]
+          },
+          {
+            "_comment": "Contact",
+            "css": "div.profile-menu-item:nth-child(3)",
+            "xpath": "/html/body/div/main/section/div[2]/div[1]/div[2]/div[3]",
+            "en": [
+              "Contact Us",
+              "Title",
+              "Message",
+              "Send"
+            ],
+            "tr": [
+              "Istek/Oneri/Şikayet",
+              "Konu Başlığı",
+              "Mesaj",
+              "Gönder"
+            ]
+          },
+          {
+            "_comment": "FAQ",
+            "css": "div.profile-menu-item:nth-child(4)",
+            "xpath": "/html/body/div/main/section/div[2]/div[1]/div[2]/div[4]",
+            "en": [
+              "FAQ",
+              "How can we help you?",
+              "TECHNICAL QUESTIONS",
+              "What is carbon footprint?",
+              "What is corporate carbon footprint?",
+              "How is the corporate carbon footprint calculated?",
+              "What should be the corporate carbon footprint calculation period?",
+              "What is ISO 14064-1?",
+              "What is the difference between a corporate carbon footprint and a product carbon footprint?",
+              "What is verification?",
+              "What is carbon offsetting?",
+              "Why should I calculate my corporate carbon footprint?",
+              "What does the CO2e unit mean?",
+              "APPLICATION USAGE",
+              "Why Co2nnectorPro?",
+              "What are the advantages of Co2nnectorPro?",
+              "Co2nnectorPro able to report?",
+              "Is the reporting format in line with ISO Standards?",
+              "Do verifiers accept the report?",
+              "Which emissions factors are used in the calculation?",
+              "Are calculations made by Co2nnectorPro verified?",
+              "I cannot add an additional location to my existing package, what should I do?",
+              "Should I get a new membership for affiliate companies?",
+              "Do license usage fees for academic uses change?",
+              "Will new modules be included in my current package?",
+              "How should I assign user authorization?",
+              "How should I make the GWP selections?",
+              "I am not sure about the accuracy of the results related to a calculation I have performed. What should I do?",
+              "Can we enter monthly or annually data in Co2nnectorPro?",
+              "Is there a demo version for Co2nnectorPro?",
+              "Who uses Co2nnectorPro?",
+              "Do I need expertise in this area to use Co2nnectorPro?",
+              "What kind of features should the device I use to use Co2nnectorPro?",
+              "How do you ensure data security?",
+              "I need help for calculating. What should I do?",
+              "Do you have an optimization / reduction target feature?",
+              "ABOUT OUR COMPANY",
+              "What is the bank account information for software fees will be paid?",
+              "What is the bank account details for carbon offsetting fees will be paid?"
+            ],
+            "tr": [
+              "SIKÇA SORULAN SORULAR",
+              "Size Nasıl Yardımcı Olabiliriz?",
+              "TEKNİK SORULAR",
+              " Karbon Ayakizi Nedir?",
+              "Kurumsal karbon ayakizi nedir?",
+              "Kurumsal karbon ayakizi nasıl hesaplanır?",
+              "Kurumsal karbon ayakizi hesaplama periyodu ne olmalıdır?",
+              "ISO 14064-1 nedir?",
+              "Kurumsal karbon ayakizi ve ürün karbon ayakizi arasındaki fark nedir?",
+              "Doğrulama nedir?",
+              "Karbon offsetleme nedir?",
+              "Kurumsal karbon ayakizimi neden hesaplamalıyım?",
+              "CO2e birimi ne demek?",
+              "YAZILIM KULLANIMI HAKKINDA",
+              "Neden Co2nnectorPro?",
+              "Co2nnectorPro özellikleri nelerdir?",
+              "Co2nnectorPro raporlama yapabiliyor mu?",
+              "Raporlama formatı ISO Standartlarına uygun mu?",
+              "Doğrulayıcı firmalar raporu kabul ediyor mu?",
+              "Hesaplamada hangi katsayılar kullanılmaktadır?",
+              "Co2nnectorPro hesaplamaları doğrulanmış mıdır?",
+              "Mevcut paketime ek bir lokasyon ekleyemiyorum, ne yapmalıyım?",
+              "İştirak şirketleri için yeni bir üyelik almalı mıyım?",
+              "Akademik kullanımlar için lisans kullanım bedelleri değişiyor mu?",
+              "Yeni modüller mevcut paketime dahil olacak mı?",
+              "Kullanıcı yetki atamalarını nasıl yapmalıyım?",
+              "GWP seçimlerini neye göre yapmalıyım?",
+              "Gerçekleştirdiğim bir hesaplama ile ilgili sonuçların doğruluğundan emin olamıyorum ne yapmalıyım?",
+              "Co2nnectorPro’da aylık veya yıllık veri girişi yapabiliyor muyuz?",
+              "Ücretsiz demo versiyonu bulunmakta mıdır?",
+              "Kimler Co2nnectorPro kullanıyor?",
+              "Co2nnectorPro’yu kullanabilmek için bu alanda uzmanlığım olmasını gerek var mıdır?",
+              "Co2nnectorPro’yu kullanabilmek için kullandığım cihaz ne tür özelliklere sahip olmalıdır?",
+              "Veri güvenliğini nasıl sağlıyorsunuz?",
+              "Hesaplamada yardıma ihtiyacım var. Ne yapmalıyım?",
+              "Optimizasyon/azalım hedefi özelliğiniz var mı?",
+              "ŞİRKET HAKKINDA",
+              "Yazılım ücretlerinin ödeneceği banka bilgileri nedir?",
+              "Karbon offsetleme ücretlerinin ödeneceği banka bilgileri nedir?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "decimal_notation_menu": [
+      {
+        "css": "select#test",
+        "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div/div[1]/div[2]/select",
+        "options": {
+          "en": [
+            "2",
+            "4",
+            "Maximum"
+          ],
+          "tr": [
+            "2",
+            "4",
+            "Maksimum"
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "url": "locations"
+  },
+  {
+    "title": [
+      {
+        "en": "Locations",
+        "tr": "Lokasyonlar"
+      }
+    ]
+  },
+  {
+    "panels": [
+      {
+        "en": [
+          "Add Location",
+          "Location Settings",
+          "Location Groups"
+        ],
+        "tr": [
+          "Yeni Lokasyon Ekle ",
+          "Lokasyon Bilgileri",
+          "Lokasyon Grupları"
+        ]
+      }
+    ]
+  },
+  {
+    "buttons": [
+      {
+        "_comment": "Currently only using page container.",
+        "css": ".locations",
+        "xpath": ""
+      },
+      {
+        "en": [
+          "Save",
+          "Create a New Group"
+        ],
+        "tr": [
+          "Kaydet",
+          "Yeni Grup Oluştur"
+        ]
+      }
+    ]
+  },
+  {
+    "location_settings_form": [
+      {
+        "css": ".location-form"
+      },
+      {
+        "en": [
+          "Location Name",
+          "Location Group",
+          "Country",
+          "City",
+          "District",
+          "Address",
+          "Number of Employees",
+          "Turnover",
+          "Production Amount",
+          "GWP Reference",
+          "Industry Type",
+          "Add Counter Uncertainty"
+        ],
+        "tr": [
+          "Lokasyon Adı",
+          "Lokasyon Grubu",
+          "Ülke",
+          "Şehir",
+          "İlçe",
+          "Adres",
+          "Çalışan Sayısı",
+          "Ciro",
+          "Üretilen Ürün Miktarı",
+          "GWP Referansı",
+          "Endüstri Tipi",
+          "Sayaç Belirsizliği Tanımla"
+        ]
+      }
+    ]
+  },
+  {
+    "dropdown_menus": [
+      {
+        "_comment": "Location menu option on left side",
+        "css": "#content > section > div.left > div.location-groups > div.location-groups-header > div > div > div.vue-treeselect__control > div.vue-treeselect__value-container",
+        "xpath": "/html/body/div/main/section/div[1]/div[3]/div[2]/div/div/div[1]",
+        "xpath_options_container": "/html/body/div/main/section/div[1]/div[3]/div[2]/div/div/div[2]",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Test Gülüstan",
+            "Yeni grup",
+            "test"
+          ],
+          "default": "No options available."
+        }
+      },
+      {
+        "_comment": "Location menu option on right side",
+        "css": "#content > section > div.left > div.location-groups > div.location-groups-header > div > div > div.vue-treeselect__menu-container > div",
+        "xpath": "/html/body/div/main/section/div[2]/div/div[3]/div[2]/div/div/div[1]",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div/div[3]/div[2]/div/div/div[2]",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Test Gülüstan",
+            "Yeni grup",
+            "test"
+          ],
+          "default": "No options available."
+        }
+      }
+    ]
+  },
+  {
+    "location_group_panel_table_headers": [
+      {
+        "css": "div.container:nth-child(3)",
+        "xpath": ""
+      },
+      {
+        "en": [
+          "Group",
+          "Location Name",
+          "City",
+          "Action"
+        ],
+        "tr": [
+          "Grup",
+          "Lokasyon Adı",
+          "Şehir",
+          "Aksiyon"
+        ]
+      }
+    ]
+  }
+]

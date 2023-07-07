@@ -1,0 +1,298 @@
+[
+  {
+    "url": "target"
+  },
+  {
+    "title": [
+      {
+        "css": "div.title > h2",
+        "en": "TARGETS",
+        "tr": "HEDEFLER"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": "div.title > h3",
+        "en": "You can set your targets here.",
+        "tr": "Hedeflerinizi buradan belirleyebilirsiniz."
+      }
+    ]
+  },
+  {
+    "table_headers_targets": [
+      {
+        "_comment": "Currently only using table-headers container.",
+        "css": "section > div.card.p-3.mb-3 > div.row.input-section",
+        "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[1]"
+      },
+      {
+        "target_type_tables": [
+          {
+            "comment": "location targets table",
+            "button_css": "div.row.input-section > div:nth-child(1) > div > div>label:nth-child(1)",
+            "en": [
+              "Target Type",
+              "Target Location",
+              "Target Name",
+              "Annual Emission Reduction Percentage",
+              "Base Year",
+              "Target Year"
+            ],
+            "tr": [
+              "Hedef Tipi",
+              "Hedef Lokasyon",
+              "Hedef İsmi",
+              "Yıllık Emisyon Azaltım Yüzdesi",
+              "Temel Yıl",
+              "Hedef Yıl"
+            ]
+          },
+          {
+            "comment": "location group targets table",
+            "button_css": "div.row.input-section > div:nth-child(1) > div > div>label:nth-child(2)",
+            "en": [
+              "Target Type",
+              "Target Location Group",
+              "Target Name",
+              "Annual Emission Reduction Percentage",
+              "Base Year",
+              "Target Year"
+            ],
+            "tr": [
+              "Hedef Tipi",
+              "Hedef Lokasyon Grubu",
+              "Hedef İsmi",
+              "Yıllık Emisyon Azaltım Yüzdesi",
+              "Temel Yıl",
+              "Hedef Yıl"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "emission_source_section": [
+      {
+        "select_action_buttons": [
+          {
+            "css": " div.target > div.emission-header > div",
+            "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[1]/div",
+            "en": [
+              "Select All",
+              "Clear Selection"
+            ],
+            "tr": [
+              "Tümünü Seç",
+              "Seçimi Temizle"
+            ]
+          }
+        ]
+      },
+      {
+        "emission_sources": [
+          {
+            "css": "div.target > div.emission-source",
+            "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]"
+          },
+          {
+            "category_buttons": [
+              {
+                "comment": "category_1_buttons",
+                "css": "div.target > div.emission-source>div:nth-child(1)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[1]",
+                "en": [
+                  "Stationary Emissions(Tier 1)",
+                  "Road Transportation",
+                  "Offroad Transportation",
+                  "Sea Transportation",
+                  "Fugitive Emissions",
+                  "Process Emissions"
+                ],
+                "tr": [
+                  "Sabit Yanma(Hesap Temelli)",
+                  "Hareketli Yanma(Onroad)",
+                  "Hareketli Yanma(Offroad)",
+                  "Deniz Ulaşımı",
+                  "Sızıntı Emisyonları",
+                  "Proses Emisyonları"
+                ]
+              },
+              {
+                "comment": "category_2_buttons",
+                "css": "div.target > div.emission-source > div:nth-child(2)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[2]",
+                "en": [
+                  "Purchased Electricity",
+                  "Heat and Steam"
+                ],
+                "tr": [
+                  "Elektrik",
+                  "Isı ve Buhar"
+                ]
+              },
+              {
+                "comment": "category_3_buttons",
+                "css": "div.target > div.emission-source > div:nth-child(3)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[3]",
+                "en": [
+                  "Upstream Transportation and Distribution",
+                  "Downstream Transportation and Distribution",
+                  "Employee Commuting",
+                  "Client and Visitor Transportation",
+                  "Business Travels"
+                ],
+                "tr": [
+                  "Kaynak Yönlü Nakliye ve Dağıtım",
+                  "Tüketici Yönlü Nakliye ve Dağıtım",
+                  "Personel Ulaşımı",
+                  "Ziyaretçi Dolaylı Emisyonlar",
+                  "İş Seyahatleri"
+                ]
+              },
+              {
+                "comment": "category_4_buttons",
+                "css": "div.target > div.emission-source > div:nth-child(4)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[4]",
+                "en": [
+                  "Purchased Goods and Services",
+                  "Capital Goods",
+                  "Waste Disposal",
+                  "Waste Water Treatment",
+                  "Water Supply",
+                  "Other"
+                ],
+                "tr": [
+                  "Satın Alınan Mal ve Hizmetler",
+                  "Sermaye Varlıkları",
+                  "Su Tüketimi",
+                  "Atık Su Arıtımı",
+                  "Atık Bertarafı",
+                  "Diğer"
+                ]
+              },
+              {
+                "comment": "category_5_buttons",
+                "css": "div.target > div.emission-source > div:nth-child(5)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[5]",
+                "en": [
+                  "Processing of Sold Products",
+                  "Use of Sold Products",
+                  "End of Life Stage of Sold Products"
+                ],
+                "tr": [
+                  "Satılan Ürünlerin İşlenmesi",
+                  "Satılan Ürünlerin Kullanım Aşaması",
+                  "Satılan Ürünlerin Yaşam Sonu"
+                ]
+              },
+              {
+                "comment": "category_6_buttons",
+                "css": "div.target > div.emission-source > div:nth-child(6)",
+                "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[2]/div[6]",
+                "en": [
+                  "Indirect GHG Emissions from Other Sources"
+                ],
+                "tr": [
+                  "Diğer Dolaylı Sera Gazı Emisyonları"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "emission_action_buttons": [
+          {
+            "css": "div.target > div.emission-action",
+            "xpath": "/html/body/div/main/section/div[2]/section/div[1]/div[2]/div[3]",
+            "en": [
+              "Target Scenarios",
+              "Create Target"
+            ],
+            "tr": [
+              "Hedef Senaryoları",
+              "Hedef Oluştur"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "my_location_targets_table": [
+      {
+        "comment": "my_location_targets_button",
+        "css": "section > div:nth-child(2) > div > ul > li > div.btnType1",
+        "xpath": "/html/body/div/main/section/div[2]/section/div[2]/div/ul/li/div[1]",
+        "expanding_icon": " section > div:nth-child(2) > div > ul > li > div.btnType1 > i"
+      },
+      {
+        "comment": "The table after expanding the my location targets button",
+        "css": "section > div:nth-child(2) > div > ul",
+        "xpath": "/html/body/div/main/section/div[2]/section/div[2]/div/ul",
+        "en": [
+          "My Location Targets",
+          "Target Name",
+          "Location",
+          "Location Group",
+          "Base Year",
+          "Target Year",
+          "Emission Reduction Percentage",
+          "View",
+          "Update",
+          "Delete"
+        ],
+        "tr": [
+          "Lokasyon Hedeflerim",
+          "Hedef İsmi",
+          "Lokasyon",
+          "Lokasyon Grubu",
+          "Baz Yıl",
+          "Hedeflenen Yıl",
+          "Emisyon Azaltma Yüzdesi",
+          "Görüntüle",
+          "Güncelle",
+          "Sil"
+        ]
+      }
+    ]
+  },
+  {
+    "my_company_targets_table": [
+      {
+        "comment": "my_location_companies_button",
+        "css": "section > div:nth-child(3) > div > ul > li > div.btnType1",
+        "xpath": "/html/body/div/main/section/div[2]/section/div[3]/div/ul/li/div[1]",
+        "expanding_icon": " section > div:nth-child(3) > div > ul > li > div.btnType1 > i"
+      },
+      {
+        "css": " section > div:nth-child(3) > div > ul",
+        "xpath": "/html/body/div/main/section/div[2]/section/div[3]/div/ul",
+        "en": [
+          "My Location Companies",
+          "Target Name",
+          "Target",
+          "Target Group",
+          "Base Year",
+          "Target Year",
+          "Emission Reduction Percentage",
+          "View"
+        ],
+        "tr": [
+          "Firma Hedeflerim",
+          "Hedef İsmi",
+          "Hedef",
+          "Hedef Grubu",
+          "Baz Yıl",
+          "Hedeflenen Yıl",
+          "Emisyon Azaltma Yüzdesi",
+          "Görüntüle"
+        ]
+      }
+    ]
+  }
+]
+

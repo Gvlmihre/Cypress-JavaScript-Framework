@@ -1,0 +1,1115 @@
+[
+  {
+    "url": "company"
+  },
+  {
+    "title": [
+      {
+        "css": ".title > h2:nth-child(1)",
+        "en": "Company",
+        "tr": "FİRMA"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": ".title > h3:nth-child(2)",
+        "en": "You Can Review and Update Company Information",
+        "tr": "Firma Bilgilerini İnceleyip Güncelleyebilirsiniz"
+      }
+    ]
+  },
+  {
+    "primary_industry": [
+      {
+        "_comment": "Sector menu options. Note that select-menu option is different from VUEs generated drop-down menus",
+        "xpath": "/html/body/div/main/section/div[2]/div[6]/div/select",
+        "options_css": "#content > section > div.company-details.container > div:nth-child(6) > div > select > option",
+        "options": {
+          "en": [],
+          "tr": [
+            "Üretim",
+            "Enerji üretimi",
+            "Uluslararası kuruluşlar",
+            "Giyim",
+            "Materyal & malzeme",
+            "Biyoteknoloji, sağlık ve ilaç",
+            "Hizmetler",
+            "Perakende",
+            "Altyapı",
+            "Hizmet sektörü",
+            "Fosil yakıtlar",
+            "Ulaşım hizmetleri",
+            "Yiyecek, içecek ve tarım"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "primary_sector": [
+      {
+        "_comment": "üretim",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options_locater": "#content > section > div.company-details.container > div:nth-child(7) > div > select > option",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Motorlu makine",
+            "Yenilenebilir enerji ekipmanları",
+            "Hafif imalat",
+            "Eğlence ve evde üretim",
+            "Elektrikli ve elektronik ekipman",
+            "Ahşap ve kauçuk ürünler",
+            "Kağıt ürünleri ve paketleme",
+            "Ulaşım araçları",
+            "Metal ürün imalatı",
+            "Plastik ürün imalatı"
+          ]
+        }
+      },
+      {
+        "_comment": "Enerji üretimi",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Yenilenebilir enerji üretimi",
+            "Nükleer enerji üretimi",
+            "Termik güç üretimi"
+          ]
+        }
+      },
+      {
+        "_comment": "Uluslararası kuruluşlar",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Devlet kurumları"
+          ]
+        }
+      },
+      {
+        "_comment": "Giyim",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Tekstil ve kumaş ürünleri"
+          ]
+        }
+      },
+      {
+        "_comment": "Materyal & malzeme",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Metal eritme, arıtma ve şekillendirme",
+            "Ahşap ve kağıt malzemeler",
+            "Çimento beton",
+            "Diğer materyaller",
+            "Diğer maden madenciliği",
+            "Metalik maden madenciliği",
+            "Kimyasallar"
+          ]
+        }
+      },
+      {
+        "_comment": "Biyoteknoloji, sağlık ve ilaç",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Sağlık hizmetleri",
+            "Tıbbi ekipman ve malzemeler",
+            "Biyoteknoloji ve ilaç"
+          ]
+        }
+      },
+      {
+        "_comment": "Hizmetler",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Uzmanlaşmış profesyonel hizmetler",
+            "Medya, telekomünikasyon ve veri merkezi hizmetleri",
+            "Endüstriyel destek hizmetleri",
+            "Diğer hizmetler",
+            "Basım ve yayıncılık hizmetleri",
+            "BT ve yazılım geliştirme",
+            "Finansal hizmetler",
+            "Ticari ve tüketici hizmetleri",
+            "Web ve pazarlama hizmetleri"
+          ]
+        }
+      },
+      {
+        "_comment": "Perakende",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "İsteğe bağlı/keyfi perakende",
+            "Ticaret, toptan satış, dağıtım, kiralama ve leasing",
+            "Perakende market"
+          ]
+        }
+      },
+      {
+        "_comment": "Altyapı",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Enerji dışı kamu hizmetleri",
+            "Enerji hizmet ağları",
+            "Arazi ve mülk sahipliği ve toplu konut",
+            "Yapı / inşaat"
+          ]
+        }
+      },
+      {
+        "_comment": "Hizmet sektörü",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Barlar, oteller ve restoranlar",
+            "Eğlence tesisleri"
+          ]
+        }
+      },
+      {
+        "_comment": "Fosil yakıtlar",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Petrol ve gaz çıkarma ve üretim",
+            "Petrol ve gaz perakendeciliği",
+            "Petrol ve gaz depolama ve nakliye",
+            "Petrol ve gaz işleme",
+            "Kömür madenciliği"
+          ]
+        }
+      },
+      {
+        "_comment": "Ulaşım hizmetleri",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Deniz taşımacılığı",
+            "Demiryolu taşımacılığı",
+            "Hava Taşımacılığı",
+            "Intermodal taşımacılık ve lojistik",
+            "Karayolu taşımacılığı"
+          ]
+        }
+      },
+      {
+        "_comment": "Yiyecek, içecek ve tarım",
+        "xpath": "/html/body/div/main/section/div[2]/div[7]/div/select",
+        "options": {
+          "en": [
+          ],
+          "tr": [
+            "Mahsül/ekin tarımı",
+            "Balık ve hayvancılık",
+            "Tomrukçuluk ve kauçuk toplama",
+            "Tütün",
+            "Yiyecek ve içecek işleme"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "primary_activity": [
+      {
+        "üretim": [
+          {
+            "_comment": "Motorlu makine",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options_locater_css": "/html/body/div/main/section/div[2]/div[8]/div/select/option",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Tarım, inşaat ve madencilik makineleri",
+                "Diğer araç ekipmanı ve sistemleri",
+                "Endüstriyel makineler",
+                "Motorlar"
+
+              ]
+            }
+          },
+          {
+            "_comment": "Yenilenebilir enerji ekipmanları",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Güneş enerjisi ekipmanları",
+                "Diğer yenilenebilir enerji ekipmanları"
+              ]
+            }
+          },
+          {
+            "_comment": "Hafif imalat",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Cephane",
+                "Otomotiv iç aksamı",
+                "Diğer kaplar ve paketleme",
+                "Diğer yapı ürünleri",
+                "Lastikler",
+                "Kirlilik kontrol ekipmanı"
+              ]
+            }
+          },
+          {
+            "_comment": "Eğlence ve evde üretim",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Mobilya",
+                "Ev eşyaları",
+                "Aksesuarlar",
+                "Oyuncaklar ve oyunlar",
+                "Spor malzemeleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Elektrikli ve elektronik ekipman",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "İletişim ekipmanları",
+                "Yarı iletkenler",
+                "Ev aletleri",
+                "Elektrikli ekipman",
+                "Elektronik ekipman",
+                "Bilgisayar donanımı",
+                "Elektronik parçalar",
+                "Piller"
+              ]
+            }
+          },
+          {
+            "_comment": "Ahşap ve kauçuk ürünler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Bitmiş ahşap ürünler",
+                "Kauçuk ürünler"
+              ]
+            }
+          },
+          {
+            "_comment": "Kağıt ürünleri ve paketleme",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "kağıt ambalaj",
+                "Kağıt ürünleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Ulaşım araçları",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Demiryolu vagonları",
+                "Gemi yapımı",
+                "Otomobiller",
+                "Eğlence araçları",
+                "Ağır vasıtalar",
+                "Havacılık"
+              ]
+            }
+          },
+          {
+            "_comment": "Metal ürün imalatı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Metal kaplar ve paketleme",
+                "Fabrikasyon metal bileşenler"
+              ]
+            }
+          },
+          {
+            "_comment": "Plastik ürün imalatı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Plastik ürünler"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Enerji_üretimi": [
+          {
+            "_comment": "Yenilenebilir enerji üretimi",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "biyokütle üretimi",
+                "Rüzgar üretimi",
+                "Diğer yenilenebilir üretim",
+                "Hidro üretim",
+                "jeotermal üretim",
+                "güneş enerjisi üretimi"
+              ]
+            }
+          },
+          {
+            "_comment": "Nükleer enerji üretimi",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Nükleer enerji üretimi"
+              ]
+            }
+          },
+          {
+            "_comment": "Termik güç üretimi",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kömür üretimi",
+                "Kombine doğalgaz çevrim santrali (CCGT)",
+                "Kombine doğalgaz çevrim santrali dışı üretim"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Uluslararası_kuruluşlar": [
+          {
+            "_comment": "Devlet kurumları",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Bölgesel ajanslar"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Giyim": [
+          {
+            "_comment": "Tekstil ve kumaş ürünleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kıyafet tasarımı ve üretimi",
+                "Bavul ve Çantalar",
+                "Tekstil"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Materyal_malzeme": [
+          {
+            "_comment": "Metal eritme, arıtma ve şekillendirme",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Değerli metaller",
+                "Alüminyum",
+                "Demir çelik",
+                "Metal işleme",
+                "Bakır",
+                "Diğer demir dışı metaller"
+              ]
+            }
+          },
+          {
+            "_comment": "Ahşap ve kağıt malzemeler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Selüloz ve kağıt fabrikaları",
+                "Bıçkıhaneler ve ahşap malzemeler"
+              ]
+            }
+          },
+          {
+            "_comment": "Çimento beton",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Çimento",
+                "Beton ürünleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Diğer materyaller",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Seramik",
+                "Cam ürünleri",
+                "Diğer ahşap olmayan yapı malzemeleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Diğer maden madenciliği",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Diğer metalik olmayan mineraller"
+              ]
+            }
+          },
+          {
+            "_comment": "Metalik maden madenciliği",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Diğer demir dışı cevher madenciliği",
+                "Demir cevheri madenciliği",
+                "Değerli metaller ve mineral madenciliği"
+              ]
+            }
+          },
+          {
+            "_comment": "Kimyasallar",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Temel plastikler",
+                "Tarımsal kimyasallar",
+                "Azotsuz gübreler",
+                "İnorganik baz kimyasalları",
+                "Diğer temel kimyasallar",
+                "Kişisel bakım ve ev ürünleri",
+                "Azotlu gübreler",
+                "Biyoyakıtlar",
+                "Özel kimyasallar"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Biyoteknoloji_sağlık_ve_ilaç": [
+          {
+            "_comment": "Sağlık hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Sağlık tesisleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Tıbbi ekipman ve malzemeler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Tıbbi malzeme",
+                "Sağlık malzemeleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Biyoteknoloji ve ilaç",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Biyoteknoloji",
+                "İlaçlar"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Hizmetler": [
+          {
+            "_comment": "Uzmanlaşmış profesyonel hizmetler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Diğer profesyonel hizmetler",
+                "Diğer finansal",
+                "Mühendislik hizmetleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Medya, telekomünikasyon ve veri merkezi hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Medya",
+                "Telekomünikasyon hizmetleri",
+                "Sunucular ve veri merkezleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Endüstriyel destek hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Endüstriyel hizmetler",
+                "Ulaşım destek hizmetleri",
+                "Enerji hizmetleri ve ekipmanları",
+                "Madencilik & metal destek hizmetleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Diğer hizmetler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Gayrimenkul hizmetleri",
+                "Eğitim hizmetleri",
+                "Sağlık Hizmetleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Basım ve yayıncılık hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Basılı yayın",
+                "Baskı hizmetleri"
+              ]
+            }
+          },
+          {
+            "_comment": "BT ve yazılım geliştirme",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "BT hizmetleri",
+                "Yazılım"
+              ]
+            }
+          },
+          {
+            "_comment": "Finansal hizmetler",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Varlık yöneticileri",
+                "GYO",
+                "Bankalar",
+                "Sigorta"
+              ]
+            }
+          },
+          {
+            "_comment": "Ticari ve tüketici hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Tüketici Hizmetleri",
+                "Seyahat Hizmetleri",
+                "Ticari hizmetler"
+              ]
+            }
+          },
+          {
+            "_comment": "Web ve pazarlama hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Web tabanlı hizmetler",
+                "Pazarlama"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Perakende": [
+          {
+            "_comment": "İsteğe bağlı/keyfi perakende",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Giyim mağazaları",
+                "Uzman perakende",
+                "İsteğe bağlı teslimat perakende",
+                "Büyük mağazalar"
+              ]
+            }
+          },
+          {
+            "_comment": "Ticaret, toptan satış, dağıtım, kiralama ve leasing",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kimyasal toptan ve dağıtım",
+                "İlaç ve sağlık malzemeleri toptan ve dağıtım",
+                "Teknoloji donanımı toptan ve dağıtımı",
+                "Metal tedariği, toptan ticareti ve ticareti",
+                "Tekstil ve hazır giyim toptan satışı",
+                "Tarım ürünleri toptan satışı",
+                "Hayvansal ürünler toptan satışı",
+                "Ev & ofis toptan satış",
+                "Endüstriyel makine dağıtımı",
+                "Tüketim malları toptan ve kiralama",
+                "Ulaşım ekipmanları toptan ticareti ve ticareti",
+                "Ahşap ve kağıt ürünleri toptan satışı",
+                "İnşaat ve yapı malzemeleri ticareti ve dağıtımı",
+                "Taşıt ve makine kiralama ve leasing",
+                "Yiyecek ve içecek toptan satışı"
+              ]
+            }
+          },
+          {
+            "_comment": "Perakende market",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Hipermarketler ve süper mağazalar",
+                "Süpermarketler, gıda ve eczaneler"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Altyapı": [
+          {
+            "_comment": "Enerji dışı kamu hizmetleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Su temini ağları",
+                "Atık Yönetimi",
+                "Geri dönüşüm"
+              ]
+            }
+          },
+          {
+            "_comment": "Enerji hizmet ağları",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Elektrik şebekeleri",
+                "Gaz hizmetleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Arazi ve mülk sahipliği ve toplu konut",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Gayrimenkul sahipleri ve konut idaresi",
+                "Arazi satış ve kiralama",
+                "Altyapı bakımı ve yönetimi"
+              ]
+            }
+          },
+          {
+            "_comment": "Yapı / inşaat",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Enerji altyapı inşaatı",
+                "Yenilenebilir enerji inşaatı",
+                "Konut inşaatı",
+                "Yardımcı hat/hizmet hattı inşaatı",
+                "Konut dışı bina inşaatı",
+                "Ulaşım altyapısı ve diğer inşaatlar"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Hizmet_sektörü": [
+          {
+            "_comment": "Barlar, oteller ve restoranlar",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Fast food",
+                "Oteller ve konaklama",
+                "Yiyecek ve içecek olanakları"
+              ]
+            }
+          },
+          {
+            "_comment": "Eğlence tesisleri",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kumar",
+                "Dinlenme ve eğlence tesisleri"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Fosil_yakıtlar": [
+          {
+            "_comment": "Petrol ve gaz çıkarma ve üretim",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Doğal gaz çıkarma",
+                "Petrol ve gaz çıkarma"
+              ]
+            }
+          },
+          {
+            "_comment": "Petrol ve gaz perakendeciliği",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Petrol ve gaz pazarlama ve perakendeciliği"
+              ]
+            }
+          },
+          {
+            "_comment": "Petrol ve gaz depolama ve nakliye",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Petrol ve gaz boru hatları ve depolama"
+              ]
+            }
+          },
+          {
+            "_comment": "Petrol ve gaz işleme",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Petrol ve gaz arıtma"
+              ]
+            }
+          },
+          {
+            "_comment": "Kömür madenciliği",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kömür çıkarma ve işleme"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Ulaşım_hizmetleri": [
+          {
+            "_comment": "Deniz taşımacılığı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Yolcu gemileri ve feribotlar",
+                "Deniz taşımacılığı"
+              ]
+            }
+          },
+          {
+            "_comment": "Demiryolu taşımacılığı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Demiryolu yük taşımacılığı",
+                "Demiryolu yolcu taşımacılığı"
+              ]
+            }
+          },
+          {
+            "_comment": "Hava Taşımacılığı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Havayolu (Yolcu taşımacılığı)",
+                "Hava taşımacılığı (Yük)"
+              ]
+            }
+          },
+          {
+            "_comment": "Intermodal taşımacılık ve lojistik",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Intermodal taşımacılık",
+                "Lojistik - nakliye",
+                "Lojistik - 3. parti / spot"
+              ]
+            }
+          },
+          {
+            "_comment": "Karayolu taşımacılığı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Karayolu yük taşımacılığı",
+                "Otobüs ve taksi"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Yiyecek_içecek_ve_tarım": [
+          {
+            "_comment": "Mahsül/ekin tarımı",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Diğer ekin yetiştiriciliği",
+                "Pamuk tarımı",
+                "Tahıl ve mısır tarımı",
+                "Pirinç tarımı",
+                "Palm yağı tarımı",
+                "Biyoyakıt tedariği",
+                "Meyve yetiştiriciliği",
+                "Sebze yetiştiriciliği"
+              ]
+            }
+          },
+          {
+            "_comment": "Balık ve hayvancılık",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kümes hayvanları ve domuz yetiştiriciliği",
+                "Balıkçılık",
+                "Diğer hayvancılık ve işleme",
+                "Su Ürünleri Yetiştiriciliği",
+                "Sığır çiftçiliği"
+              ]
+            }
+          },
+          {
+            "_comment": "Tomrukçuluk ve kauçuk toplama",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Kerestecilik"
+              ]
+            }
+          },
+          {
+            "_comment": "Tütün",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Tütün ürünleri"
+              ]
+            }
+          },
+          {
+            "_comment": "Yiyecek ve içecek işleme",
+            "xpath": "/html/body/div/main/section/div[2]/div[8]/div/select",
+            "options": {
+              "en": [
+              ],
+              "tr": [
+                "Palm yağı işleme",
+                "Hayvan işleme",
+                "Alkolsüz içeçekler",
+                "Süt ve yumurta ürünleri",
+                "Çikolatasız şekerleme",
+                "Çikolatalı şekerleme",
+                "Tahıl ve mısır öğütme",
+                "Yağlı tohum (susam, hardal, keten tohumu vb.) işleme",
+                "Çay",
+                "Alkollü içecekler",
+                "Şeker",
+                "Pişmiş ürünler ve tahıllar",
+                "Meyve, yemiş ve sebze işleme",
+                "Kahve",
+                "Diğer gıda işleme",
+                "Deniz ürünleri işleme"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+      {
+        "form_change_company_information": {
+          "_comment": "Checking form container.",
+          "css": "#content > section > div.company-details.container",
+          "xpath": "/html/body/div/main/section/div[2]",
+          "content": [
+            {
+              "_comment": "Input filed labels",
+              "en": [
+                "Logo",
+                "Company Name",
+                "Trading Name",
+                "Address",
+                "Phone Number",
+                "Sector"
+              ],
+              "tr": [
+                "Logo",
+                "Firma Adı",
+                "Ticari Ünvan",
+                "Adres",
+                "Telefon",
+                "Sektör"
+              ]
+            },
+            {
+              "_comment": "Save and choose-file buttons",
+              "en": [
+                "Save"
+              ],
+              "tr": [
+                "Kaydet"
+              ]
+            }
+          ]
+        }
+      }
+]

@@ -1,0 +1,303 @@
+[
+  {
+    "url": "summary"
+  },
+  {
+    "title": [
+      {
+        "en": "RESULTS",
+        "tr": "SONUÇLAR"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": ".title > h3:nth-child(2)",
+        "en": "You can follow the results of recorded data and create your carbon footprint reports.",
+        "tr": "Kayıtlı verilere ait sonuçları gözlemleyebilir ve karbon ayakizi raporlarınızı oluşturabilirsiniz."
+      }
+    ]
+  },
+  {
+    "dropdown_menus": [
+      {
+        "_comment": "Select-menu option is different from VUEs generated drop-down menus",
+        "comment": "year_dropdown_menu",
+        "xpath": "/html/body/div/main/section/div[2]/div/div[1]",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div/div[1]/div/ul",
+        "options": {
+          "en": [],
+          "tr": []
+
+
+        }
+      },
+      {
+        "_comment": "Group_dropdown_menu",
+        "xpath": "/html/body/div/main/section/div[2]/div/div[2]/div",
+        "css" : "div > div.vue-treeselect__menu-container",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div/div[2]/div/div[2]",
+        "options": {
+          "en": [],
+          "tr": [
+            "Tüm Gruplar",
+            "Test Gülüstan",
+            "Yeni grup",
+            "test"
+          ]
+        }
+      },
+      {
+        "_comment": "Location_dropdown_menu",
+        "xpath": "/html/body/div/main/section/div[2]/div/div[3]/div",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div/div[3]/div/ul",
+        "options": {
+          "en": [],
+          "tr": [
+
+          ]
+        }
+      },
+      {
+        "_comment": "Select-menu option is different from VUEs generated drop-down menus",
+        "comment": "Reporting_dropdown_menu",
+        "xpath": "/html/body/div/main/section/div[2]/div/div[4]/select",
+        "options": {
+          "en": [],
+          "tr": [
+            "ISO",
+            "GHG"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "buttons": [
+      {
+        "_comment": "Currently only using page container.",
+        "css": "#content > section > div.location-selection",
+        "xpath": "//*[@id=\"content\"]/section/div[2]"
+      },
+      {
+        "en": [
+          "Export to Excel",
+          "Create report"
+        ],
+        "tr": [
+          "Excel'e Aktar",
+          "Rapor Oluştur"
+        ]
+      }
+    ]
+  },
+  {
+    "panel_tabs_content": [
+      {
+        "_comment": "Currently only using section container.",
+        "css": "div.summary-wrapper",
+        "xpath": "/html/body/div/main/section/div[3]"
+      },
+      {
+        "en": [
+          "Carbon Footprint Results",
+          "Energy Management and Uncertainties",
+          "Report History",
+          "Documents & Invoices"
+        ],
+        "tr": [
+          "Karbon Ayakizi Sonuçları",
+          "Enerji Yönetimi ve Belirsizlikler",
+          "Geçmiş Raporlar",
+          "Dosyalar & Faturalar"
+        ]
+      },
+      {
+        "tab_contents": [
+          [
+            {
+              "_comment": "Carbon Footprint Results",
+              "css": "#content > section > div.summary-wrapper > div.tabs > div:nth-child(1)",
+              "xpath": "/html/body/div/main/section/div[3]/div[1]/div[1]",
+              "container_css": "#content > section > div.summary-wrapper > div:nth-child(2)",
+              "container_xpath": "/html/body/div/main/section/div[3]/div[2]"
+            },
+            {
+              "subcategories": [
+                {
+                  "Category 1": "Direct Greenhouse Gas Emission",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(1)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[1]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(1) > div.row.table-title > svg"
+                },
+                {
+                  "Category 1": "Bio-Mass Greenhouse Gas Emission",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(2)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[2]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(2) > div.row.table-title > svg",
+                  "en": [
+                    "Location",
+                    "Emission Scope",
+                    "Emission Source",
+                    "Consumption Amount",
+                    "Unit",
+                    "CO2 Tonne",
+                    "CH4 Tonne",
+                    "N2O Tonne",
+                    "Emission Factor",
+                    "Carbon Footprint CO2 equivalent",
+                    "Description",
+                    "Emission Factor Reference"
+                  ],
+                  "tr": [
+                    "Lokasyon",
+                    "Emisyon Kapsamı",
+                    "Emisyon Kaynağı",
+                    "Tüketim Miktarı",
+                    "Birim",
+                    "Ton CO2",
+                    "Ton CH4",
+                    "Ton N2O",
+                    "Emisyon Faktörü",
+                    "Karbon Ayakizi CO2 Eşdeğeri",
+                    "Açıklama",
+                    "Emisyon Faktörü Referansı"
+                  ]
+                },
+                {
+                  "Category 2": "Energy Indirect GHG Emissions",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(3)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[3]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(3) > div.row.table-title > svg"
+                },
+                {
+                  "Category 3": "Indirect GHG Emissions from Transportation",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(4)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[4]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(4) > div.row.table-title > svg"
+                },
+                {
+                  "Category 4": "Indirect GHG Emissions from Transportation",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(5)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[5]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(5) > div.row.table-title > svg"
+                },
+                {
+                  "Category 5": "Indirect GHG Emissions from Use of Sold Products",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(6)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[6]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(6) > div.row.table-title > svg"
+                },
+                {
+                  "Category 6": "Indirect GHG Emissions from Other Sources",
+                  "css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(7)",
+                  "xpath": "/html/body/div/main/section/div[3]/div[2]/div[7]",
+                  "expanding_icon_css": "#content > section > div.summary-wrapper > div:nth-child(2) > div:nth-child(7) > div.row.table-title > svg",
+                  "en": [
+                    "Location",
+                    "Emission Scope",
+                    "Emission Source",
+                    "Consumption Amount",
+                    "Unit",
+                    "Emission Factor",
+                    "Carbon Footprint CO2 equivalent",
+                    "Emission Factor Reference"
+                  ],
+                  "tr": [
+                    "Lokasyon",
+                    "Emisyon Kapsamı",
+                    "Emisyon Kaynağı",
+                    "Tüketim Miktarı",
+                    "Birim",
+                    "Emisyon Faktörü",
+                    "Karbon Ayakizi CO2 Eşdeğeri",
+                    "Emisyon Faktörü Referansı"
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "_comment": "Energy Management and Uncertainties",
+              "css": "#content > section > div.summary-wrapper > div.tabs > div:nth-child(2)"
+            },
+            {
+              "en": [
+                "Location",
+                "Emission Source",
+                "Activity Data",
+                "Uncertainty of Activity Data",
+                "GHG Emission Factor",
+                "Emission Factor Uncertainty",
+                "CO2 Emissions in kg",
+                "CO2 Emiision in Metric Tons",
+                "Uncertainty of Calculated Emissions",
+                "Variable 1",
+                "Variable 2"
+              ],
+              "tr": [
+                "Lokasyon",
+                "Emisyon Kaynağı",
+                "Etkinlik Verileri",
+                "Faaliyet Verilerinin Belirsizliği",
+                "GHG Emisyon Faktörü",
+                "Emisyon Faktörü Belirsizliği",
+                "kg Cinsinden CO2 Emisyonu",
+                "Metrik tonlarda CO2 Emisyonu",
+                "Hesaplanan emisyonların belirsizliği",
+                "Yardımcı Değişken 1",
+                "Yardımcı Değişken 2"
+              ]
+            }
+          ],
+          [
+            {
+              "_comment": "Report History",
+              "css": "#content > section > div.summary-wrapper > div.tabs > div:nth-child(3)"
+            },
+            {
+              "en": [
+                "Report Name",
+                "Report Creator",
+                "Report Date",
+                "Report Type",
+                "Version",
+                "Action"
+              ],
+              "tr": [
+                "Rapor Adı",
+                "Raporu Oluşturan",
+                "Rapor Tarihi",
+                "Rapor Tipi",
+                "Versiyon",
+                "Aksiyon"
+              ]
+            }
+          ],
+          [
+            {
+              "_comment": "Documents & Invoices",
+              "css": "#content > section > div.summary-wrapper > div.tabs > div:nth-child(4)"
+            },
+            {
+              "en": [
+                "Location",
+                "Emission Scope",
+                "Emission Source",
+                "Documents"
+              ],
+              "tr": [
+                "Lokasyon",
+                "Emisyon Kapsamı",
+                "Emisyon Kaynağı",
+                "Dosyalar"
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

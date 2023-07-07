@@ -1,0 +1,104 @@
+/**
+ * Semtrio Copyright (c) 2022
+ *
+ * Test for demos
+ *
+ * @summary Basic tests for ConnectorPro v2 location page using cypress
+ * @author Parvez <parvezislam@semtrio.com>
+ *
+ * Created at     : 2022-09-12 02:21:56
+ */
+/// <reference types="cypress" />
+require('cypress-xpath');
+import {
+  adminLogin,
+  logout,
+  clickOnElementAndVisitPageAndCheckUrl,
+  clickDropDownMenuAndValidateOptions
+} from '../../../helpers/util';
+import dashboardLandingPageElements from "../../../fixtures/connectorprov2/dashboard/dashboard.json";
+import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json"
+
+const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
+const locationPageElements = require('../../../fixtures/connectorprov2/dashboard/locations.json');
+let languageStrings = 'tr';
+
+// sanity check
+expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(locationPageElements, 'list of location page items').to.be.an('array');
+expect(loginPageElements, 'list of login page items').to.be.an('array');
+
+/**
+ * More description
+ */
+describe('Run Connector Pro v2 location page smoke tests', () => {
+
+  afterEach(() => {
+    logout()
+  });
+
+  /*
+  Basic location tab tests start here
+   */
+  function loginAndVisitLocationsPage() {
+    adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
+    clickOnElementAndVisitPageAndCheckUrl(
+        connectorproCommonElements[3].sidebar[0].locations[0],
+        locationPageElements[0].url);
+  }
+
+  it('Check locations page for all panels', () => {
+    loginAndVisitLocationsPage();
+    cy.get(locationPageElements[2].panels[0][languageStrings]).each(item => {
+      cy.contains(locationPageElements[3].buttons[0].css, item);
+    });
+  });
+
+  it("Check location page for all buttons", () => {
+    loginAndVisitLocationsPage();
+    cy.get(locationPageElements[3].buttons[1][languageStrings]).each(item => {
+      cy.contains(locationPageElements[3].buttons[0].css, item);
+    });
+  });
+
+  it("Check location page for location settings form elements", () => {
+    loginAndVisitLocationsPage();
+    cy.get(
+        locationPageElements[4].location_settings_form[1][languageStrings]).each(
+        item => {
+          cy.contains(locationPageElements[4].location_settings_form[0].css,
+              item);
+        });
+  });
+
+  it("Check location page for location groups dropdown menu options", () => {
+    const locationPageDropdownMenus = locationPageElements[5].dropdown_menus;
+    JSON.stringify(locationPageDropdownMenus);
+
+    loginAndVisitLocationsPage();
+    cy.get(locationPageDropdownMenus).each(ddmenu => {
+      clickDropDownMenuAndValidateOptions(ddmenu, languageStrings);
+    });
+  });
+
+  it("Check location page for location groups dropdown table headers", () => {
+    loginAndVisitLocationsPage();
+    cy.get(
+        locationPageElements[6].location_group_panel_table_headers[1][languageStrings]).each(
+        item => {
+          cy.contains(
+              locationPageElements[6].location_group_panel_table_headers[0].css,
+              item);
+        });
+  });
+
+  it('Check location page links are not broken', () => {
+    loginAndVisitLocationsPage();
+    const profileDropdownMenu = dashboardLandingPageElements[8].profile_dropdown
+    profileDropdownMenu.forEach(item => {
+      cy.get(item[0]).click();
+      cy.location('pathname').should('eq', `/${item[1]}`);
+      cy.go('back')
+    });
+  });
+})

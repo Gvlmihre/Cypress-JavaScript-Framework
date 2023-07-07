@@ -1,0 +1,12 @@
+cypress/screenshots/*
+cypress/videos/*
+cypress/downloads/*
+workspace*
+.idea*
+node_modules*
+.DS_Store
+cypress/.DS_Store
+cypress/results/*
+mochawesome*
+**/*.log
+/cypress/fixtures/generated_json_files/

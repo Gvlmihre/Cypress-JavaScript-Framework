@@ -1,0 +1,63 @@
+[
+  {
+    "url": "companies"
+  },
+  {
+    "title": "Firmalar"
+  },
+  {
+    "button": [
+        ".v-btn--has-bg",
+        "Yeni Firma"
+    ]
+  },
+  {
+    "searchbar": [
+      ".v-text-field__slot > input",
+      "Firma Ara"
+    ]
+  },
+  {
+    "labels": [
+      ["div.col:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > label:nth-child(1)",
+        "Üyelik Tipi"
+      ],
+      [
+        "div.col:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > label:nth-child(1)",
+        "Paket Seçimi"
+      ],
+      [
+        "div.col:nth-child(7) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > label:nth-child(1)",
+        "Statü"
+      ]
+    ]
+  },
+  {
+    "dropdown_menus": [
+      [
+        "/html/body/div/div[1]/main/div/div/div/div[1]/div[5]",
+        "div.v-menu__content:nth-child(2)",
+        ["Tümü", "Lisans", "Entegrasyon"]
+      ],
+      [
+        "/html/body/div/div[1]/main/div/div/div/div[1]/div[6]",
+        "div.v-menu__content:nth-child(3)",
+        ["Tümü", "Waitomo", "Macka", "Socotra", "Socotra v2", "Macka v2", "Waitomo v2"]
+      ],
+      [
+        "/html/body/div/div[1]/main/div/div/div/div[1]/div[7]",
+        "div.v-menu__content:nth-child(4)",
+        ["Tümü", "Aktif", "P/D", "Read-Only"]
+      ]
+    ]
+  },
+  {
+    "table": {
+      "locator": ".px-7",
+      "title": "Firma Listesi",
+      "headers": ["Distribütör","Firma Adı", "Tedarikçi", "Üyelik Tipi", "Paket",  "Danışman", "Kayıt Tarihi", "Üyelik Başlangıç",
+         "Üyelik Bitiş", "Statü", "Detay", "Düzenle", "Sil"],
+      "pagination": ".v-pagination"
+    }
+  }
+]

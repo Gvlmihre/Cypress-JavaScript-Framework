@@ -1,0 +1,18 @@
+{
+  "development-db": {
+    "host": "174.138.5.248",
+    "port": 5432,
+    "database": "development",
+    "user": "connector_pro",
+    "password": "connector_pro",
+    "ssl": false
+  },
+  "test-db": {
+    "host": "174.138.5.248",
+    "port": 5432,
+    "database": "test",
+    "user": "connector_pro",
+    "password": "connector_pro",
+    "ssl": false
+  }
+}

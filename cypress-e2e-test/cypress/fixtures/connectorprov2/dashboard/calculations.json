@@ -1,0 +1,1171 @@
+[
+  {
+    "url": "calculation"
+  },
+  {
+    "title": [
+      {
+        "en": "Calculation",
+        "tr": "Hesaplama"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "en": "Complete your calculation by selecting the emission type and emission sources one by one. You can enter your consumption amount monthly or annually, and upload your related invoices and documents to the software as a file.",
+        "tr": "Raporları listeleyip, görüntüleyebilir veya yeni rapor oluşturabilirsiniz."
+      }
+    ]
+  },
+  {
+    "panels": [
+      {
+        "_comment": "The panels section",
+        "css": "#content > section > div.source-type-selection",
+        "xpath": "/html/body/div/main/section/div[2]"
+      },
+      {
+        "en": [
+          "Category 1",
+          "Category 2",
+          "Category 3",
+          "Category 4",
+          "Category 5",
+          "Category 6"
+        ],
+        "tr": [
+          "Kategori 1",
+          "Kategori 2",
+          "Kategori 3",
+          "Kategori 4",
+          "Kategori 5",
+          "Kategori 6"
+        ]
+      }
+    ]
+  },
+  {
+    "buttons": [
+      {
+        "_comment": "Currently only using page container.",
+        "css": "#content > section",
+        "xpath": "/html/body/div/main/section"
+      },
+      {
+        "en": [
+          "Stationary Combustion",
+          "(Tier 1)",
+          "Mobile Combustion",
+          "(On Road)",
+          "Mobile Combustion",
+          "(Off Road)",
+          "Sea Transportation",
+          "Fugitive Emissions",
+          "Process Emissions",
+          "Purchased Electricity",
+          "Heat and Steam",
+          "Save"
+        ],
+        "tr": [
+          "Sabit Yanma",
+          "(Hesap Temelli)",
+          "Hareketli Yanma",
+          "(On Road)",
+          "Hareketli Yanma",
+          "(Off Road)",
+          "Deniz Ulaşımı",
+          "Sızıntı Emisyonları",
+          "Proses Emisyonlar",
+          "Elektrik",
+          "Isı ve Buhar",
+          "Kaydet"
+        ]
+      },
+      {
+        "category_1_buttons": [
+          {
+            "stationary_emissions": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(1) > div.emission-source-type"
+            ],
+            "waterborne_navigation": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(4) > div.emission-source-type"
+            ],
+            "transportation": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(2) > div.emission-source-type"
+            ],
+            "refrigeration_and_ac": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(5) > div.emission-source-type"
+            ],
+            "transportation_off_road": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(3) > div.emission-source-type"
+            ],
+            "industry_emissions": [
+              "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(6) > div.emission-source-type"
+            ]
+          }
+        ]
+      },
+      {
+        "category_2_buttons": [
+          {
+            "purchased_electricity": [
+              "#content > section > div.source-type-selection > div.scope-selection-wrapper.small > div > div > div:nth-child(1) > div.emission-source-type"
+            ],
+            "heat": [
+              "#content > section > div.source-type-selection > div.scope-selection-wrapper.small > div > div > div:nth-child(2) > div.emission-source-type"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "whole_calculation_section": "selected the whole calculation section",
+    "css_container": "#content > section",
+    "xpath": "//*[@id=\"content\"]/section"
+  },
+  {
+    "category_1": "Direct Greenhouse Gas Emission",
+    "css": "#content > section > div.source-type-selection > div:nth-child(1) > div",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div",
+    "subcategories": [
+      {
+        "subcategory1": "Stationary Combustion (Tier 1)",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(1) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[1]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Select Emission Source",
+              "Consumption Amount",
+              "Uncertainty",
+              "Unit",
+              "Data Entry Period",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Kaynağı Seçiniz",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory2": "Mobile Combustion (On Road)",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(2) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[2]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Select Emission Source",
+              "Consumption Amount",
+              "Uncertainty",
+              "Unit",
+              "Data Entry Period",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Kaynağı Seçiniz",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory3": "Mobile Combustion (Off Road)",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(3) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[3]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Emission Industry",
+              "Select Emission Source",
+              "Consumption Amount",
+              "Uncertainty",
+              "Unit",
+              "Data Entry Period",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Endüstri",
+              "Emisyon Kaynağı Seçiniz",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory4": "sea transportation",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(4) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[4]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Select Emission Source",
+              "Consumption Amount",
+              "Uncertainty",
+              "Unit",
+              "Data Entry Period",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Kaynağı Seçiniz",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory5": "Fugitive Emissions",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(5) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[5]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Data Source",
+              "Device Type",
+              "Select Emission Source",
+              "Unit",
+              "Gas Capacity",
+              "Fill Amount",
+              "Uncertainty",
+              "EF CO2(Ton CO2/Tj)",
+              "Uncertainty",
+              "Documents",
+              "Explanation"
+            ],
+            "tr": [
+              "Veri Kaynağı",
+              "Cihaz Türü",
+              "Emisyon Kaynağı Seçiniz",
+              "Birim",
+              "Gaz Kapasitesi",
+              "Dolum Miktarı",
+              "Belirsizlik",
+              "EF CO2(Ton CO2/Tj)",
+              "Belirsizlik",
+              "Belgeler",
+              "Açıklama"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory6": "Process Emissions",
+        "css": "#content > section > div.source-type-selection > div:nth-child(1) > div > div > div:nth-child(6) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div/div/div[6]/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Activity",
+              "Amount",
+              "Uncertainty",
+              "Unit",
+              "EF CO2 (kgCO2e)",
+              "Uncertainty"
+            ],
+            "tr": [
+              "Faaliyet",
+              "Faaliyet Verisi",
+              "Belirsizlik",
+              "Birim",
+              "EF CO2 (kgCO2e)",
+              "Belirsizlik"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category_2": "Energy Indirect GHG Emissions",
+    "css": "#content > section > div.source-type-selection > div.scope-selection-wrapper.small",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[2]",
+    "subcategories": [
+      {
+        "subcategory1": "purchased_electricity",
+        "css": "#content > section > div.source-type-selection > div.scope-selection-wrapper.small > div > div > div:nth-child(1) > div.emission-source-type",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[2]/div/div/div[1]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Select Emission Source",
+              "Unit",
+              "Data Entry Period",
+              "EF(kgCO2e)",
+              "Uncertainty",
+              "Consumption Amount",
+              "Uncertainty",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Kaynağı Seçiniz",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "EF(kgCO2e)",
+              "Belirsizlik",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      },
+      {
+        "subcategory2": "Heat and Steam",
+        "css": "#content > section > div.source-type-selection > div.scope-selection-wrapper.small > div > div > div:nth-child(2)",
+        "xpath": "//*[@id=\"content\"]/section/div[2]/div[2]/div/div/div[2]",
+        "calculation_form": [
+          {
+            "css": "#content > section > div.calculation-form.container",
+            "xpath": "//*[@id=\"content\"]/section/div[3]"
+          },
+          {
+            "en": [
+              "Select Emission Source",
+              "Unit",
+              "Data Entry Period",
+              "EF(kgCO2e)",
+              "Uncertainty",
+              "Consumption Amount",
+              "Uncertainty",
+              "Explanation",
+              "Documents"
+            ],
+            "tr": [
+              "Emisyon Kaynağı Seçiniz",
+              "Birim",
+              "Veri Giriş Periyodu",
+              "EF(kgCO2e)",
+              "Belirsizlik",
+              "Tüketim Miktarı",
+              "Belirsizlik",
+              "Açıklama",
+              "Belgeler"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category3": "Indirect GHG Emissions from Transportation",
+    "css": ".categories > :nth-child(1)",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[3]/div/div[1]",
+    "subcategories":[
+      [
+        {
+          "subcategory1": "Upstream Transportation and Distribution",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(1)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[1]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Shipping Type",
+                "Data Entry Period",
+                "Departure",
+                "Arrival",
+                "Distance (KM)",
+                "Weight (KG)",
+                "Uncertainty",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Nakliye Tipi Seçiniz",
+                "Veri Giriş Periyodu",
+                "Kalkış",
+                "Varış",
+                "Mesafe (KM)",
+                "Ağırlık (KG)",
+                "Belirsizlik",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory2": "Downstream Transportation and Distribution",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(2)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[2]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Shipping Type",
+                "Data Entry Period",
+                "Departure",
+                "Arrival",
+                "Distance (KM)",
+                "Weight (KG)",
+                "Uncertainty",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Nakliye Tipi Seçiniz",
+                "Veri Giriş Periyodu",
+                "Kalkış",
+                "Varış",
+                "Mesafe (KM)",
+                "Ağırlık (KG)",
+                "Belirsizlik",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory3": "Employee Commuting",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(3)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[3]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Data Entry Period",
+                "Consumption Amount",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Veri Giriş Periyodu",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory4": "Client and Visitor Transportation",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(4)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[4]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Data Entry Period",
+                "Consumption Amount",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Veri Giriş Periyodu",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory5": "Business Travels",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(5)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[5]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "category4": "Indirect GHG Emissions From Product Use",
+    "css": ".categories > :nth-child(2)",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[3]/div/div[2]",
+    "subcategories": [
+      [
+        {
+          "subcategory1": "Purchased Goods and Services",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(1)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[1]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "EF",
+                "Uncertainty",
+                "Consumption Amount",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "EF",
+                "Belirsizlik",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory2": "Capital Goods",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(2)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[2]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "EF",
+                "Uncertainty",
+                "Consumption Amount",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "EF",
+                "Belirsizlik",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory3": "Waste Disposal",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(3)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[3]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Disposal Type",
+                "Amount(kg)",
+                "Uncertainty",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Bertaraf Tipi",
+                "Faaliyet Verisi",
+                "Belirsizlik",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory4": "Waste Water Treatment",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(4)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[4]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Activity",
+                "Description",
+                "Activity Data",
+                "Uncertainty",
+                "EF (kgCO2e/m3)",
+                "Uncertainty"
+              ],
+              "tr": [
+                "Faaliyet",
+                "Açıklama",
+                "Faaliyet Verisi",
+                "Belirsizlik",
+                "EF (kgCO2e/m3)",
+                "Belirsizlik"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory5": "Water Supply",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(5)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[5]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Activity",
+                "Description",
+                "Activity Data",
+                "Uncertainty",
+                "EF (kgCO2e/m3)",
+                "Uncertainty"
+              ],
+              "tr": [
+                "Faaliyet",
+                "Açıklama",
+                "Faaliyet Verisi",
+                "Belirsizlik",
+                "EF (kgCO2e/m3)",
+                "Belirsizlik"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory6": "Other",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(6)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[6]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "EF",
+                "Uncertainty",
+                "Consumption Amount",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "EF",
+                "Belirsizlik",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "category5": "Indirect GHG Emissions from Use of Sold Products",
+    "css": ".categories > :nth-child(3)",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[3]/div/div[3]",
+    "subcategories": [
+      [
+        {
+          "subcategory1": "Processing of Sold Products",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(1)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[1]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "Consumption Amount",
+                "Uncertainty",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory2": "Processing of Sold Products",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(2)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[2]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Unit",
+                "Consumption Amount",
+                "Uncertainty",
+                "EF CO2(Ton CO2/Tj)",
+                "Uncertainty",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Birim",
+                "Tüketim Miktarı",
+                "Belirsizlik",
+                "EF CO2(Ton CO2/Tj)",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "subcategory3": " End of Life Stage of Sold Products",
+          "css": "#content > section > div.calculation-tabs > div:nth-child(3)",
+          "xpath": "//*[@id=\"content\"]/section/div[3]/div[3]"
+        },
+        {
+          "calculation_form": [
+            {
+              "css": "#content > section > div.calculation-form.container",
+              "xpath": "//*[@id=\"content\"]/section/div[4]"
+            },
+            {
+              "en": [
+                "Select Emission Source",
+                "Amount(kg)",
+                "Uncertainty",
+                "Disposal Type",
+                "Disposal Perc.",
+                "Explanation",
+                "Documents"
+              ],
+              "tr": [
+                "Emisyon Kaynağı Seçiniz",
+                "Bertaraf Tipi",
+                "Faaliyet Verisi",
+                "Belirsizlik",
+                "Belirsizlik",
+                "Açıklama",
+                "Belgeler"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "category_6": "Diğer Dolaylı Sera Gazı Emisyonları",
+    "css": ".categories > :nth-child(4)",
+    "xpath": "//*[@id=\"content\"]/section/div[2]/div[3]/div/div[4]",
+    "calculation_form": [
+      {
+        "css": "#content > section > div.calculation-form.container",
+        "xpath": "//*[@id=\"content\"]/section/div[3]"
+      },
+      {
+        "en": [
+          "Activity",
+          "Amount",
+          "Uncertainty",
+          "Unit",
+          "EF CO2 (kgCO2e)",
+          "Uncertainty"
+        ],
+        "tr": [
+          "Faaliyet",
+          "Faaliyet Verisi",
+          "Belirsizlik",
+          "Birim",
+          "EF CO2 (kgCO2e)",
+          "Belirsizlik"
+        ]
+      }
+    ]
+  },
+  {
+    "Detailed_Calculation_form": [
+      {
+        "icon_css": "#content > section > div.calculation-form.container > div.detailed-calculation > h4 > span",
+        "calculation_form_css": "#content > section > div.calculation-form.container > div.accordion__content",
+        "calculation_form_xpath": "/html/body/div/main/section/div[3]/div[3]",
+        "save_button_css": " div.calculation-submit-row > button"
+      },
+      {
+        "en": [
+          "EF CO2(Ton CO2/Tj)",
+          "Uncertainty",
+          "EF CH4(Ton CH4/Tj",
+          "EF N2O(Ton N2O/Tj)",
+          "NCV(TJ/GG)",
+          "Activity Data(tj)"
+        ],
+        "tr": [
+          "EF CO2(Ton CO2/Tj)",
+          "Belirsizlik",
+          "EF CH4(Ton CH4/Tj",
+          "EF N2O(Ton N2O/Tj)",
+          "NKD(TJ/GG)",
+          "Faaliyet Verisi(tj)"
+        ]
+      }
+    ]
+  },
+  {
+    "bottom_form_1": {
+      "comment": "Category 1",
+      "css": "#content > section > div:nth-child(4)",
+      "xpath": "//*[@id=\"content\"]/section/div[4]"
+    },
+    "bottom_form_2": {
+      "comment": "Scope 1 | Bio-Mass Greenhouse Gas Emission",
+      "css": "#content > section > div:nth-child(5)",
+      "xpath": "//*[@id=\"content\"]/section/div[5]"
+    },
+    "en": [
+      "Emission Source",
+      "Amount",
+      "Unit",
+      "ton CO2e",
+      "Data Entry Period",
+      "Explanation",
+      "Action"
+    ],
+    "tr": [
+      "Emisyon Kaynağı",
+      "Miktar",
+      "Birim",
+      "ton CO2e",
+      "Veri Giriş Periyodu",
+      "Açıklama",
+      "Aksiyon"
+    ]
+  },
+  {
+    "bottom_form_subcategory_6":
+    {
+      "en": [
+        "Emission Source",
+        "Amount",
+        "Unit",
+        "ton CO2e",
+        "Data Entry Period",
+        "Action"
+      ],
+      "tr": [
+        "Emisyon Kaynağı",
+        "Miktar",
+        "Birim",
+        "ton CO2e",
+        "Veri Giriş Periyodu",
+        "Aksiyon"
+      ]
+    }
+  },
+  {
+    "bulk_shipping_files_section": [
+      {
+        "css": "div.calculation-form.container > div:nth-child(5) > div > div:nth-child(2)",
+        "xpath": "/html/body/div/main/section/div[4]/div[5]/div/div[2]",
+        "expanding_button_css": " div.calculation-form.container > div:nth-child(5) > div > div > h4 > span",
+        "expanding_button_xpath": "/html/body/div/main/section/div[4]/div[5]/div/div/h4/span"
+      },
+      {
+        "en": [
+         "Bulk Shipping File",
+          "You can bulk upload your shipping data as .xls file",
+          "Upload Bulk Shipping File",
+          "Sample File"
+        ],
+        "tr": [
+          "Toplu Nakliye Dosyası",
+          "Nakliye verilerinizi .xls dosyası şeklinde toplu olarak yükleyebilirsiniz",
+          "Nakliye Dosyasını kaydet",
+          "Örnek Dosya"
+        ]
+      },
+      {
+        "Uploaded_Bulk_Shipping_Files": [
+          {
+            "css": "div.calculation-form.container > div:nth-child(5) > div > div:nth-child(2) > div.row.justify-content-center.mt-3 > div > div",
+            "xpath": "/html/body/div/main/section/div[4]/div[5]/div/div[2]/div[3]/div/div"
+          },
+          {
+            "en": [
+              "Uploaded Bulk Shipping Files",
+              "File Name",
+              "Created By",
+              "Creation Time",
+              "Action"
+            ],
+            "tr":[
+              "Dosya Adı",
+              "Tarafından Yaratıldı",
+              "Oluşturulma Zamanı",
+              "Aksiyon"
+            ]
+          }
+        ]
+      }
+
+    ]
+  },
+  {
+    "yearDdMenu":
+    {
+      "yearVsDdmenuCss": "div.v-select.header-year-select"
+    }
+  },
+  {
+    "locationDdMenu":
+    {
+      "locationVsDdmenuCss": "div.v-select.header-location-select"
+    }
+  },
+  {
+    "categoryOneCalculationForm":
+    {
+      "category_one_subcategories": "div.source-type-selection > div:nth-child(1) > div > div > div",
+      "emission_industry": " div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > select",
+      "select_emission_source": "#content > section > div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > select",
+      "select_emission_source2": "#content > section > div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > select",
+      "select_emission_source4": "div.calculation-form.container > div:nth-child(1) > div:nth-child(3) > div",
+      "consumption_amount": "[placeholder*=\"Tüketim Miktarı\"]",
+      "unit": "div.calculation-form.container > div:nth-child(1) > div:nth-child(3) > div > select",
+      "explanation": "div.calculation-form.container > div:nth-child(1) > div:nth-child(2) > div.col-md-6 > input",
+      "documents": "#customFile",
+      "save": "button.calculation-submit-button",
+      "data_source": "div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > select",
+      "device_type": "[name*='Device']",
+      "gas_capacity": "div.calculation-form.container > div:nth-child(2) > div:nth-child(2) > input",
+      "fill_amount": " div.calculation-form.container > div:nth-child(2) > div:nth-child(3) > input",
+      "ef": "[placeholder=\"EF CO2(Ton CO2/Tj)\"]",
+      "ef5": "[placeholder=\"EF CO2 (kgCO2e)\"]",
+      "choose_a_file": "input.custom-file-input.dark",
+      "explanation1": " div.calculation-form.container > div:nth-child(3) > div:nth-child(3) > input",
+      "activity": "div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > div > input",
+      "amount": "div.calculation-form.container > div:nth-child(1) > div:nth-child(2) > div > div.input-col.main-input > input",
+      "success_message": "#content > div.modal-mask > div.modal-wrapper > div.modal-container.success > h2"
+    }
+  },
+  {
+    "categoryTwoCalculationForm": {
+      "subcategories": "div.scope-selection-wrapper.small > div > div > div",
+      "select_emission_source": "div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > select",
+      "unit": "div.calculation-form.container > div:nth-child(1) > div:nth-child(2) > select",
+      "consumption_amount": "div.calculation-form.container > div:nth-child(2) > div:nth-child(1) > div > div.input-col.main-input > input",
+      "ef": "[placeholder=\"EF CO2 (kgCO2e)\"]",
+      "explanation": "div.calculation-form.container > div:nth-child(3) > div.col-md-6 > input",
+      "choose_a_file": "#customFile",
+      "save": "button.calculation-submit-button",
+      "success_message": "#content > div.modal-mask > div.modal-wrapper > div.modal-container.success > h2"
+    }
+  },
+  {
+    "categoryThreeCalculationForm": {
+      "category_three": "div.source-type-selection > div:nth-child(3) > div > div:nth-child(1) ",
+      "subcategories": "#content > section > div.calculation-tabs > div",
+      "select_shipping_type": "div.calculation-form.container > div:nth-child(1) > div:nth-child(1) > div",
+      "select_activity_type": "div.calculation-form.container > div:nth-child(1) > div:nth-child(2) > div",
+      "select_sub_type": "div.calculation-form.container > div:nth-child(1) > div:nth-child(3) > div",
+      "select_size": "div.calculation-form.container > div:nth-child(1) > div:nth-child(4) > div",
+      "departure": "div.calculation-form.container > div:nth-child(2) > div:nth-child(1) > div > div",
+      "arrival": "div.calculation-form.container > div:nth-child(2) > div:nth-child(2) > div > div",
+      "distance": "div.calculation-form.container > div:nth-child(2) > div:nth-child(3) > input",
+      "weight": "div.calculation-form.container > div:nth-child(2) > div:nth-child(4) > input",
+      "ef": "[placeholder=\"EF CO2(Ton CO2/Tj)\"]",
+      "explanation": "div.calculation-form.container > div:nth-child(3) > div:nth-child(2) > input",
+      "choose_a_file": "#customFile",
+      "save": "button.calculation-submit-button",
+      "success_message": "#content > div.modal-mask > div.modal-wrapper > div.modal-container.success > h2",
+      "bulk_shipping_files_button": " div.calculation-form.container > div:nth-child(5) > div > div > h4 > i",
+      "choose_a_file_bulk": "div.col-md-5>div>div.edit-row>div.custom-file>input",
+      "upload_bulk_shipping_file": "div.d-inline-block > button.btnType1.px-3",
+      "select_emission_source": "div.calculation-form.container > div > div > div"
+    }
+  }
+]
+
+
+
+

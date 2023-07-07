@@ -1,0 +1,151 @@
+stages:
+  - check_server_status
+  - test
+
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+    - cache/Cypress
+    - build
+
+poll-server:
+  stage: check_server_status
+  script:
+    - "bash .gitlab/ci/serverHealthCheck.sh"
+  allow_failure: false
+  tags:
+    - cypress
+
+#cypress-test-admin-panel:
+#  image: cypress/included:10.3.0
+#  stage: test
+#  before_script:
+#    - whoami
+#    # install graphics libraries
+#    #- apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+#    # - echo 'Install node.js and nvm, if not installed already.'
+#    - "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash"
+#    - 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"'
+#    - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' # This loads nvm
+#    #installing and using the latest stable version of node.js
+#    - nvm install 18.3.0
+#    - nvm use 18.3.0
+#    - npm install cypress --save-dev
+#    - npm ci || true
+#  script:
+#    # start the app server in the background... (not needed right now)
+#    # run Cypress tests on any unused Xvfb port
+#    - "xvfb-run -a bash ./.gitlab/ci/run.sh test admin"
+#  allow_failure: false
+#  tags:
+#    - cypress
+#  artifacts:
+#    when: always
+#    paths:
+#      - cypress/videos/**/*.mp4
+#      - cypress/screenshots/**/*.png
+#      - cypress/results/**/*
+#      - ./**/*.log
+#    expire_in: 5 day
+
+cypress-smoke-test-dashboard:
+  image: cypress/included:10.3.0
+  stage: test
+  before_script:
+    - whoami
+    # install graphics libraries
+    #- apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+    # - echo 'Install node.js and nvm, if not installed already.'
+    - "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash"
+    - 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"'
+    - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' # This loads nvm
+    #installing and using the latest stable version of node.js
+    - nvm install 18.3.0
+    - nvm use 18.3.0
+    - npm install cypress --save-dev
+    - npm ci || true
+  script:
+    # start the app server in the background... (not needed right now)
+    # run Cypress tests on any unused Xvfb port
+    - "xvfb-run -a bash ./.gitlab/ci/run.sh test dashboard"
+  allow_failure: false
+  tags:
+    - cypress
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+      - cypress/results/**/*
+      - ./**/*.log
+    expire_in: 5 day
+
+cypress-api-test-dashboard:
+  image: cypress/included:10.3.0
+  stage: test
+  before_script:
+    - whoami
+    # install graphics libraries
+    #- apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+    # - echo 'Install node.js and nvm, if not installed already.'
+    - "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash"
+    - 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"'
+    - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' # This loads nvm
+    #installing and using the latest stable version of node.js
+    - nvm install 18.3.0
+    - nvm use 18.3.0
+    - npm install cypress --save-dev
+    - npm ci || true
+  script:
+    # start the app server in the background... (not needed right now)
+    # run Cypress tests on any unused Xvfb port
+    - "xvfb-run -a bash ./.gitlab/ci/run.sh test dashboard api"
+  allow_failure: false
+  tags:
+    - cypress
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+      - cypress/results/**/*
+      - ./**/*.log
+    expire_in: 5 day
+
+cypress-functional-test-dashboard:
+  image: cypress/included:10.3.0
+  stage: test
+  before_script:
+    - whoami
+    # install graphics libraries
+    #- apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+    # - echo 'Install node.js and nvm, if not installed already.'
+    - "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash"
+    - 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"'
+    - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' # This loads nvm
+    #installing and using the latest stable version of node.js
+    - nvm install 18.3.0
+    - nvm use 18.3.0
+    - npm install cypress --save-dev
+    - npm ci || true
+  script:
+    # start the app server in the background... (not needed right now)
+    # run Cypress tests on any unused Xvfb port
+    - "xvfb-run -a bash ./.gitlab/ci/run.sh test dashboard functional"
+  allow_failure: false
+  tags:
+    - cypress
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+      - cypress/results/**/*
+      - ./**/*.log
+    expire_in: 5 day

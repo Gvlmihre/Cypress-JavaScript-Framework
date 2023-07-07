@@ -1,0 +1,107 @@
+[
+  {
+    "url": "dashboard"
+  },
+  {
+    "title": ""
+  },
+  {
+    "logout_string": [
+      {
+        "en": "Logout",
+        "tr": "Çıkış"
+      }
+    ]
+  },
+  {
+    "language_toggle_menu_icon":[
+      {
+        "icon_xpath": "/html/body/div/header/div/div[3]/div/div/div[1]/span/img",
+        "xpath": "//*[@id=\"lang-selection-select\"]"
+      }
+    ]
+  },
+  {
+    "language_toggle_menu_dropdown_options": [
+      {
+            "css": "div.v-select#lang-selection-select",
+            "ul_xpath": "/html/body/div/header/div/div[3]/div/ul"
+          }
+    ]
+  },
+  {
+    "tabs": [
+      {
+        "_comment": "Need to add back 'comparison' after they are complete.",
+        "en": [
+          "Locations",
+          "Calculation",
+          "Analysis",
+          "Results",
+          "Comparison",
+          "Targets",
+          "Users",
+          "Company info",
+          "Supplier App"
+        ],
+        "tr": [
+          "Lokasyonlar",
+          "Hesaplama",
+          "Analiz",
+          "Sonuçlar",
+          "Kıyaslama",
+          "Hedefler",
+          "Kullanıcılar",
+          "Firma Bilgileri",
+          "Supplier App"
+        ]
+      }
+    ]
+  },
+  {
+    "panels": [
+      {
+        "en": [
+          "REPORTS",
+          "COMPARISON",
+          "CARBON OFFSETTING",
+          "TARGETS",
+          "ANALYSIS"
+        ],
+        "tr": [
+          "RAPORLAR",
+          "KIYASLAMA",
+          "KARBON OFSETLEME",
+          "HEDEFLER",
+          "ANALİZ"
+        ]
+      }
+    ]
+  },
+  {
+    "buttons": [
+      {
+        "en": [
+          "create new report",
+          "start offset",
+          "Show Targets",
+          "details"
+        ],
+        "tr": [
+          "Yeni Rapor Oluştur",
+          "Karbon Ofsetle",
+          "Hedefleri Görüntüle",
+          "Detaylar"
+        ]
+      }
+    ]
+  },
+  {
+    "profile_dropdown": [
+      [
+        ".user",
+        "profile"
+      ]
+    ]
+  }
+]

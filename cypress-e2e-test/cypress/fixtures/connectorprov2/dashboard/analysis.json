@@ -1,0 +1,346 @@
+[
+  {
+    "url": "analysis"
+  },
+  {
+    "title": [
+      {
+        "en": "Analysis",
+        "tr": "Analiz"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "en": "You can check analytical data on your greenhouse gas emissions",
+        "tr": "Sera gazı emisyonlarınıza ait analitik verileri gözlemleyebilirsiniz"
+      }
+    ]
+  },
+  {
+    "dropdown_menus": [
+      {
+        "_comment": "Year dropdown menu",
+        "xpath": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[1]",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[1]/div/ul",
+        "options": {
+          "en": [],
+          "tr": [
+          ]
+        }
+      },
+      {
+        "_comment": "Group dropdown menu",
+        "xpath": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[2]/div/div[1]",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[2]/div/div[2]",
+        "options": {
+          "en": [
+            "All Groups"
+          ],
+          "tr": [
+            "Tüm Gruplar",
+            "Test Gülüstan",
+            "Yeni grup",
+            "test"
+          ]
+        }
+      },
+      {
+        "_comment": "Location dropdown menu",
+        "xpath": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[3]",
+        "xpath_options_container": "/html/body/div/main/section/div[2]/div[1]/div[1]/div/div[3]/div/ul",
+        "options": {
+          "en": [
+            "All Locations"
+          ],
+          "tr": [
+
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "left_panel_sections": [
+      [
+        {
+          "_comment": "Category 1",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(2)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[2]",
+          "en": [
+            "Category 1 - Direct Greenhouse Gas Emission",
+            "Stationary Combustion",
+            "(Tier 1)",
+            "Mobile Combustion",
+            "(On Road)",
+            "Mobile Combustion",
+            "(Off Road)",
+            "Sea Transportation",
+            "Fugitive Emissions",
+            "Process Emissions"
+          ],
+          "tr": [
+            "Kategori 1 - Doğrudan Sera Gazı Emisyonları",
+            "Sabit Yanma",
+            "(Hesap Temelli)",
+            "Hareketli Yanma",
+            "(On Road)",
+            "Hareketli Yanma",
+            "(Off Road)",
+            "Deniz Ulaşımı",
+            "Sızıntı Emisyonları",
+            "Proses Emisyonları"
+          ]
+        }
+      ],
+      [
+        {
+          "_comment": "Currently only using page container.",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(3)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[3]",
+          "en": [
+            "Category 2 - Energy Indirect GHG Emissions",
+            "Purchased Electricity",
+            "Heat and Steam"
+          ],
+          "tr": [
+            "Kategori 2 - Enerji Dolaylı Sera Gazı Emisyonları",
+            "Elektrik",
+            "Isı ve Buhar"
+          ]
+        }
+      ],
+      [
+        {
+          "_comment": "Currently only using page container.",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(4)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[4]",
+          "en": [
+            "Category 3 - Indirect GHG Emissions from Transportation",
+            "Upstream Transportation and Distribution",
+            "Downstream Transportation and Distribution",
+            "Employee Commuting",
+            "Client and Visitor Transportation",
+            "Business Travels"
+          ],
+          "tr": [
+            "Kategori 3 - Nakliye Dolaylı Sera Gazı Emisyonları",
+            "Kaynak Yönlü Nakliye ve Dağıtım",
+            "Tüketici Yönlü Nakliye ve Dağıtım",
+            "Personel Ulaşımı",
+            "Ziyaretçi Dolaylı Emisyonlar",
+            "İş Seyahatleri"
+          ]
+        }
+      ],
+      [
+        {
+          "_comment": "Currently only using page container.",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(5)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[5]",
+          "en": [
+            "Category 4 - Raw Material Indirect GHG Emissions GHG Emissions",
+            "Purchased Goods and Services",
+            "Capital Goods",
+            "Waste Disposal",
+            "Water Treatment",
+            "Water Supply",
+            "Other"
+          ],
+          "tr": [
+            "Kategori 4 - Satın Alınan Ürün ve Hizmet Kaynaklı Sera Gazı Emisyonları",
+            "Satın Alınan Mal ve Hizmetler",
+            "Sermaye Varlıklar",
+            "Atık Bertarafı",
+            "Atık Su Arıtımı",
+            "Su Tüketimi",
+            "Diğer"
+          ]
+        }
+      ],
+      [
+        {
+          "_comment": "Currently only using page container.",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(6)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[6]",
+          "en": [
+            "Category 5 - Indirect GHG Emissions from Use of Sold Products",
+            "Processing of Sold Products",
+            "Processing of Sold Products",
+            "End of Life Stage of Sold Products"
+          ],
+          "tr": [
+            "Kategori 5 - Satılan Ürünlerinin Kullanımı Kaynaklı",
+            "Satılan Ürünlerin İşlenmesi",
+            "Satılan Ürünlerin Kullanım Aşaması",
+            "Satılan Ürünlerin Yaşam Sonu"
+          ]
+        }
+      ],
+      [
+        {
+          "_comment": "Currently only using page container.",
+          "css": "#content > section > div.analysis-content > div.left > div.source-selection > div:nth-child(7)",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[1]/div[2]/div[7]",
+          "en": [
+            "Category 6 - Indirect GHG Emissions from Other Sources",
+            "Category 6"
+          ],
+          "tr": [
+            "Kategori 6 - Diğer Dolaylı Sera Gazı Emisyonları",
+            "Kategori 6"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "right_panel_sections": [
+         {
+          "_comment": "the page before opening the detail",
+          "css": "#content > section > div.analysis-content > div.right",
+          "xpath": "/html/body/div/main/section/div[2]/div[2]",
+          "en": [
+            "Category 1",
+            "Category 2",
+            "Category 3",
+            "Category 4",
+            "Category 5",
+            "Category 6"
+          ],
+          "tr": [
+            "Kategori 1",
+            "Kategori 2",
+            "Kategori 3",
+            "Kategori 4",
+            "Kategori 5",
+            "Kategori 6"
+          ]
+        },
+      {
+        "_comment": "The details button",
+        "css": "#content > section > div.analysis-content > div.right > div > div > div.w-100 > div:nth-child(2) > div > button",
+        "xpath": "/html/body/div/main/section/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/button",
+        "en": [
+          "Details"
+        ],
+        "tr": [
+          "Detaylar"
+        ]
+      }
+    ]
+  },
+      {
+        "analysis_details_section": {
+          "_comment": "Currently only using section container.",
+          "css": "#content > section > div.analysis-content > div.right",
+          "xpath": "//*[@id=\"content\"]/section/div[2]/div[2]",
+          "tab_contents": [
+            {
+              "_comment": "Category 1",
+              "css": "#content > section > div.analysis-content > div.right",
+              "element_to_be_clicked": "div.source-selection > div:nth-child(2) > div > div > div:nth-child(1) > div.source-label > span",
+              "en": [
+                "Stationary Emissions (Tier 1)",
+                "Mobile Combustion (On Road)",
+                "Mobile Combustion (Off Road)",
+                "Sea Transportation",
+                "Fugitive Emissions",
+                "Process Emissions"
+              ],
+              "tr": [
+                "Sabit Yanma (Hesap Temelli)",
+                "Hareketli Yanma (On Road)",
+                "Hareketli Yanma (Off Road)",
+                "Deniz Ulaşımı",
+                "Sızıntı Emisyonları",
+                "Proses Emisyonları"
+              ]
+            },
+            {
+              "_comment": "Category 2",
+              "css": "#content > section > div.analysis-content > div.right > div > div.graph-display > div > div > div.row > div.col-md-5 > div > div:nth-child(2)",
+              "en": [
+                "Purchased Electricity",
+                "Heat and Steam"
+              ],
+              "tr": [
+                "Elektrik",
+                "Isı ve Buhar"
+              ]
+            },
+            {
+              "_comment": "Category 3",
+              "css": "#content > section > div.analysis-content > div.right > div > div.graph-display > div > div > div.row > div.col-md-5 > div > div:nth-child(3)",
+              "en": [
+                "Upstream Transportation and Distribution",
+                "Downstream Transportation and Distribution",
+                "Employee Commuting",
+                "Client and Visitor Transportation",
+                "Business Travels"
+              ],
+              "tr": [
+                "Kaynak Yönlü Nakliye ve Dağıtım",
+                "Tüketici Yönlü Nakliye ve Dağıtım",
+                "Personel Ulaşımı",
+                "Ziyaretçi Dolaylı Emisyonlar",
+                "İş Seyahatleri"
+              ]
+            },
+            {
+              "_comment": "Category 4",
+              "css": "#content > section > div.analysis-content > div.right > div > div.graph-display > div > div > div.row > div.col-md-5 > div > div:nth-child(4)",
+              "en": [
+                "Purchased Goods and Services",
+                "Capital Goods",
+                "Waste Disposal",
+                "Water Treatment",
+                "Water Supply",
+                "Other"
+              ],
+              "tr": [
+                "Satın Alınan Mal ve Hizmetler",
+                "Sermaye Varlıkları",
+                "Atık Bertarafı",
+                "Atık Su Arıtımı",
+                "Su Tüketimi",
+                "Diğer"
+              ]
+            },
+            {
+              "_comment": "Category 5",
+              "css": "#content > section > div.analysis-content > div.right > div > div.graph-display > div > div > div.row > div.col-md-5 > div > div:nth-child(5)",
+              "en": [
+                "Processing of Sold Products",
+                "Processing of Sold Products",
+                "End of Life Stage of Sold Products"
+              ],
+              "tr": [
+                "Satılan Ürünlerin İşlenmesi",
+                "Satılan Ürünlerin Kullanım Aşaması",
+                "Satılan Ürünlerin Yaşam Sonu"
+              ]
+            },
+            {
+              "_comment": "Category 6",
+              "css": "#content > section > div.analysis-content > div.right > div > div.graph-display > div > div > div.row > div.col-md-5 > div > div:nth-child(6)",
+              "en": [
+                "Indirect GHG Emissions from Other Sources",
+                "Electricity Transmission and Distribution",
+                "Well-to-Tank Emissions",
+                "Franchises",
+                "Other"
+              ],
+              "tr": [
+                "Diğer Dolaylı Sera Gazı Emisyonları",
+                "Elektrik İletim ve Dağıtım Kayıpları",
+                "Well-to-Tank Emisyonları",
+                "Franchiselar",
+                "Diğer"
+              ]
+            }
+          ]
+        }
+      }
+    ]

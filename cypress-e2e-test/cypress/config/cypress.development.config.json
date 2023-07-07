@@ -1,0 +1,10 @@
+{
+    "env": {
+        "db": "development-db",
+        "environment": "development",
+        "testType": "smoke",
+        "testSite": "dashboard"
+    },
+    "baseUrl": "http://dev-test-web.co2nnectorpro.com.tr",
+    "specPattern": "cypress/e2e/connectorprov2/dashboard/**/smoke_test*.{js,jsx,ts,tsx}"
+}

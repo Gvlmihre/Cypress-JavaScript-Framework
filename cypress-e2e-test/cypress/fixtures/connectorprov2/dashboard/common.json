@@ -1,0 +1,36 @@
+[
+  {
+    "header":  [
+      {
+        "links": {
+          "user_profile": [".user", "/html/body/div/header/div[3]/a[1]"]
+        }
+      }
+    ]
+  },
+  {"body":  ""},
+  {"footer":  ""},
+  {"sidebar": [
+    {
+      "dashboard": [
+        {
+          "css": ".icon-sidebar-logo",
+          "xpath": "/html/body/div/aside/div[1]/a/div"
+        },
+        {
+          "url": "/locations"
+        }
+      ],
+      "locations": [".icon-sidebar-location", "/html/body/div/aside/ul/li[1]/a/div"],
+      "calculation": [".icon-sidebar-calculation", "/html/body/div/aside/ul/li[2]/a/div"],
+      "analysis": [".icon-sidebar-analysis", "/html/body/div/aside/ul/li[3]/a/div"],
+      "results": [".icon-sidebar-results", "/html/body/div/aside/ul/li[4]/a/div"],
+      "targets": [".icon-sidebar-target", "/html/body/div/aside/ul/li[5]/a/div"],
+      "users": ["#sidebar-user", "/html/body/div/aside/ul/li[7]/a/div"],
+      "comparison": [".icon-sidebar-comparison", "/html/body/div/aside/ul/li[7]/a/div"],
+      "company_info": [".icon-sidebar-company", "/html/body/div/aside/ul/li[8]/a/div"],
+      "faq": [".icon-sidebar-faq", "/html/body/div/aside/div[2]/a/div"]
+    }
+  ]
+  }
+]

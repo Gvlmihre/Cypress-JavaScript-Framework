@@ -1,0 +1,403 @@
+[
+  {
+    "url": "comparison"
+  },
+  {
+    "title": [
+      {
+        "css": ".title > h2:nth-child(1)",
+        "en": "COMPARISON",
+        "tr": "KIYASLAMA"
+      }
+    ]
+  },
+  {
+    "description": [
+      {
+        "css": ".title > h3:nth-child(2)",
+        "en": "You can make location-based comparisons.",
+        "tr": "Lokasyon bazlı kıyaslama yapabilirsiniz."
+      }
+    ]
+  },
+  {
+    "panel_comparisons_tab_contents": [
+      {
+        "_comment": "Currently only using panel container.",
+        "css": "#content > section > div.compare.wrapper",
+        "xpath": "/html/body/div/main/section/div[2]"
+      },
+      {
+        "comparison_year_ddmenu": [
+          {
+            "css": "div.compare-year-selection > div > select",
+            "xpath": "/html/body/div/main/section/div[2]/div[1]/div/select",
+            "en": [
+
+            ],
+            "tr": [
+
+            ]
+          }
+        ]
+      },
+      {
+        "_comment": "Comparison Type",
+        "en": [
+          "Location",
+          "Location Group"
+        ],
+        "tr": [
+          "Lokasyon",
+          "Lokasyon Grubu"
+        ]
+      },
+      {
+        "comparison_tab_contents": [
+          {
+            "_comment": "The whole comparison tab",
+            "css": "div.compare-content > div:nth-child(1)",
+            "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]"
+          },
+          {
+            "content": [
+              [
+                {
+                  "comment": "Location_based_comparison",
+                  "css": "div.compare-type-selection > div > div:nth-child(1)",
+                  "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[1]/div/div[1]"
+                },
+                {
+                  "comment": "Locations line",
+                  "css": "div.compare-content > div:nth-child(1) > div.select-line",
+                  "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]",
+                  "options": {
+                    "en": [
+                      "Location 1",
+                      "Location 2",
+                      "Location 3",
+                      "Location 4",
+                      "Location 5"
+                    ],
+                    "tr": [
+                      "Lokasyon 1",
+                      "Lokasyon 2",
+                      "Lokasyon 3",
+                      "Lokasyon 4",
+                      "Lokasyon 5"
+                    ]
+                  }
+                },
+                {
+                  "location_selection_dropdown_menus": [
+                    {
+                      "_comment": "Location dropdown menu 1",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(1)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[1]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 2",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(2)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 3",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(3)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[3]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 4",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(4)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[4]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 5",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(5)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[5]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "comment": "location_group_based_comparison",
+                  "css": "div.compare-type-selection > div > div:nth-child(2)",
+                  "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[1]/div/div[2]"
+                },
+                {
+                  "comment": "Location groups line",
+                  "css": "div.compare-content > div:nth-child(1) > div.select-line",
+                  "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]",
+                  "options": {
+                    "en": [
+                      "Location Group 1",
+                      "Location Group 2",
+                      "Location Group 3",
+                      "Location Group 4",
+                      "Location Group 5"
+                    ],
+                    "tr": [
+                      "Lokasyon Grubu 1",
+                      "Lokasyon Grubu 2",
+                      "Lokasyon Grubu 3",
+                      "Lokasyon Grubu 4",
+                      "Lokasyon Grubu 5"
+                    ]
+                  }
+                },
+                {
+                  "location_group_selection_ddmenu": [
+                    {
+                      "_comment": "Location dropdown menu 1",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(1)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[1]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 2",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(2)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 3",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(3)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[3]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 4",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(4)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[4]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    },
+                    {
+                      "_comment": "Location dropdown menu 5",
+                      "css": "div.compare-content > div:nth-child(1) > div.select-line>div:nth-child(5)",
+                      "xpath_options_container": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[2]/div[5]/div/div/ul",
+                      "options": {
+                        "en": [],
+                        "tr": []
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "Emission_source_tabs": [
+              {
+                "css": "#content > section > div.compare.wrapper > div.compare-content",
+                "xpath": "//*[@class=\"emission-source\"]"
+              },
+              {
+                "select_action_buttons": [
+                  {
+                    "css": "div.select-actions",
+                    "xpath": "//*[@class=\"select-actions\"]",
+                    "en": [
+                      "Select All",
+                      "Clear Selections"
+                    ],
+                    "tr": [
+                      "Tümünü Seç",
+                      "Seçimi Temizle"
+                    ]
+                  }
+                ]
+              },
+              {
+                "calculation_type_ddmenu": [
+                  {
+                    "css": "div.emission-header > div > div.select-box > select",
+                    "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[3]/div[1]/div/div[3]/select",
+                    "en": [
+                      "GHG",
+                      "ISO"
+                    ],
+                    "tr": [
+                      "GHG",
+                      "ISO"
+                    ]
+                  }
+                ]
+              },
+              {
+                "category_buttons": [
+                  {
+                    "comment": "category_1_buttons",
+                    "css": "div.emission-source > div:nth-child(1)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[1]",
+                    "en": [
+                      "Stationary Combustion",
+                      "Mobile Combustion",
+                      "Mobile Combustion",
+                      "Sea Transportation",
+                      "Fugitive Emissions",
+                      "Process Emissions"
+                    ],
+                    "tr": [
+                      "Sabit Yanma",
+                      "Hareketli Yanma",
+                      "Hareketli Yanma",
+                      "Deniz Ulaşımı",
+                      "Sızıntı Emisyonları",
+                      "Proses Emisyonları"
+                    ]
+                  },
+                  {
+                    "comment": "category_2_buttons",
+                    "css": " div.emission-source > div:nth-child(2)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[2]",
+                    "en": [
+                      "Purchased Electricity",
+                      "Heat and Steam"
+                    ],
+                    "tr": [
+                      "Elektrik",
+                      "Isı ve Buhar"
+                    ]
+                  },
+                  {
+                    "comment": "category_3_buttons",
+                    "css": " div.emission-source > div:nth-child(3)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[3]",
+                    "en": [
+                      "Upstream Transportation and Distribution",
+                      "Downstream Transportation and Distribution",
+                      "Employee Commuting",
+                      "Client and Visitor Transportation",
+                      "Business Travels"
+                    ],
+                    "tr": [
+                      "Kaynak Yönlü Nakliye ve Dağıtım",
+                      "Tüketici Yönlü Nakliye ve Dağıtım",
+                      "Personel Ulaşımı",
+                      "Ziyaretçi Dolaylı Emisyonlar",
+                      "İş Seyahatleri"
+                    ]
+                  },
+                  {
+                    "comment": "category_4_buttons",
+                    "css": " div.emission-source > div:nth-child(4)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[4]",
+                    "en": [
+                      "Purchased Goods and Services",
+                      "Capital Goods",
+                      "Waste Disposal",
+                      "Waste Water Treatment",
+                      "Water Supply",
+                      "Other"
+                    ],
+                    "tr": [
+                      "Satın Alınan Mal ve Hizmetler",
+                      "Sermaye Varlıkları",
+                      "Atık Bertarafı",
+                      "Atık Su Arıtımı",
+                      "Su Tüketimi",
+                      "Diğer"
+                    ]
+                  },
+                  {
+                    "comment": "category_5_buttons",
+                    "css": " div.emission-source > div:nth-child(5)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[5]",
+                    "en": [
+                      "Processing of Sold Products",
+                      "Use of Sold Products",
+                      "End of Life Stage of Sold Products"
+                    ],
+                    "tr": [
+                      "Satılan Ürünlerin İşlenmesi",
+                      "Satılan Ürünlerin Kullanım Aşaması",
+                      "Satılan Ürünlerin Yaşam Sonu"
+                    ]
+                  },
+                  {
+                    "comment": "category_6_buttons",
+                    "css": " div.emission-source > div:nth-child(6)",
+                    "xpath": "//*[@class=\"emission-source\"]/div[6]",
+                    "en": [
+                      "Indirect GHG Emissions from Other Sources"
+                    ],
+                    "tr": [
+                      "Diğer Dolaylı Sera Gazı Emisyonları"
+                    ]
+                  }
+                ]
+              },
+              {
+                "compare_button": [
+                  {
+                    "css": " div.emission-action > button",
+                    "xpath": "/html/body/div/main/section/div[2]/div[2]/div[1]/div[3]/div[3]/button",
+                    "en": [
+                      "Compare"
+                    ],
+                    "tr": [
+                      "Kıyasla"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "comparison_result_section":[
+        {
+          "css": "div.compare-content > div:nth-child(2)",
+          "xpath": "/html/body/div/main/section/div[2]/div[2]/div[2]",
+          "en": [
+            "Total Emissions",
+            "Performance"
+          ],
+          "tr": [
+            "Toplam Emisyon",
+            "Performans"
+          ]
+        }
+      ]
+      }
+    ]
+  }
+]
+
+
+
+
+
