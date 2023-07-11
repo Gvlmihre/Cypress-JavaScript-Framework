@@ -1,4 +1,4 @@
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 /// <reference types="cypress" />
 require('cypress-xpath');
@@ -8,12 +8,12 @@ import {
     clickOnElementAndVisitPageAndCheckUrl,
 } from '../../../helpers/util';
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const targetsPageElements = require('../../../fixtures/connectorprov2/dashboard/targets.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const targetsPageElements = require('../../../fixtures/connectAppv2/dashboard/targets.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(targetsPageElements, 'list of targets page items').to.be.an('array');
 
 
@@ -32,7 +32,7 @@ describe('Run ConnectApp
 
 function loginAndVisitTargetsPage() {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-    clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].targets[0], targetsPageElements[0].url);
+    clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].targets[0], targetsPageElements[0].url);
 }
 
 it('Check targets page for title and description', () => {

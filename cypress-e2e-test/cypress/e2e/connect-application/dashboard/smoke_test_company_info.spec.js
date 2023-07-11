@@ -1,4 +1,4 @@
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 
 /// <reference types="cypress" />
@@ -9,14 +9,14 @@ import {
     logout,
     adminLogin
 } from '../../../helpers/util';
-import loginAndVisitCompanyInfoPage from "../../../fixtures/connectorprov2/dashboard/company_info.json";
+import loginAndVisitCompanyInfoPage from "../../../fixtures/connectAppv2/dashboard/company_info.json";
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const companyInfoPageElements = require('../../../fixtures/connectorprov2/dashboard/company_info.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const companyInfoPageElements = require('../../../fixtures/connectAppv2/dashboard/company_info.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(companyInfoPageElements, 'list of companyInfo page items').to.be.an('array');
 
 
@@ -38,7 +38,7 @@ describe('Run ConnectApp page smoke tests', () => {
 
     function loginAndVisitCompanyInfoPage() {
         adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-        clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].company_info[0], companyInfoPageElements[0].url);
+        clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].company_info[0], companyInfoPageElements[0].url);
     }
 
     it('Check companyInfo page for title and description', () => {

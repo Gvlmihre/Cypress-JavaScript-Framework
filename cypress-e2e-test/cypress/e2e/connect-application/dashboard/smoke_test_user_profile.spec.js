@@ -1,4 +1,4 @@
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 
 /// <reference types="cypress" />
@@ -9,12 +9,12 @@ import {
   clickOnElementAndVisitPageAndCheckUrl,
   clickDropDownMenuAndValidateOptions
 } from '../../../helpers/util';
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const userProfilePageElements = require('../../../fixtures/connectorprov2/dashboard/user_profile.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const userProfilePageElements = require('../../../fixtures/connectAppv2/dashboard/user_profile.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(userProfilePageElements, 'list of user profile page items').to.be.an('array');
 
 
@@ -36,7 +36,7 @@ describe('Run ConnectApp tests', () => {
 
   function loginAndVisitUserProfilePage() {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password)
-    clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[0].header[0].links.user_profile[0], userProfilePageElements[0].url);
+    clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[0].header[0].links.user_profile[0], userProfilePageElements[0].url);
   }
 
   it('Check user profile page for title and description', () => {

@@ -7,10 +7,10 @@ import {
     logout
 } from '../../../helpers/util';
 
-import dashboardLandingPageElements from "../../../fixtures/connectorprov2/dashboard/dashboard.json";
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json"
-import connectorProTRLanguageCode from "../../../helpers/util.js"
-import connectorProENLanguageCode from "../../../helpers/util.js"
+import dashboardLandingPageElements from "../../../fixtures/connectAppv2/dashboard/dashboard.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json"
+import connectAppTRLanguageCode from "../../../helpers/util.js"
+import connectAppENLanguageCode from "../../../helpers/util.js"
 
 
 let languageStrings = 'tr';
@@ -91,13 +91,13 @@ it('Can toggle language option', () => {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
     cy.xpath(lang_toggle_menu).then((lang_menu) => {
         if (lang_menu.attr('src').includes('tr')) {
-            current_lang = connectorProTRLanguageCode;
+            current_lang = connectAppTRLanguageCode;
 
             cy.get(dashboardLandingPageElements[5].tabs[0].tr).each(item => {
                 cy.get('#sidebar').contains(item, { matchCase: false });
             });
         } else if (lang_menu.attr('src').includes('en')) {
-            current_lang = connectorProENLanguageCode;
+            current_lang = connectAppENLanguageCode;
 
             cy.get(dashboardLandingPageElements[5].tabs[0].en).each(item => {
                 cy.get('#sidebar').contains(item, { matchCase: false });
@@ -106,7 +106,7 @@ it('Can toggle language option', () => {
     })
 
     cy.get(lang_toggle_menu_dropdown_menu_selector).click().then(() => {
-        if (current_lang === connectorProTRLanguageCode) {
+        if (current_lang === connectAppTRLanguageCode) {
             cy.xpath(lang_toggle_menu_dropdown)
                 .find('li').as('options')
             cy.get('@options')
@@ -117,7 +117,7 @@ it('Can toggle language option', () => {
                         cy.get('#sidebar').contains(item, { matchCase: false });
                     });
                 })
-        } else if (current_lang === connectorProENLanguageCode) {
+        } else if (current_lang === connectAppENLanguageCode) {
             cy.get('@options')
                 .then(options => [...options].map(option => option.innerHTML))
                 .then(html => {

@@ -6,15 +6,15 @@ import {
     clickOnElementAndVisitPageAndCheckUrl,
     logout
 } from '../../../helpers/util';
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const calculationsPageElements = require('../../../fixtures/connectorprov2/dashboard/calculations.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const calculationsPageElements = require('../../../fixtures/connectAppv2/dashboard/calculations.json');
 
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(calculationsPageElements, 'list of calculations page items').to.be.an('array');
 
 
@@ -41,7 +41,7 @@ const detailed_calculation_form = calculationsPageElements[12].Detailed_Calculat
 
 function loginAndVisitCalculationsPage() {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-    clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].calculation[0], calculationsPageElements[0].url);
+    clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].calculation[0], calculationsPageElements[0].url);
 }
 
 it('Check calculations page for all panels', () => {

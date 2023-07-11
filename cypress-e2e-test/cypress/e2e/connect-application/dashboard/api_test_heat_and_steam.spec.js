@@ -1,7 +1,7 @@
 
 /// <reference types="cypress" />
 require('cypress-xpath');
-const loginPageElements = require("../../../fixtures/connectorprov2/dashboard/login_page.json");
+const loginPageElements = require("../../../fixtures/connectAppv2/dashboard/login_page.json");
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 

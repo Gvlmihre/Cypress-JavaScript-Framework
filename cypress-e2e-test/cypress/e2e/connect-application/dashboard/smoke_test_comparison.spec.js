@@ -1,4 +1,4 @@
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 /// <reference types="cypress" />
 require('cypress-xpath');
@@ -7,12 +7,12 @@ import {
     logout,
     clickOnElementAndVisitPageAndCheckUrl
 } from '../../../helpers/util';
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const comparisonsPageElements = require('../../../fixtures/connectorprov2/dashboard/comparison.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const comparisonsPageElements = require('../../../fixtures/connectAppv2/dashboard/comparison.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(comparisonsPageElements, 'list of comparisons page items').to.be.an('array');
 
 
@@ -30,7 +30,7 @@ describe('Run ConnectApp> {
 
 function loginAndVisitComparisonPage() {
     adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-    clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].comparison[0], comparisonsPageElements[0].url);
+    clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].comparison[0], comparisonsPageElements[0].url);
     cy.visit('/comparison');
 }
 

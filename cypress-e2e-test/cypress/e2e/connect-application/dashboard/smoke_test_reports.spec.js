@@ -1,4 +1,4 @@
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 /// <reference types="cypress" />
 require('cypress-xpath');
@@ -11,13 +11,13 @@ import {
 
 
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const resultsPageElements = require('../../../fixtures/connectorprov2/dashboard/results.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const resultsPageElements = require('../../../fixtures/connectAppv2/dashboard/results.json');
 
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(resultsPageElements, 'list of results page items').to.be.an('array');
 
 
@@ -36,7 +36,7 @@ describe('Run ConnectApps', () => {
 
     function loginAndVisitResultsPage() {
         adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-        clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].results[0], resultsPageElements[0].url);
+        clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].results[0], resultsPageElements[0].url);
     }
 
     it("Check reports page for all dropdown menus", () => {

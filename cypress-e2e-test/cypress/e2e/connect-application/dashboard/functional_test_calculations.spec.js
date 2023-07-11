@@ -1,7 +1,7 @@
 /**
 
 /// <reference types="cypress" />
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 require('cypress-xpath');
 
@@ -17,12 +17,12 @@ import {
   selectYearAndLocation
 } from '../../../helpers/util';
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const calculationsPageElements = require('../../../fixtures/connectorprov2/dashboard/calculations.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const calculationsPageElements = require('../../../fixtures/connectAppv2/dashboard/calculations.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(calculationsPageElements, 'list of calculations page items').to.be.an('array');
 
 
@@ -45,7 +45,7 @@ describe('Run ConnectApp', () => {
 
   function loginAndVisitCalculationsPage() {
     adminLogin(username, password);
-    clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].calculation[0], calculationsPageElements[0].url);
+    clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].calculation[0], calculationsPageElements[0].url);
   }
 
   it("category 1.1 calculation", () => {

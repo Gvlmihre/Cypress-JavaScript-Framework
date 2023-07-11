@@ -7,14 +7,14 @@ import {
     clickOnElementAndVisitPageAndCheckUrl,
     logout
 } from '../../../helpers/util';
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const usersPageElements = require('../../../fixtures/connectorprov2/dashboard/users.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const usersPageElements = require('../../../fixtures/connectAppv2/dashboard/users.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(usersPageElements, 'list of users page items').to.be.an('array');
 
 
@@ -33,7 +33,7 @@ describe('Run ConnectApp users page smoke tests', () => {
 
     function loginAndVisitUsersPage() {
         adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
-        clickOnElementAndVisitPageAndCheckUrl(connectorproCommonElements[3].sidebar[0].users[0], usersPageElements[0].url);
+        clickOnElementAndVisitPageAndCheckUrl(connectAppCommonElements[3].sidebar[0].users[0], usersPageElements[0].url);
     }
 
     it('Check users page for title and description', () => {

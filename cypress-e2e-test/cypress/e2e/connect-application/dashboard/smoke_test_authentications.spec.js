@@ -5,12 +5,12 @@ import {
     logout,
     adminLogin,
 } from '../../../helpers/util';
-const dashboardLandingPageElements = require('../../../fixtures/connectorprov2/dashboard/dashboard.json');
-const connectorProLanguageEnCode = "en"
+const dashboardLandingPageElements = require('../../../fixtures/connectAppv2/dashboard/dashboard.json');
+const connectAppLanguageEnCode = "en"
 // sanity check
 expect(dashboardLandingPageElements, 'list of dashboard items').to.be.an('array');
 
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json";
 
 describe('Run ConnectApp
 
@@ -106,8 +106,8 @@ it("Test localstorage EN lang code injection for English strings", () => {
         const token = results.body.accessToken
         cy.log(token)
         localStorage.setItem('access_token', token);
-        localStorage.setItem('co2nnectorpro-language-code', connectorProLanguageEnCode);
-        expect(localStorage.getItem('co2nnectorpro-language-code')).to.equal(connectorProLanguageEnCode);
+        localStorage.setItem('co2nnectorpro-language-code', connectAppLanguageEnCode);
+        expect(localStorage.getItem('co2nnectorpro-language-code')).to.equal(connectAppLanguageEnCode);
 
         cy.visit('/dashboard');
         cy.url().should('contain', 'company-selection');

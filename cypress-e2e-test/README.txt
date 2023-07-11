@@ -9,7 +9,7 @@ Or (for headless running): `npx cypress run`
 
 Reports
 1. `npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator`
-2. `npx cypress run --record --key 1d3bfd9e-e0b9-43c9-9d8d-fcdf4b906281 --spec "cypress/e2e/connectorprov2/smoke_test_authentications.spec.js" --config-file cypress.config.js.backup`
+2. `npx cypress run --record --key 1d3bfd9e-e0b9-43c9-9d8d-fcdf4b906281 --spec "cypress/e2e/connectAppv2/smoke_test_authentications.spec.js" --config-file cypress.config.js.backup`
 
 [Optional]
 1. `cypress run --reporter mochawesome --reporter-options reportDir="cycpress/results",overwrite=false,html=true,json=true`

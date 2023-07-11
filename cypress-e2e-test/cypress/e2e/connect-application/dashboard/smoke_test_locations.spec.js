@@ -7,15 +7,15 @@ import {
   clickOnElementAndVisitPageAndCheckUrl,
   clickDropDownMenuAndValidateOptions
 } from '../../../helpers/util';
-import dashboardLandingPageElements from "../../../fixtures/connectorprov2/dashboard/dashboard.json";
-import loginPageElements from "../../../fixtures/connectorprov2/dashboard/login_page.json"
+import dashboardLandingPageElements from "../../../fixtures/connectAppv2/dashboard/dashboard.json";
+import loginPageElements from "../../../fixtures/connectAppv2/dashboard/login_page.json"
 
-const connectorproCommonElements = require('../../../fixtures/connectorprov2/dashboard/common.json');
-const locationPageElements = require('../../../fixtures/connectorprov2/dashboard/locations.json');
+const connectAppCommonElements = require('../../../fixtures/connectAppv2/dashboard/common.json');
+const locationPageElements = require('../../../fixtures/connectAppv2/dashboard/locations.json');
 let languageStrings = 'tr';
 
 // sanity check
-expect(connectorproCommonElements, 'list of common items').to.be.an('array');
+expect(connectAppCommonElements, 'list of common items').to.be.an('array');
 expect(locationPageElements, 'list of location page items').to.be.an('array');
 expect(loginPageElements, 'list of login page items').to.be.an('array');
 
@@ -34,7 +34,7 @@ Basic location tab tests start here
 function loginAndVisitLocationsPage() {
   adminLogin(loginPageElements[0].admin_username, loginPageElements[1].password);
   clickOnElementAndVisitPageAndCheckUrl(
-    connectorproCommonElements[3].sidebar[0].locations[0],
+    connectAppCommonElements[3].sidebar[0].locations[0],
     locationPageElements[0].url);
 }
 

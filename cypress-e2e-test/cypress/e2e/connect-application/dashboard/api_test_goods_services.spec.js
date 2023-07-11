@@ -5,7 +5,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run ConnectAppc API Category 4.1 Purchased Goods And Services Tests', () => {
+describe('Run ConnectApp API Category 4.1 Purchased Goods And Services Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []

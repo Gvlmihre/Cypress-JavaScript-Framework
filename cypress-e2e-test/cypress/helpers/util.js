@@ -1,4 +1,4 @@
-import calculationsPageElements from "../fixtures/connectorprov2/dashboard/calculations.json";
+import calculationsPageElements from "../fixtures/connectAppv2/dashboard/calculations.json";
 const faker = require("faker");
 
 const test_url = 'http://test-app.co2nnectapp.com.tr/login'
@@ -6,8 +6,8 @@ const username_field = 'div.inner > div:nth-child(2) > input'
 const password_field = '#loginPassword'
 const login_button = 'div.container>div:nth-child(2)>button'
 const first_company = "table > tbody>tr:nth-child(1)"
-const connectorProTRLanguageCode = "tr"
-const connectorProENLanguageCode = "en"
+const connectAppTRLanguageCode = "tr"
+const connectAppENLanguageCode = "en"
 export const adminLogin = (username, password) => {
     cy.visit(test_url)
     cy.get(username_field)
@@ -337,7 +337,7 @@ export const categoryThreeCalculation = (index) => {
                 })
                 cy.get(weight).type(fillCalculationForm().weight)
                 cy.get(explanation).type(fillCalculationForm().explanation)
-                cy.get(document).selectFile('connectorPro.xlsx')
+                cy.get(document).selectFile('connectApp.xlsx')
                 cy.get(save).click()
                 cy.get(successMessage).as('successMessage').then((el) => {
                     if (current_language_code === 'tr') {
@@ -350,7 +350,7 @@ export const categoryThreeCalculation = (index) => {
 
                 cy.wait(3000)
                 cy.get(bulkShippingFiles).click({ force: true })
-                cy.get(documentBulk).selectFile('connectorPro.xlsx')
+                cy.get(documentBulk).selectFile('connectApp.xlsx')
                 cy.get(uploadFile).click({ force: true })
                 cy.wait(2000)
                 cy.get(successMessage).as('successMessage').then((el) => {
@@ -383,7 +383,7 @@ export const categoryThreeCalculation = (index) => {
                 cy.get(weight).type(fillCalculationForm().weight)
                 cy.get(ef).type(fillCalculationForm().ef)
                 cy.get(explanation).type(fillCalculationForm().explanation)
-                cy.get(document).selectFile('connectorPro.xlsx')
+                cy.get(document).selectFile('connectApp.xlsx')
                 cy.get(save).click()
                 cy.get(successMessage).as('successMessage').then((el) => {
                     if (current_language_code === 'tr') {
@@ -396,7 +396,7 @@ export const categoryThreeCalculation = (index) => {
 
                 cy.wait(3000)
                 cy.get(bulkShippingFiles).click({ force: true })
-                cy.get(documentBulk).selectFile('connectorPro.xlsx', { force: true })
+                cy.get(documentBulk).selectFile('connectApp.xlsx', { force: true })
                 cy.get(uploadFile).click({ force: true })
                 //cy.wait(2000)
                 cy.get(successMessage).as('successMessage').then((el) => {

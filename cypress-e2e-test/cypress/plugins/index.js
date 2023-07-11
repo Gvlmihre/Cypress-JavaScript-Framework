@@ -32,7 +32,7 @@ const path = require("path");
 async function fetchConfigurationByFile(environment, testType, testSiteIsAdmin) {
     const pathOfConfigurationFile = `config/cypress.${environment}.config.json`;
     let configJson = await fs.readJson(path.join(__dirname, "../", pathOfConfigurationFile));
-    let specPathPattern = "cypress/e2e/connectorprov2/TEST_SITE/**/TEST_TYPE*.{js,jsx,ts,tsx}";
+    let specPathPattern = "cypress/e2e/connectAppv2/TEST_SITE/**/TEST_TYPE*.{js,jsx,ts,tsx}";
 
     switch (testType) {
         case "functional":
