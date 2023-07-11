@@ -14,7 +14,7 @@ describe('Run ConnectApp Public API Category 3.5 Business Travels Tests', () => 
     const emissionSourceIds = []
     const emissionSourceUnits = []
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it(" ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
