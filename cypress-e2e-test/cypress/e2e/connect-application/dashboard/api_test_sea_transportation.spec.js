@@ -12,7 +12,7 @@ describe('Run ConnectApp Public API Category 1 Sea Transportation tests', () => 
     const emissionSourceUnits = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })

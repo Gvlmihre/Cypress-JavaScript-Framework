@@ -15,18 +15,18 @@ describe('Run ConnectAppn Services Tests', () => {
     const airportIds = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
 
-    it("Co2nnectorpro V2 Public API Get Emission Units Test", () => {
+    it("ConnectApp Public API Get Emission Units Test", () => {
         cy.apiRequest('GET', '/calculation-variables/units').then(json => {
             expect(json.status).to.equals(200)
         })
     })
 
-    it('Co2nnectorpro V2 Public API Get Emission Units Filter By String Test', () => {
+    it('ConnectApp Public API Get Emission Units Filter By String Test', () => {
         const string = 'test'
         cy.apiRequest('GET', `/calculation-variables/units?search=${string}`)
             .then(json => {
@@ -36,14 +36,14 @@ describe('Run ConnectAppn Services Tests', () => {
             })
     })
 
-    it('Co2nnectorpro V2 Public API Get Places Test', () => {
+    it('ConnectApp Public API Get Places Test', () => {
         cy.apiRequest('GET', '/calculation-variables/places?').then(json => {
             expect(json.status).to.equals(200)
         })
     })
 
 
-    it('Co2nnectorpro V2 Public API Get Airports Test', () => {
+    it('ConnectApp Public API Get Airports Test', () => {
         cy.apiRequest('GET', '/calculation-variables/places?placeType=AIRPORT')
             .then(json => {
                 cy.get(json.body.content).each(item => {
@@ -54,7 +54,7 @@ describe('Run ConnectAppn Services Tests', () => {
     })
 
 
-    it("Co2nnectorpro V2 Public API Calculate Airport Distance POST Request Test", () => {
+    it("ConnectApp Public API Calculate Airport Distance POST Request Test", () => {
 
         const departureAirportId = getRandomArrayElement(airportIds)
         const arrivalAirportId = getRandomArrayElement(airportIds)
@@ -74,7 +74,7 @@ describe('Run ConnectAppn Services Tests', () => {
             })
     });
 
-    it("Co2nnectorpro V2 Public API Delete Calculated Carbon Footprint Test ", () => {
+    it("ConnectApp Public API Delete Calculated Carbon Footprint Test ", () => {
         const emission_source_id = '32268b33-3afc-43d9-bbe3-9d56291462d6';
         const unit_id = '4d7f9150-3ac1-485b-86d2-84329e5d9b44';
         const amount = faker.mersenne.rand(1000, 1);

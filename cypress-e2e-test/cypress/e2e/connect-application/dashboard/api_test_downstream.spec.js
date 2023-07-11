@@ -27,7 +27,7 @@ describe('Run ConnectAppc API Category 3.1 downstream Transportation And Distrib
 
     const railEmissionSourceIds = []
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
@@ -65,7 +65,7 @@ describe('Run ConnectAppc API Category 3.1 downstream Transportation And Distrib
     })
 
 
-    it('Co2nnectorpro V2 Public API Get Airport Ids Test', () => {
+    it('ConnectApp Public API Get Airport Ids Test', () => {
         cy.apiRequest('GET', '/calculation-variables/places?placeType=AIRPORT')
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -119,7 +119,7 @@ describe('Run ConnectAppc API Category 3.1 downstream Transportation And Distrib
         })
     })
 
-    it('Co2nnectorpro V2 Public API Get port Ids Test', () => {
+    it('ConnectApp Public API Get port Ids Test', () => {
         cy.apiRequest('GET', '/calculation-variables/places?placeType=MARINE_PORT').then(json => {
             expect(json.status).to.equals(200)
             cy.get(json.body.content).each(item => {
@@ -167,7 +167,7 @@ describe('Run ConnectAppc API Category 3.1 downstream Transportation And Distrib
     })
 
 
-    it('Co2nnectorpro V2 Public API Get City Ids Test', () => {
+    it('ConnectApp Public API Get City Ids Test', () => {
         cy.apiRequest('GET', '/calculation-variables/places?placeType=CITY')
             .then(json => {
                 expect(json.status).to.equals(200)

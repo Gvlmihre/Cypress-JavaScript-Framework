@@ -14,7 +14,7 @@ describe('Run ConnectApp Public API Category 4.4 Waste Water Treatment Tests', (
     const emissionSourceUnitIds = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })

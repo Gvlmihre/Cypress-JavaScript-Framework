@@ -12,7 +12,7 @@ describe('Run ConnectApp Public API Category 4.3 Waste Disposal Tests', () => {
     const emissionSourceIds = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })

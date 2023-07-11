@@ -7,14 +7,14 @@ describe('Run ConnectApp) => {
     const username = `${Cypress.env('username')}`
 const password = `${Cypress.env('password')}`
 
-it("Co2nnectorpro V2 Public API Get Locations Test", () => {
+it("ConnectApp Public API Get Locations Test", () => {
     cy.apiRequest('GET', '/locations').then(json => {
         expect(json.status).to.equals(200)
     })
 })
 
 
-it('Co2nnectorpro V2 Public API Get Locations By Year Test', () => {
+it('ConnectApp Public API Get Locations By Year Test', () => {
     const year = faker.mersenne.rand(2021, 2025)
     cy.apiRequest('GET', `/locations?year=${year}`)
         .then(json => {

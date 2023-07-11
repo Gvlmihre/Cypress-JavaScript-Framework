@@ -10,12 +10,12 @@ describe('Run ConnectApp Public API Indirect GHG Emissions From Other Sources Pr
     const emissionUnitIds = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
 
-    it("Co2nnectorpro V2 Public API Get Emission Units Test", () => {
+    it("ConnectApp Public API Get Emission Units Test", () => {
         cy.apiRequest('GET', '/calculation-variables/units')
             .then(json => {
                 expect(json.status).to.equals(200)

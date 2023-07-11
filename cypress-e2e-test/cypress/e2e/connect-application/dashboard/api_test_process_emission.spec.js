@@ -11,7 +11,7 @@ describe('Run ConnectApp Public API Category 1 Process Emissions tests', () => {
     const emissionUnitIds = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
@@ -24,7 +24,7 @@ describe('Run ConnectApp Public API Category 1 Process Emissions tests', () => {
             })
     })
 
-    it("Co2nnectorpro V2 Public API Get Emission Unit Ids Test", () => {
+    it("ConnectApp Public API Get Emission Unit Ids Test", () => {
         cy.apiRequest('GET', '/calculation-variables/units')
             .then(json => {
                 expect(json.status).to.equals(200)

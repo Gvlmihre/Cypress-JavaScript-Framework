@@ -14,7 +14,7 @@ describe('Run ConnectApp Public API Category 2 Heat and Steam Tests', () => {
     const emissionSourceUnits = []
     let locationIds
 
-    it("Co2nnectorpro V2 Public API Get Location Ids Test", () => {
+    it("ConnectApp Public API Get Location Ids Test", () => {
         locationIds = getLocations()
         cy.log(locationIds)
     })
