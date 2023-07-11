@@ -23,7 +23,7 @@ expect(companyInfoPageElements, 'list of companyInfo page items').to.be.an('arra
 /**
  * More description
  */
-describe('Run Connector Pro v2 companyInfo page smoke tests', () => {
+describe('Run ConnectApp page smoke tests', () => {
     /**
      * Create test user profile and seed the db
      */

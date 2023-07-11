@@ -10,7 +10,7 @@ import {
 const faker = require("faker");
 
 
-describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests', () => {
+describe('Run ConnectApp Public API Category 1 Stationary Combustion Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -23,7 +23,7 @@ describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Stationary Combustion GET Emission Sources Test', () => {
+    it('ConnectAppc API Stationary Combustion GET Emission Sources Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/emission-source/stationary?locationId=${locationId}`)
             .then(json => {
@@ -40,7 +40,7 @@ describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests
             })
     })
 
-    it('Connector Pro V2 Public API Stationary Combustion GET Emission Sources By String Test', () => {
+    it('ConnectApp Public API Stationary Combustion GET Emission Sources By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/emission-source/stationary?locationId=${locationId}&search=${string}`)
@@ -52,7 +52,7 @@ describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests
             })
     })
 
-    it('Connector Pro V2 Public API Stationary Combustion GET Calculated Carbon Footprints Test', () => {
+    it('ConnectApp Public API Stationary Combustion GET Calculated Carbon Footprints Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/stationary?locationId=${locationId}`).then(json => {
             expect(json.status).to.equals(200)
@@ -60,7 +60,7 @@ describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests
     })
 
 
-    it('Connector Pro V2 Public API Stationary Combustion POST Calculate Carbon Footprint Test', () => {
+    it('ConnectApp Public API Stationary Combustion POST Calculate Carbon Footprint Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(20, 1)
@@ -77,7 +77,7 @@ describe('Run Connector Pro V2 Public API Category 1 Stationary Combustion Tests
             })
     })
 
-    it('Connector Pro V2 Public API Stationary Combustion POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppion POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(20, 1)

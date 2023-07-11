@@ -4,7 +4,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', () => {
+describe('Run ConnectApp Public API Category 1 Sea Transportation tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -17,7 +17,7 @@ describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', 
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Sea Transportation GET Emission Sources Test', () => {
+    it('ConnectApp Public API Sea Transportation GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/sea-transportation?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -32,7 +32,7 @@ describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', 
             });
     })
 
-    it('Connector Pro V2 Public API Sea Transportation GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Sea Transportation GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/sea-transportation?search=${string}`)
             .then(json => {
@@ -43,7 +43,7 @@ describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Sea Transportation GET Calculated Carbon Footprints Test', () => {
+    it('ConnectApp Public API Sea Transportation GET Calculated Carbon Footprints Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/sea-transportation?locationId=${locationId}`)
             .then(json => {
@@ -51,7 +51,7 @@ describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Sea Transportation POST Calculate Carbon Footprint Test', () => {
+    it('ConnectAppc API Sea Transportation POST Calculate Carbon Footprint Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(10, 1)
@@ -68,7 +68,7 @@ describe('Run Connector Pro V2 Public API Category 1 Sea Transportation tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Sea Transportation POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppc API Sea Transportation POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(10, 1)

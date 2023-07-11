@@ -5,7 +5,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 1 Process Emissions tests', () => {
+describe('Run ConnectApp Public API Category 1 Process Emissions tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionUnitIds = []
@@ -16,7 +16,7 @@ describe('Run Connector Pro V2 Public API Category 1 Process Emissions tests', (
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Process Emissions GET Calculated Carbon Footprints Test', () => {
+    it('ConnectApp Public API Process Emissions GET Calculated Carbon Footprints Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/process-emission?locationId=${locationId}`)
             .then(json => {
@@ -36,7 +36,7 @@ describe('Run Connector Pro V2 Public API Category 1 Process Emissions tests', (
     })
 
 
-    it('Connector Pro V2 Public API Process Emissions POST Calculate Carbon Footprint Test', () => {
+    it('ConnectApp Public API Process Emissions POST Calculate Carbon Footprint Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const activity = faker.lorem.word()
         const amount = faker.mersenne.rand(1000, 1)
@@ -57,7 +57,7 @@ describe('Run Connector Pro V2 Public API Category 1 Process Emissions tests', (
     })
 
 
-    it('Connector Pro V2 Public API Process Emissions POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppsions POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const activity = faker.lorem.word()
         const amount = faker.mersenne.rand(1000, 1)

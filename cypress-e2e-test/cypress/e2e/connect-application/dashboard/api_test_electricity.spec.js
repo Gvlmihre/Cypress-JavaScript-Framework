@@ -5,7 +5,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
+describe('Run ConnectApp Public API Category 2 Electricity Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -18,7 +18,7 @@ describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Electricity GET Emission Sources Test', () => {
+    it('ConnectApp Public API Electricity GET Emission Sources Test', () => {
         const locationId = getRandomArrayElement(locationIds)
 
         cy.apiRequest('GET', `/emission-source/electricity?locationId=${locationId}`)
@@ -36,7 +36,7 @@ describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
     })
 
 
-    it('Connector Pro V2 Public API Electricity GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Electricity GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/emission-source/electricity?locationId=${locationId}&search=${string}`)
@@ -45,7 +45,7 @@ describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
             )
     })
 
-    it('Connector Pro V2 Public API Electricity GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Electricity GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/electricity?locationId=${locationId}`)
             .then(json => {
@@ -54,7 +54,7 @@ describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
     })
 
 
-    it('Connector Pro V2 Public API Electricity POST Calculate Carbon Footprint Test', () => {
+    it('ConnectApp Public API Electricity POST Calculate Carbon Footprint Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(2, 1)
@@ -71,7 +71,7 @@ describe('Run Connector Pro V2 Public API Category 2 Electricity Tests', () => {
             })
     })
 
-    it('Connector Pro V2 Public API Electricity POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppt Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(2, 1)

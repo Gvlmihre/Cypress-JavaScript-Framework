@@ -21,7 +21,7 @@ expect(userProfilePageElements, 'list of user profile page items').to.be.an('arr
 /**
  * More description
  */
-describe('Run Connector Pro v2 user profile page smoke tests', () => {
+describe('Run ConnectApp tests', () => {
 
   /**
    * Log out after each test

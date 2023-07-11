@@ -29,7 +29,7 @@ expect(calculationsPageElements, 'list of calculations page items').to.be.an('ar
 /**
  * More description
  */
-describe('Run Connector Pro v2 calculations page smoke tests', () => {
+describe('Run ConnectApp', () => {
 
   const username = `${Cypress.env('username')}`
   const password = `${Cypress.env('password')}`

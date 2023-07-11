@@ -6,7 +6,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests', () => {
+describe('Run ConnectApp Public API Category 3.3 Employee Commuting Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -19,7 +19,7 @@ describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests'
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Employee Commuting GET Emission Sources Test', () => {
+    it('ConnectApp Public API Employee Commuting GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/employee-commuting?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -35,7 +35,7 @@ describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests'
     })
 
 
-    it('Connector Pro V2 Public API Employee Commuting GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Employee Commuting GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/employee-commuting?search=${string}`)
             .then(json => {
@@ -47,7 +47,7 @@ describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests'
     })
 
 
-    it('Connector Pro V2 Public API Employee Commuting GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Employee Commuting GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/employee-commuting?locationId=${locationId}`)
             .then(json => {
@@ -55,7 +55,7 @@ describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests'
             })
     })
 
-    it('Connector Pro V2 Public API Employee Commuting Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API Employee Commuting Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(7, 1)
@@ -73,7 +73,7 @@ describe('Run Connector Pro V2 Public API Category 3.3 Employee Commuting Tests'
     })
 
 
-    it('Connector Pro V2 Public API Employee Commuting Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectApparbon Footprint POST Request Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(7, 1)

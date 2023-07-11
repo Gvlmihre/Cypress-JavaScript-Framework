@@ -4,7 +4,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () => {
+describe('Run ConnectApp Public API Category 4.5 Water Supply Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -18,7 +18,7 @@ describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () =
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Water Supply GET Emission Sources Test', () => {
+    it('ConnectApp Public API Water Supply GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/water-supply?`)
             .then(json => {
                 cy.get(json.body.content).each(item => {
@@ -35,7 +35,7 @@ describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () =
         cy.log(emissionSourceUnitIds)
     })
 
-    it('Connector Pro V2 Public API Water Supply GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Water Supply GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSourceNames)
         cy.apiRequest('GET', `/emission-source/water-supply?search=${string}`)
             .then(json => {
@@ -47,7 +47,7 @@ describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () =
             })
     })
 
-    it('Connector Pro V2 Public API Water Supply GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Water Supply GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/water-supply?locationId=${locationId}`)
             .then(json => {
@@ -55,7 +55,7 @@ describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () =
             })
     })
 
-    it('Connector Pro V2 Public API Water Supply Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API Water Supply Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(1, 0)
@@ -74,7 +74,7 @@ describe('Run Connector Pro V2 Public API Category 4.5 Water Supply Tests', () =
             })
     })
 
-    it('Connector Pro V2 Public API Water Supply Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectAppest - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(1, 0)

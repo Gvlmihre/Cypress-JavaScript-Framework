@@ -4,7 +4,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', () => {
+describe('Run ConnectApp Public API Category 4.3 Waste Disposal Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -17,7 +17,7 @@ describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', ()
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Waste Disposal GET Emission Sources Test', () => {
+    it('ConnectApp Public API Waste Disposal GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/waste-disposal?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -32,7 +32,7 @@ describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', ()
         cy.log(emissionSourceIds)
     })
 
-    it('Connector Pro V2 Public API Waste Disposal GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Waste Disposal GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSourceNames)
         cy.apiRequest('GET', `/emission-source/waste-disposal?search=${string}`)
             .then(json => {
@@ -44,7 +44,7 @@ describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', ()
             })
     })
 
-    it('Connector Pro V2 Public API Waste Disposal GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Waste Disposal GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/waste-disposal?locationId=${locationId}`)
             .then(json => {
@@ -52,7 +52,7 @@ describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', ()
             })
     })
 
-    it('Connector Pro V2 Public API Waste Disposal Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API Waste Disposal Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(17, 0)
@@ -69,7 +69,7 @@ describe('Run Connector Pro V2 Public API Category 4.3 Waste Disposal Tests', ()
             })
     })
 
-    it('Connector Pro V2 Public API Waste Disposal Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectAppDisposal Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(17, 0)

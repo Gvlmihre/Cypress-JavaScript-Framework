@@ -6,7 +6,7 @@ import {
     getLocations,
     getRandomArrayElement
 } from '../../../helpers/util';
-describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road tests', () => {
+describe('Run ConnectApp Public API Category 1 Mobile Combustion Off Road tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -19,7 +19,7 @@ describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road 
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Mobile Combustion Off Road GET Emission Sources test', () => {
+    it('ConnectAppc API Mobile Combustion Off Road GET Emission Sources test', () => {
         cy.apiRequest('GET', `/emission-source/mobile-combustion/off-road?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -34,7 +34,7 @@ describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road 
             });
     })
 
-    it('Connector Pro V2 Public API Mobile Combustion Off Road GET Emission Sources By String Test', () => {
+    it('ConnectApp Public API Mobile Combustion Off Road GET Emission Sources By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/mobile-combustion/off-road?search=${string}`)
             .then(json => {
@@ -45,7 +45,7 @@ describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road 
             })
     })
 
-    it('Connector Pro V2 Public API Mobile Combustion Off Road GET Calculated Carbon Footprints test', () => {
+    it('ConnectApp Public API Mobile Combustion Off Road GET Calculated Carbon Footprints test', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/mobile-combustion/off-road?locationId=${locationId}`)
             .then(json => {
@@ -54,7 +54,7 @@ describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road 
     })
 
 
-    it('Connector Pro V2 Public API Mobile Combustion Off Road POST Calculate Carbon Footprint', () => {
+    it('ConnectApp Public API Mobile Combustion Off Road POST Calculate Carbon Footprint', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(10, 1)
@@ -71,7 +71,7 @@ describe('Run Connector Pro V2 Public API Category 1 Mobile Combustion Off Road 
     })
 
 
-    it('Connector Pro V2 Public API Mobile Combustion Off Road POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppad POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(20, 1)

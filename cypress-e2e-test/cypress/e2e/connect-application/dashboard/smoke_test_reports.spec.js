@@ -24,7 +24,7 @@ expect(resultsPageElements, 'list of results page items').to.be.an('array');
 /**
  * More description
  */
-describe('Run Connector Pro v2 results page smoke tests', () => {
+describe('Run ConnectApps', () => {
 
     afterEach(() => {
         logout()

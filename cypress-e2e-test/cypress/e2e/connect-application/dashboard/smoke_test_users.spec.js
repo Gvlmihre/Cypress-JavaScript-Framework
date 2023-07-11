@@ -21,7 +21,7 @@ expect(usersPageElements, 'list of users page items').to.be.an('array');
 /**
  * More description
  */
-describe('Run Connector Pro v2 users page smoke tests', () => {
+describe('Run ConnectApp users page smoke tests', () => {
 
     afterEach(() => {
         logout()

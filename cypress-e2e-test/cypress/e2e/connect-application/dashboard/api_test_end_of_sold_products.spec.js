@@ -6,7 +6,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Category 5.3 Tests', () => {
+describe('Run ConnectApp Public API End Of Life Stage Of Sold Products Category 5.3 Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -19,7 +19,7 @@ describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Cat
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API End Of Life Stage Of Sold Products 5.3 GET Emission Sources Test', () => {
+    it('ConnectApp Public API End Of Life Stage Of Sold Products 5.3 GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/end-of-life-stage?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -34,7 +34,7 @@ describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Cat
             })
     })
 
-    it('Connector Pro V2 Public API End Of Life Stage Of Sold Products 5.3 GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API End Of Life Stage Of Sold Products 5.3 GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSourceNames)
         cy.apiRequest('GET', `/emission-source/end-of-life-stage?search=${string}`)
             .then(json => {
@@ -46,7 +46,7 @@ describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Cat
             })
     })
 
-    it('Connector Pro V2 Public API End Of Life Stage Of Sold Products 5.3 GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API End Of Life Stage Of Sold Products 5.3 GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/end-of-life-stage?locationId=${locationId}`)
             .then(json => {
@@ -54,7 +54,7 @@ describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Cat
             })
     })
 
-    it('Connector Pro V2 Public API End Of Life Stage Of Sold Products 5.3 Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API End Of Life Stage Of Sold Products 5.3 Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(emissionSources.length - 1, 0)
@@ -74,7 +74,7 @@ describe('Run Connector Pro V2 Public API End Of Life Stage Of Sold Products Cat
     })
 
 
-    it('Connector Pro V2 Public API End Of Life Stage Of Sold Products 5.3 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectAppStage Of Sold Products 5.3 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(emissionSourceIds.length - 1, 1)

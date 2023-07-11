@@ -6,7 +6,7 @@ const {
     calculateAirportDistance
 } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', () => {
+describe('Run ConnectApp Public API Category 3.5 Business Travels Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     let locationIds
@@ -19,8 +19,8 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
         cy.log(locationIds)
     })
 
-    //Connector Pro V2 Public API Business Travels - Airway Tests Starts Here
-    it('Connector Pro V2 Public API Business Travels GET Calculated Carbon Footprints Test - Airway', () => {
+    //ConnectApp Public API Business Travels - Airway Tests Starts Here
+    it('ConnectApp Public API Business Travels GET Calculated Carbon Footprints Test - Airway', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/business-travels/airway?locationId=${locationId}`)
             .then(json => {
@@ -28,7 +28,7 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Business Travels Calculate Carbon Footprint POST Request Test - Airway', () => {
+    it('ConnectAppalculate Carbon Footprint POST Request Test - Airway', () => {
         //get random location id from related location ids
         const locationId = getRandomArrayElement(locationIds)
 
@@ -80,8 +80,8 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
         })
     })
 
-    //Connector Pro V2 Public API Business Travels - Others Tests Starts Here
-    it('Connector Pro V2 Public API Business Travels GET Emission Sources Test - Others', () => {
+    //ConnectApp Public API Business Travels - Others Tests Starts Here
+    it('ConnectApp Public API Business Travels GET Emission Sources Test - Others', () => {
         cy.apiRequest('GET', `/emission-source/business-travels?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -96,7 +96,7 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
             });
     })
 
-    it('Connector Pro V2 Public API Business Travels GET Emission Sources Filter By String Test - Others', () => {
+    it('ConnectApp Public API Business Travels GET Emission Sources Filter By String Test - Others', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/business-travels?search=${string}`)
             .then(json => {
@@ -107,7 +107,7 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Business Travels GET Calculated Carbon Footprints Test- Others', () => {
+    it('ConnectApp Public API Business Travels GET Calculated Carbon Footprints Test- Others', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/business-travels/others?locationId=${locationId}`)
             .then(json => {
@@ -116,7 +116,7 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
     })
 
 
-    it('Connector Pro V2 Public API Business Travels Calculate Carbon Footprint POST Request Test - Others', () => {
+    it('ConnectApp Public API Business Travels Calculate Carbon Footprint POST Request Test - Others', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
@@ -134,7 +134,7 @@ describe('Run Connector Pro V2 Public API Category 3.5 Business Travels Tests', 
             })
     })
 
-    it('Connector Pro V2 Public API Business Travels Calculate Carbon Footprint POST Request 400 Bad Request Test - Others', () => {
+    it('ConnectAppBusiness Travels Calculate Carbon Footprint POST Request 400 Bad Request Test - Others', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)

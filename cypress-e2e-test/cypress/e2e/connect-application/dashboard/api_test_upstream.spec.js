@@ -7,7 +7,7 @@ const {
     getLocations
 } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation And Distribution Tests', () => {
+describe('Run ConnectAppCategory 3.1 Upstream Transportation And Distribution Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     let locationIds
@@ -30,7 +30,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources Test', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources Test', () => {
         cy.apiRequest('GET', '/emission-source/upstream?').then(json => {
             expect(json.status).to.equals(200)
             cy.get(json.body.content).each(item => {
@@ -42,7 +42,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
         })
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/upstream?search=${string}`).then(json => {
             expect(json.status).to.equals(200)
@@ -50,7 +50,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
     })
 
     //Upstream Transportation And Distribution - Air Related Tests Start Here
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources - Air ', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources - Air ', () => {
 
         cy.apiRequest('GET', '/emission-source/upstream?tripType=AIR')
             .then(json => {
@@ -73,7 +73,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
             })
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Air', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Air', () => {
         const locationId = getRandomArrayElement(locationIds)
         const airEmissionSourceId = getRandomArrayElement(airEmissionSourceIds)
         const weight = faker.mersenne.rand(3000, 1)
@@ -105,7 +105,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
     })
 
     //Upstream Transportation And Distribution - Sea Related Tests Start Here
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources - Sea ', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources - Sea ', () => {
         cy.apiRequest('GET', '/emission-source/upstream?tripType=SEA').then(json => {
             expect(json.status).to.equals(200)
             cy.get(json.body.content).each(item => {
@@ -125,7 +125,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
         })
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Sea', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Sea', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const distance = faker.mersenne.rand(9000, 1)
@@ -151,7 +151,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
     })
 
     //Upstream Transportation And Distribution - Land Related Tests Start Here
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources - Land ', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources - Land ', () => {
         cy.apiRequest('GET', '/emission-source/upstream?tripType=LAND')
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -173,7 +173,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
             })
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Land', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Land', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const distance = faker.mersenne.rand(9000, 1)
@@ -199,7 +199,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
     })
 
     //Upstream Transportation And Distribution - Rail Related Tests Start Here
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Emission Sources - Rail ', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution GET Emission Sources - Rail ', () => {
         cy.apiRequest('GET', '/emission-source/upstream?tripType=RAIL')
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -210,7 +210,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
             })
     })
 
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Rail', () => {
+    it('ConnectApp Public API Upstream Transportation And Distribution Calculate Carbon Footprint POST Request Test - Rail', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const distance = faker.mersenne.rand(9000, 1)
@@ -239,7 +239,7 @@ describe('Run Connector Pro V2 Public API Category 3.1 Upstream Transportation A
     })
 
     //Upstream Transportation And Distribution - Common Tests Start Here
-    it('Connector Pro V2 Public API Upstream Transportation And Distribution GET Calculated Carbon Footprints', () => {
+    it('ConnectAppam Transportation And Distribution GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.log(locationId)
         cy.apiRequest('GET', `/calculation/upstream?locationId=${locationId}`)

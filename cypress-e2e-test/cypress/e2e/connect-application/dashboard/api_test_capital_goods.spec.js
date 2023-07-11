@@ -6,7 +6,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () => {
+describe('Run ConnectApp Public API Category 4.2 Capital Goods Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -32,7 +32,7 @@ describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () 
             })
     })
 
-    it('Connector Pro V2 Public API Capital Goods Create New Emission Source Post Request Test', () => {
+    it('ConnectApp Public API Capital Goods Create New Emission Source Post Request Test', () => {
         const reference = getRandomArrayElement(['Defra', 'Ecoinvent', 'EMA', 'EPA'])
         const emissionSourceName = faker.lorem.word()
         const unitId = getRandomArrayElement(emissionUnitIds)
@@ -50,7 +50,7 @@ describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () 
             })
     })
 
-    it('Connector Pro V2 Public API Capital Goods GET Emission Sources Test', () => {
+    it('ConnectApp Public API Capital Goods GET Emission Sources Test', () => {
 
         cy.apiRequest('GET', `/emission-source/capital-goods?`)
             .then(json => {
@@ -67,7 +67,7 @@ describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () 
             })
     })
 
-    it('Connector Pro V2 Public API Capital Goods GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Capital Goods GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
 
         cy.apiRequest('GET', `/emission-source/capital-goods?search=${string}`)
@@ -80,14 +80,14 @@ describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () 
             })
     })
 
-    it('Connector Pro V2 Public API Capital Goods GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Capital Goods GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/capital-goods?locationId=${locationId}`).then(json => {
             expect(json.status).to.equals(200)
         })
     })
 
-    it('Connector Pro V2 Public API Capital Goods Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API Capital Goods Calculate Carbon Footprint POST Request Test', () => {
 
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
@@ -105,7 +105,7 @@ describe('Run Connector Pro V2 Public API Category 4.2 Capital Goods Tests', () 
             })
     })
 
-    it('Connector Pro V2 Public API Capital Goods Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectApps Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(8, 1)

@@ -4,7 +4,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Indirect GHG Emissions From Other Sources Process Emissions 6.1 Tests', () => {
+describe('Run ConnectApp Public API Indirect GHG Emissions From Other Sources Process Emissions 6.1 Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionUnitIds = []
@@ -26,7 +26,7 @@ describe('Run Connector Pro V2 Public API Indirect GHG Emissions From Other Sour
             })
     })
 
-    it('Connector Pro V2 Public API Indirect GHG Emissions From Other Sources 6.1 GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Indirect GHG Emissions From Other Sources 6.1 GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/other-process-emission?locationId=${locationId}`)
             .then(json => {
@@ -34,7 +34,7 @@ describe('Run Connector Pro V2 Public API Indirect GHG Emissions From Other Sour
             })
     })
 
-    it('Connector Pro V2 Public API Indirect GHG Emissions From Other Sources 6.1 Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectAppIndirect GHG Emissions From Other Sources 6.1 Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const activity = faker.lorem.word()
         const amount = faker.mersenne.rand(1000, 1)
@@ -54,7 +54,7 @@ describe('Run Connector Pro V2 Public API Indirect GHG Emissions From Other Sour
             })
     })
 
-    it('Connector Pro V2 Public API Indirect GHG Emissions From Other Sources 6.1 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectAppct GHG Emissions From Other Sources 6.1 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
         const activity = faker.lorem.word()
         const amount = faker.mersenne.rand(1000, 1)
         const unitId = getRandomArrayElement(emissionUnitIds)

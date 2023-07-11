@@ -4,7 +4,7 @@ require('cypress-xpath');
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 5.2 Tests', () => {
+describe('Run ConnectApp Public API Usage Phase Of Sold Products Category 5.2 Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const emissionSources = []
@@ -29,7 +29,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 Create New Emission Source POST Request Test', () => {
+    it('ConnectApp Public API Usage Phase Of Sold Products 5.2 Create New Emission Source POST Request Test', () => {
         const reference = getRandomArrayElement(['Defra', 'Ecoinvent', 'EMA', 'EPA'])
         const emissionSourceName = faker.lorem.word()
         const unitId = getRandomArrayElement(emissionUnitIds)
@@ -46,7 +46,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 GET Emission Sources Test', () => {
+    it('ConnectApp Public API Usage Phase Of Sold Products 5.2 GET Emission Sources Test', () => {
         cy.apiRequest('GET', `/emission-source/usage-stage?`)
             .then(json => {
                 expect(json.status).to.equals(200)
@@ -61,7 +61,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Usage Phase Of Sold Products 5.2 GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/usage-stage?search=${string}`)
             .then(json => {
@@ -73,7 +73,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Usage Phase Of Sold Products 5.2 GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/usage-stage?locationId=${locationId}`)
             .then(json => {
@@ -81,7 +81,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 Calculate Carbon Footprint POST Request Test', () => {
+    it('ConnectApp Public API Usage Phase Of Sold Products 5.2 Calculate Carbon Footprint POST Request Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(emissionSourceIds.length - 1, 0)
@@ -100,7 +100,7 @@ describe('Run Connector Pro V2 Public API Usage Phase Of Sold Products Category 
             })
     })
 
-    it('Connector Pro V2 Public API Usage Phase Of Sold Products 5.2 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
+    it('ConnectAppPhase Of Sold Products 5.2 Calculate Carbon Footprint POST Request Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(emissionSourceIds.length - 1, 1)

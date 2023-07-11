@@ -4,7 +4,7 @@
 require('cypress-xpath');
 const { apiForbiddenRequest } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Current User API Tests', () => {
+describe('Run ConnectApp Current User API Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
 

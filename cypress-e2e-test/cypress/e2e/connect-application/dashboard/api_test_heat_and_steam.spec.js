@@ -5,7 +5,7 @@ const loginPageElements = require("../../../fixtures/connectorprov2/dashboard/lo
 const faker = require("faker");
 const { getRandomArrayElement, getLocations } = require("../../../helpers/util");
 
-describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () => {
+describe('Run ConnectApp Public API Category 2 Heat and Steam Tests', () => {
 
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
@@ -19,7 +19,7 @@ describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () =
         cy.log(locationIds)
     })
 
-    it('Connector Pro V2 Public API Heat and Steam GET Emission Sources Test', () => {
+    it('ConnectAppHeat and Steam GET Emission Sources Test', () => {
 
         cy.apiRequest('GET', `/emission-source/heat-and-steam?`)
             .then(json => {
@@ -36,7 +36,7 @@ describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () =
     });
 
 
-    it('Connector Pro V2 Public API Heat and Steam GET Emission Sources Filter By String Test', () => {
+    it('ConnectApp Public API Heat and Steam GET Emission Sources Filter By String Test', () => {
         const string = getRandomArrayElement(emissionSources)
         cy.apiRequest('GET', `/emission-source/heat-and-steam?search=${string}`)
             .then(json => {
@@ -47,7 +47,7 @@ describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () =
             })
     })
 
-    it('Connector Pro V2 Public API Heat and Steam GET Calculated Carbon Footprints', () => {
+    it('ConnectApp Public API Heat and Steam GET Calculated Carbon Footprints', () => {
         const locationId = getRandomArrayElement(locationIds)
         cy.apiRequest('GET', `/calculation/heat-and-steam?locationId=${locationId}`)
             .then(json => {
@@ -56,7 +56,7 @@ describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () =
     })
 
 
-    it('Connector Pro V2 Public API Heat and Steam POST Calculate Carbon Footprint Test', () => {
+    it('ConnectApp Public API Heat and Steam POST Calculate Carbon Footprint Test', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(3, 1)
@@ -74,7 +74,7 @@ describe('Run Connector Pro V2 Public API Category 2 Heat and Steam Tests', () =
     })
 
 
-    it('Connector Pro V2 Public API Heat and Steam POST Calculate Carbon Footprint Test - 400 Bad Request', () => {
+    it('ConnectAppulate Carbon Footprint Test - 400 Bad Request', () => {
         const locationId = getRandomArrayElement(locationIds)
         const amount = faker.mersenne.rand(1000, 1)
         const i = faker.mersenne.rand(3, 1)

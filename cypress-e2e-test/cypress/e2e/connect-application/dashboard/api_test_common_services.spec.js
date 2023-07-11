@@ -9,7 +9,7 @@ import {
 require('cypress-xpath');
 import faker from "faker";
 
-describe('Run Connector Pro V2 Public API Calculations Common Services Tests', () => {
+describe('Run ConnectAppn Services Tests', () => {
     const username = `${Cypress.env('username')}`
     const password = `${Cypress.env('password')}`
     const airportIds = []
